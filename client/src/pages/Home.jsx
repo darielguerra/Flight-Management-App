@@ -9,7 +9,7 @@ export const Home = () => {
         </div>
         <div class="container">   
   
-            <div class="creatflightspage">
+            <div class="createflightspage">
                 <a className="CreatFlights-link"
                 href="http://localhost:3000/createaflight"
                 target="_blank"
