@@ -5,7 +5,7 @@ export const Home = () => {
         <>  
         <html>
         <div class="title">
-                <h1>DG Airlines</h1>
+                <h1>DGI Airlines</h1>
         </div>
         <div class="container">   
   
