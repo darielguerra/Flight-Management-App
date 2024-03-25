@@ -7,7 +7,7 @@ h1 {
     font-family: "Courier New";
 }
 
-.creatflightspage {
+.createflightspage {
     background-image: url("./picturecreateflight.jpg");
     color:white;
     text-align: center;
@@ -36,3 +36,4 @@ h3 {
     align-items: center;
     /*height: 50vh;*/
 }
+
