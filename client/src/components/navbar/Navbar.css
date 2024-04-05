@@ -1,6 +1,9 @@
 .nav {
-   background-color: #f2a2a4;
-   height: 3.2rem;
+    background-color: rgb(45, 45, 45);
+   height: 5rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 
 a { /*link styling*/
@@ -17,14 +20,20 @@ a { /*link styling*/
 
 .logo-image{
     /*cropping excess of top and bottom of image*/
-    width: 7.2rem;
-    height: 4rem; /*would shrink down to 4rem height*/
-    object-fit: cover; /*but because have this, its filling 
+    width: 5.4rem;
+    margin-left: .6rem;
+    margin-bottom: .2rem;
+    /*height: 4rem; /*would shrink down to 4rem height*/
+    /*object-fit: cover; /*but because have this, its filling 
                        the area and cropping the top and bottom*/
+    background-color: rgb(210, 210, 210);
 }
 
-logo-name {
-    font-size: 5rem;
+.logo-name {
+    font-size: 3rem;
+    margin-left: 2rem ;
+    font-family: "Verdana";
+    color: rgba(230, 144, 111, 1)
 }
 
 .nav-links {
@@ -38,6 +47,7 @@ logo-name {
 .nav-links li {
     list-style: none;
     margin-left: 2.5rem;
+    position: relative;
 }
 
 

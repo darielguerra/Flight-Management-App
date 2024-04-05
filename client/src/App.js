@@ -8,7 +8,8 @@ function App() {
     <BrowserRouter>
                 <Navbar />
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    {/*<Route path="/" element={<Home />} /> */}
+                    <Route path="/" element={<EditAFlight />} /> 
                     <Route path="/createaflight" element={<CreateAFlight />} />
                     <Route path="/editaflight" element={<EditAFlight />} />
                     <Route path="/updateaflight/:flightnumber" element={<UpdateAFlight />} /> 
