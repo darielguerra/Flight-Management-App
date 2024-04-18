@@ -1,0 +1,53 @@
+.nav {
+   background-color: rgb(45, 45, 45);
+   height: 4rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+a { /*link styling*/
+    text-decoration: none; /*removes the link underline*/
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    text-decoration: none; 
+}
+
+.logo-image{
+    /*cropping excess of top and bottom of image*/
+    width: 5.4rem;
+    margin-left: .6rem;
+    margin-bottom: .2rem;
+    /*height: 4rem; /*would shrink down to 4rem height*/
+    /*object-fit: cover; /*but because have this, its filling 
+                       the area and cropping the top and bottom*/
+    background-color: rgb(210, 210, 210);
+}
+
+.logo-name {
+    font-size: 3rem;
+    margin-left: 2rem ;
+    font-family: "Verdana";
+    color: rgba(230, 144, 111, 1)
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-left: 45rem;
+}
+
+.nav-links li {
+    list-style: none;
+    margin-left: 2.5rem;
+    position: relative;
+}
+
+

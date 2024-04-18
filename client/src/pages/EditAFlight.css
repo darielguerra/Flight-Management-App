@@ -1,9 +1,14 @@
-.dark {background-color: rgb(45, 45, 45)}
+.dark {
+    background-color: rgb(176, 176, 176);
+}
 
-.grid {   
+.grid { 
+    border: 5px solid;
+    width: 73%; 
+    margin:auto;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    background-color: rgb(45, 45, 45);
+    grid-template-columns: 33% 33% 33%;
+    background-color: rgba(255, 255, 255);
 }
 
 .flightnumber {
@@ -11,18 +16,20 @@
     font-size: 24px;
     font-family: "Franklin Gothic Medium";
     text-align: center;
-    background-color: rgb(45, 45, 45)
+    background-color: rgb(45, 45, 45);
+    color: white
 }
 
 .tile {
-    border: 5px solid rgb(26, 160, 178);
-    color:white;
+    border: 5px solid rgba(32, 32, 32, 0.8);
+    color:rgb(0, 0, 0);
     text-align: left;
     font-family: "Century Gothic";
     padding: 50px;
     margin: 20px;
-    background-color: rgb(45, 45, 45)
-    }
+    background-color: rgb(221, 221, 221);
+    box-shadow: 0 0 5px 1px rgb(188, 188, 188);
+}
 
     .buttons {
         color:white;
