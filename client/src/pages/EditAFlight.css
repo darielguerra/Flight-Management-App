@@ -1,9 +1,14 @@
-.dark {background-color: rgb(210, 210, 210)}
+.dark {
+    background-color: rgb(176, 176, 176);
+}
 
-.grid {   
+.grid { 
+    border: 5px solid;
+    width: 73%; 
+    margin:auto;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    background-color: rgb(255, 255, 255);
+    grid-template-columns: 33% 33% 33%;
+    background-color: rgba(255, 255, 255);
 }
 
 .flightnumber {
