@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import './EditAFlight.css';
+import './FlightList.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export const EditAFlight = () => {  
+export const FlightList = () => {  
 
     const [flights, setFlights] = useState([]);
 
@@ -59,6 +59,7 @@ export const EditAFlight = () => {
 
  
     return (
+        <>
         <div className="dark">
         <div className="grid">
             {flights.map((flight, index) => {
@@ -79,11 +80,13 @@ export const EditAFlight = () => {
                             <a href="http://localhost:3000/editaflight"><button onClick={() => handleDelete(flight.flightNumber)} className="btn">Delete</button>
                             </a>                        
                         </div>
-                        </div>
+                    </div>
             );
             })}
         </div>
         </div>
+
+        </>
     );
 }
 

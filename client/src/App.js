@@ -1,6 +1,6 @@
 //import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import {Home, CreateAFlight, EditAFlight, UpdateAFlight, Error} from './pages';
+import { CreateAFlight, FlightList, UpdateAFlight, Error} from './pages';
 import { Navbar } from './components/navbar/Navbar';
 
 function App() {
@@ -8,10 +8,9 @@ function App() {
     <BrowserRouter>
                 <Navbar />
                 <Routes>
-                    {/*<Route path="/" element={<Home />} /> */}
-                    <Route path="/" element={<EditAFlight />} /> 
+                    <Route path="/" element={<FlightList />} /> 
                     <Route path="/createaflight" element={<CreateAFlight />} />
-                    <Route path="/editaflight" element={<EditAFlight />} />
+                    <Route path="/flightlist" element={<FlightList />} />
                     <Route path="/updateaflight/:flightnumber" element={<UpdateAFlight />} /> 
                     <Route path="*" element={<Error />} />
                 </Routes>
