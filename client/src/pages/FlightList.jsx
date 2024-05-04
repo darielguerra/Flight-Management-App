@@ -60,7 +60,7 @@ export const FlightList = () => {
  
     return (
         <>
-        <div className="dark">
+        <div className="dark" >
         <div className="grid">
             {flights.map((flight, index) => {
                 return (
@@ -76,9 +76,8 @@ export const FlightList = () => {
                         <div><strong>Passenger Limit:  </strong>{flight.passengerLimit}</div>
 
                         <div className="buttons">
-                            <Link to={"/updateaflight/"+flight.flightNumber} className="link btn">Update</Link>
-                            <a href="http://localhost:3000/editaflight"><button onClick={() => handleDelete(flight.flightNumber)} className="btn">Delete</button>
-                            </a>                        
+                            <Link to={"/updateaflight/"+flight.flightNumber} className="btn">Update</Link>
+                            <a href="http://localhost:3000/editaflight"><button onClick={() => handleDelete(flight.flightNumber)} className="btn">Delete</button></a>                        
                         </div>
                     </div>
             );

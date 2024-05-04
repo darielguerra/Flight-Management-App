@@ -1,9 +1,14 @@
 .nav {
-   background-color: rgb(45, 45, 45);
+    background-color: var(--nav-color);
+   
+   /*background-color: rgb(255, 158, 109);*/
    height: 5rem;
    display: flex;
    justify-content: space-between;
    align-items: center;
+   width: 100%;
+   border-bottom: 2.4px solid var(--border-color-altdarker2);
+  
 }
 
 a { /*link styling*/
@@ -12,36 +17,35 @@ a { /*link styling*/
 }
 
 .logo {
-    display: flex;
-    justify-content: space-evenly; 
-    align-items: center;
-    text-decoration: none; 
+
 }
+
 
 .logo-image{
     /*cropping excess of top and bottom of image*/
-    width: 5.4rem;
+    width: 4.8rem;
     margin-left: .6rem;
     margin-bottom: .2rem;
     /*height: 4rem; /*would shrink down to 4rem height*/
     /*object-fit: cover; /*but because have this, its filling 
                        the area and cropping the top and bottom*/
-    background-color: rgb(210, 210, 210);
+    /*background-color: rgb(210, 210, 210); */
+
 }
 
 .logo-name {
+   /* position: fixed; */
     font-size: 3rem;
     margin-left: 2rem ;
-    font-family: "Verdana";
-    color: rgba(230, 144, 111, 1)
+    font-family: "Roboto";
+    font-weight: 700;
+    color:  var(--primary-font-color);
+    -webkit-text-stroke:  1px var(--border-color-altdarker2);
+    /*color: rgba(230, 144, 111, 1) desired color when inverted*/
 }
 
 .nav-links {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-    margin-left: 45rem;
+   
 }
 
 .nav-links li {
@@ -49,5 +53,45 @@ a { /*link styling*/
     margin-left: 2.5rem;
     position: relative;
 }
+/*
+@media screen and (max-width:651px) {
+    .logo-name  {
+        top: 20px;
+        position: fixed;
+        scale: 1.2;
+        z-index: 3;
+    }
+}
+*/
 
 
+/*
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+  }
+  
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+  
+
+  .main {
+    margin-top: 30px; 
+  }
+  */
