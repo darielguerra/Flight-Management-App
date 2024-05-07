@@ -1,37 +1,45 @@
 html, body {
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(0, 47, 91);
 }
 
-.dark {
-    /*filter: brightness(150%);*/
-    height: 100%;
+.pilots {
+    border: 2px solid var(--border-color-altdarker);
+    width: 25%;
+    margin-top: 1rem;
+    margin-left: 4rem;
+    background-color: var(--foreground-color-altlighter);
+}
+
+.page {
+    background-color: var(--background-color);
+    margin: 0px;
+    padding: 0px;
     width: 100%;
-    margin: 0;
-    padding: 0;    
-    /*background-color: rgb(255, 254, 170);*/
-    background-color: #f2f1eeff;
+    height: 100%;
+    display: flex;
 }
 
-.grid {
-    width: 73%; 
-    margin:auto;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
+.container {
+ 
+}
+
+.flights {
+   width: 65%;
 }
 
 .flightnumber {
-    margin-bottom: 50px;
     font-size: 24px;
     font-family: "Franklin Gothic Medium";
-    text-align: center;
     /*background-color: rgb(197, 129, 95);*/
     color: var(--primary-font-color);
 }
 
 .tile {
+    width: 100%;
     border: 2px solid var(--border-color-altdarker);
     color:rgb(0, 0, 0);
     text-align: left;
@@ -40,13 +48,29 @@ html, body {
     margin: 20px;
     background-color: var(--foreground-color-altlighter);
     /*box-shadow: 0 0 5px 1px rgb(188, 188, 188); */
+    display: flex;
 }
+
+.departure {
+    margin: 2rem;
+}
+
+
+.arrival {
+    margin: 2rem;
+}
+
+
+
+
 
     .buttons {
         color:white;
         margin-top: 50px;
         margin-left: 70px;
         background-color: rgb(201, 167, 150);
+        display: flex;
+        flex-direction: column;
     }
 /*
     .btn {

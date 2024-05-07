@@ -26,7 +26,7 @@ export const FlightList = () => {
 
 
    /**
-    * funtion for formating date using slice method
+    * Format date using the slice method
     * 
     * original format: yyyy-mm-dd
     * indexes:         0123456789  
@@ -41,8 +41,12 @@ export const FlightList = () => {
         return date;
     }
 
-    // format time
+    
+    /**
+     * Format time
+     */
     const formatTime = (time) => {
+
         // Splitting the time into hours and minutes
         const [hours, minutes] = time.split(':');
         
@@ -59,33 +63,44 @@ export const FlightList = () => {
 
  
     return (
-        <>
-        <div className="dark" >
-        <div className="grid">
-            {flights.map((flight, index) => {
-                return (
-                    <div key={flight._id} className="tile">
-                        <div className="flightnumber"><strong>Flight#  </strong>{flight.flightNumber}</div>
-                        <div><strong>Departure Date:  </strong>{formatDate(flight.departureDate)}</div>
-                        <div><strong>Arrival Date:  </strong>{formatDate(flight.arrivalDate)}</div>
-                        <div><strong>Departure Time: </strong>{formatTime(flight.departureTime)}</div>                        
-                        <div><strong>Arrival Time:  </strong>{formatTime(flight.arrivalTime)}</div>
-                        <div><strong>Departure Airport:  </strong>{flight.departureAirport}</div>
-                        <div><strong>Arrival Airport:  </strong>{flight.arrivalAirport}</div>
-                        <div><strong>Current Number Of Passengers:  </strong>{flight.currentNumberOfPassengers}</div>
-                        <div><strong>Passenger Limit:  </strong>{flight.passengerLimit}</div>
+        <div className="page">
+            
 
-                        <div className="buttons">
-                            <Link to={"/updateaflight/"+flight.flightNumber} className="btn">Update</Link>
-                            <a href="http://localhost:3000/editaflight"><button onClick={() => handleDelete(flight.flightNumber)} className="btn">Delete</button></a>                        
-                        </div>
-                    </div>
-            );
-            })}
-        </div>
-        </div>
+                <div className="pilots">
+                    <div><strong>Pilot:  </strong></div>
+                </div>
 
-        </>
+                <div className="flights">
+                    {flights.map((flight, index) => {
+                        return (
+                            <div key={flight._id} className="tile">                               
+                                
+                                <div className="flightnumber"><strong>Flight#  </strong>{flight.flightNumber}</div>
+                               
+                                <div className="departure">
+                                    <div><strong>Departure Date:  </strong>{formatDate(flight.departureDate)}</div>
+                                    <div><strong>Departure Time: </strong>{formatTime(flight.departureTime)}</div> 
+                                    <div><strong>Departure Airport:  </strong>{flight.departureAirport}</div> 
+                                    <div><strong>Current Number Of Passengers:  </strong>{flight.currentNumberOfPassengers}</div>                       
+                                </div>
+
+                                <div className="arrival">
+                                    <div><strong>Arrival Date:  </strong>{formatDate(flight.arrivalDate)}</div>
+                                    <div><strong>Arrival Time:  </strong>{formatTime(flight.arrivalTime)}</div>
+                                    <div><strong>Arrival Airport:  </strong>{flight.arrivalAirport}</div>
+                                    <div><strong>Passenger Limit:  </strong>{flight.passengerLimit}</div>
+                                </div>                                       
+             
+                                <div className="buttons">
+                                    <Link to={"/updateaflight/"+flight.flightNumber} className="btn">Update</Link>
+                                    <a href="http://localhost:3000/editaflight"><button onClick={() => handleDelete(flight.flightNumber)} className="btn">Delete</button></a>                        
+                                </div>
+                            </div>
+                    );
+                    })}
+                </div>
+            
+        </div>
     );
 }
 
