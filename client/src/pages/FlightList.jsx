@@ -2,7 +2,10 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import './FlightList.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css'; 
+
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 
 export const FlightList = () => {  
 
@@ -63,17 +66,17 @@ export const FlightList = () => {
 
  
     return (
-        <div className="page">
+        <div className="page" color="primary">
             
 
-                <div className="pilots">
+                <Card className="pilots" variant="outlined" color="primary">
                     <div><strong>Pilot:  </strong></div>
-                </div>
+                </Card>
 
                 <div className="flights">
                     {flights.map((flight, index) => {
                         return (
-                            <div key={flight._id} className="tile">                               
+                            <Card key={flight._id} className="flight-card" variant="outlined" color="primary">                               
                                 
                                 <div className="flightnumber"><strong>Flight#  </strong>{flight.flightNumber}</div>
                                
@@ -95,7 +98,7 @@ export const FlightList = () => {
                                     <Link to={"/updateaflight/"+flight.flightNumber} className="btn">Update</Link>
                                     <a href="http://localhost:3000/editaflight"><button onClick={() => handleDelete(flight.flightNumber)} className="btn">Delete</button></a>                        
                                 </div>
-                            </div>
+                            </Card>
                     );
                     })}
                 </div>
