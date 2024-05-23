@@ -7,14 +7,17 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import { useTheme } from '@mui/material/styles';
 
 
 export const Navbar = () => {
+
+   const theme = useTheme();
+
    return (
 
        <Box sex={{ flexGrow: 1}}>
-         <AppBar position="static" className="nav" color="primary">
+         <AppBar position="static" className="nav" style={{ backgroundColor: theme.palette.primary.main }}>
           <Toolbar>
           <a className="logo" href="http://localhost:3000/" >
         <img className="logo-image" src="images/logo.png" alt="logo" />

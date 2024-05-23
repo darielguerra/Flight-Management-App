@@ -6,10 +6,14 @@ import './FlightList.css';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import { useTheme } from '@mui/material/styles';
+
+
 
 export const FlightList = () => {  
 
     const [flights, setFlights] = useState([]);
+    const theme = useTheme();
 
     useEffect(() => {
         axios.get('http://localhost:8085/flights')
@@ -64,19 +68,19 @@ export const FlightList = () => {
         return formattedTime;
     }
 
- 
+     
     return (
-        <div className="page" color="primary">
+        <div className="page" style={{ backgroundColor: theme.palette.secondary.main }}>
             
 
-                <Card className="pilots" variant="outlined" color="primary">
+                <Card className="pilots" variant="outlined" style={{ backgroundColor: theme.palette.primary.light }}>
                     <div><strong>Pilot:  </strong></div>
                 </Card>
 
                 <div className="flights">
                     {flights.map((flight, index) => {
                         return (
-                            <Card key={flight._id} className="flight-card" variant="outlined" color="primary">                               
+                            <Card key={flight._id} className="flight-card" variant="outlined" style={{ backgroundColor: theme.palette.primary.light }}>                               
                                 
                                 <div className="flightnumber"><strong>Flight#  </strong>{flight.flightNumber}</div>
                                
