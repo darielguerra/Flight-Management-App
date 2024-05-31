@@ -70,7 +70,8 @@ export const FlightList = () => {
 
      
     return (
-        <div className="page" style={{ backgroundColor: theme.palette.secondary.main }}>
+        <div className="page" style={{ backgroundColor: theme.palette.secondary.main, 
+            backgroundImage: "url(images/Gulfstream.webp)" }}>
             
 
                 <Card className="pilots" variant="outlined" style={{ backgroundColor: theme.palette.primary.light }}>
