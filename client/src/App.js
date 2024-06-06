@@ -2,10 +2,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CreateAFlight, FlightList, UpdateAFlight, Error} from './pages';
 import { Navbar } from './components/navbar/Navbar';
+import { ThemeProvider } from '@mui/material/styles';
+import { Theme } from './theme/Theme';
 
 function App() {
   return (
-    <BrowserRouter>
+    <ThemeProvider theme={Theme}>
+         <BrowserRouter>
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<FlightList />} /> 
@@ -14,7 +17,8 @@ function App() {
                     <Route path="/updateaflight/:flightnumber" element={<UpdateAFlight />} /> 
                     <Route path="*" element={<Error />} />
                 </Routes>
-            </BrowserRouter>
+         </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

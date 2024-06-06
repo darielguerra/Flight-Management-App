@@ -8,45 +8,53 @@ html, body {
 
 .pilots {
     border: 2px solid var(--border-color-altdarker);
-    width: 25%;
-    margin-top: 1rem;
+    width: 20%;
+    margin-top: 3rem;
     margin-left: 4rem;
-    background-color: var(--foreground-color-altlighter);
+    margin-right: 2rem;
+    color: #305263;
+   /* background-color: var(--foreground-color-altlighter);*/
 }
 
 .page {
-    background-color: var(--background-color);
+    /*background-color: var(--background-color);*/
     margin: 0px;
     padding: 0px;
     width: 100%;
     height: 100%;
     display: flex;
-}
-
+    background-attachment:fixed;/*no scrolling*/
+    background-repeat: no-repeat;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    object-fit: fill;
+   }
 .container {
  
 }
 
 .flights {
+   margin-top: 2rem;
    width: 65%;
+
 }
 
 .flightnumber {
     font-size: 24px;
     font-family: "Franklin Gothic Medium";
     /*background-color: rgb(197, 129, 95);*/
-    color: var(--primary-font-color);
+    color: #305263;
 }
 
-.tile {
-    width: 100%;
+.flight-card {
+    width: 95%;
     border: 2px solid var(--border-color-altdarker);
     color:rgb(0, 0, 0);
     text-align: left;
     font-family: "Century Gothic";
     padding: 50px;
     margin: 20px;
-    background-color: var(--foreground-color-altlighter);
+    margin-bottom: 2.5rem;
+    /*background-color: var(--foreground-color-altlighter);*/
     /*box-shadow: 0 0 5px 1px rgb(188, 188, 188); */
     display: flex;
 }
