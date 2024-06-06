@@ -23,8 +23,10 @@ html, body {
     width: 100%;
     height: 100%;
     display: flex;
-
+    background-attachment:fixed;/*no scrolling*/
+    background-repeat: no-repeat;
     overflow-y: hidden; /* Hide vertical scrollbar */
+    object-fit: fill;
    }
 .container {
  
@@ -33,6 +35,7 @@ html, body {
 .flights {
    margin-top: 2rem;
    width: 65%;
+
 }
 
 .flightnumber {

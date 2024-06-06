@@ -17,13 +17,13 @@ export const Navbar = () => {
    return (
 
        <Box sex={{ flexGrow: 1}}>
-         <AppBar position="static" className="nav" style={{ backgroundColor: theme.palette.primary.main }}>
+         <AppBar position="fixed" className="nav" style={{ backgroundColor: theme.palette.primary.main }}>
           <Toolbar>
           <a className="logo" href="http://localhost:3000/" >
         <img className="logo-image" src="images/logo.png" alt="logo" />
       </a>
             
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} className="title">
+            <Typography variant="h3" textAlign="center" component="div" sx={{ flexGrow: 1 }} className="title">
                Zenith Airlines
             </Typography> 
             <IconButton
