@@ -56,9 +56,9 @@ export const FlightList = () => {
       <div className="page" style={{ backgroundColor: theme.palette.secondary.main, 
         backgroundImage: "url(images/Gulfstream.webp)", backgroundSize: "cover", backgroundPosition: "center"  }}>        
       
-      <Card className="pilots" variant="outlined" style={{ backgroundColor: theme.palette.primary.light }}>
+      <div className="pilots">
         <div><strong>Pilot:  </strong></div>
-      </Card>
+      </div>
 
       <div className="flights">
         {flights.map((flight, index) => {

@@ -1,14 +1,20 @@
 :root {
-  --primary-font-color: #e98074ff;
-  --secondary-font-color: #3a3f3dff;
-  --foreground-color: rgb(229, 226, 212);
-  --nav-color: #f2f0e9ff;
-  --background-color: #f2f0e9ff;
-  --foreground-color-altlighter: rgb(246, 245, 242);
-  --foreground-color-altlighter2: #f4f4f0ff;
-  --border-color: #aeaeaeff;
-  --border-color-altdarker: #797979ff;
-  --border-color-altdarker2: #3a3a3aff;
+  --primary-light-color: #FEE9DD;
+  --primary-dark-color: #D5BFB6;
+  --secondary-light-color: #9DB0CE;
+  --secondary-dark-color: #3B395B;
+  --tertiary-light1-color: #C68E8E;
+  --tertiary-light2-color: #D67878;
+  --tertiary-dark-color: #783E3E;
+
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.6rem; 
+  --font-size-large: 2.4rem;
+  --font-size-xlarge: 3.2rem;
+
+  --spacing-small: 1.2rem;
+  
+  --border-radius-small: 0.4rem;
 }
 
 

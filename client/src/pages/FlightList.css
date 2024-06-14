@@ -7,13 +7,13 @@ html, body {
 }
 
 .pilots {
-    border: 2px solid var(--border-color-altdarker);
+  
     width: 20%;
     margin-top: 3rem;
     margin-left: 4rem;
     margin-right: 2rem;
     color: #305263;
-   /* background-color: var(--foreground-color-altlighter);*/
+    background-color: var(--primary-light-color);
 }
 
 .page {
