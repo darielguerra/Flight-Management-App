@@ -1,11 +1,18 @@
 :root {
   --primary-light-color: #FEE9DD;
+  --primary-medium-color: #F8D7D3;
   --primary-dark-color: #D5BFB6;
   --secondary-light-color: #9DB0CE;
   --secondary-dark-color: #3B395B;
+  --secondary-dark2-color: #535878;
   --tertiary-light1-color: #C68E8E;
   --tertiary-light2-color: #D67878;
   --tertiary-dark-color: #783E3E;
+  --tertiary-dark2-color:#430E0E;
+
+  --secondary-text-color: #4B2222;
+
+  --font-family-main:"Inter", sans-serif;
 
   --font-size-small: 1.2rem;
   --font-size-medium: 1.6rem; 

@@ -53,8 +53,7 @@ export const FlightList = () => {
     }
 
     return (
-      <div className="page" style={{ backgroundColor: theme.palette.secondary.main, 
-        backgroundImage: "url(images/Gulfstream.webp)", backgroundSize: "cover", backgroundPosition: "center"  }}>        
+      <div className="page" >        
       
       <div className="pilots">
         <div><strong>Pilot:  </strong></div>
@@ -63,25 +62,33 @@ export const FlightList = () => {
       <div className="flights">
         {flights.map((flight, index) => {
           return (
-            <Card key={flight._id} className="flight-card" variant="outlined" style={{ backgroundColor: theme.palette.primary.light }}>                               
-              <div className="flightnumber"><strong>Flight#  </strong>{flight.flightNumber}</div>
-              <div className="departure">
-                <div><strong>Departure Date:  </strong>{formatDate(flight.departureDate)}</div>
-                <div><strong>Departure Time: </strong>{formatTime(flight.departureTime)}</div> 
-                <div><strong>Departure Airport:  </strong>{flight.departureAirport}</div> 
-                <div><strong>Current Number Of Passengers:  </strong>{flight.currentNumberOfPassengers}</div>                       
-              </div> 
-              <div className="arrival">
-                <div><strong>Arrival Date:  </strong>{formatDate(flight.arrivalDate)}</div>
-                <div><strong>Arrival Time:  </strong>{formatTime(flight.arrivalTime)}</div>
-                <div><strong>Arrival Airport:  </strong>{flight.arrivalAirport}</div>
-                <div><strong>Passenger Limit:  </strong>{flight.passengerLimit}</div>
-              </div>   
+            <div key={flight._id} className="flight-card" >                               
+              <div className="flightnumber"><p>Flight# {flight.flightNumber}</p></div>
+              {/*<div className="flightnumber"><p><strong>Flight# </strong>{flight.flightNumber}</p></div>*/}
+              <div className="flight-info">
+                <div className="airports">{flight.departureAirport}-&gt;<br />
+                  {flight.arrivalAirport}
+                </div>
+                <div className="pilot-departure-arrival">
+                  <h2>Pilot</h2>
+                  Ron Perlman
+                </div>
+                <div className="pilot-departure-arrival">
+                  <h2>Departs</h2>
+                  <p>{formatDate(flight.departureDate)}<br /> at {formatTime(flight.departureTime)}</p>
+                  {/*<div><strong>Current Number Of Passengers:  </strong>{flight.currentNumberOfPassengers}</div>*/}                  
+                </div> 
+                <div className="pilot-departure-arrival">
+                  <h2>Arrives</h2>
+                  {formatDate(flight.arrivalDate)}<br /> at {formatTime(flight.arrivalTime)}
+                  {/*<div><strong>Passenger Limit:  </strong>{flight.passengerLimit}</div>*/}
+                </div>   
+              </div>  
               <div className="buttons">
                 <Link to={"/updateaflight/"+flight.flightNumber} className="btn">Update</Link>
                 <a href="http://localhost:3000/editaflight"><button onClick={() => handleDelete(flight.flightNumber)} className="btn">Delete</button></a>                        
               </div>
-            </Card>
+            </div>
           );
         })}
       </div>
