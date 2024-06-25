@@ -1,6 +1,6 @@
 //import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CreateAFlight, FlightList, UpdateAFlight, Error} from './pages';
+import { CreateAFlight, FlightList, UpdateAFlight, About, Error} from './pages';
 import { Navbar } from './components/navbar/Navbar';
 import { ThemeProvider } from '@mui/material/styles';
 import { Theme } from './theme/Theme';
@@ -15,6 +15,7 @@ function App() {
                     <Route path="/createaflight" element={<CreateAFlight />} />
                     <Route path="/flightlist" element={<FlightList />} />
                     <Route path="/updateaflight/:flightnumber" element={<UpdateAFlight />} /> 
+                    <Route path="/about" element={<About />} />
                     <Route path="*" element={<Error />} />
                 </Routes>
          </BrowserRouter>

@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useTheme } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 
 export const Navbar = () => {
@@ -18,12 +19,16 @@ export const Navbar = () => {
 
     <nav className="nav">          
       <a className="logo" href="http://localhost:3000/" >
-        <img className="logo-image" src="images/logo 7.png" alt="logo" />
+        <img className="logo-image" src="images/logo 11.png" alt="logo" />
       </a>
-        <h1 className="logo-name"><strong>Zenith Airlines</strong></h1>
+      <div className="title">
+        <h1 className="logo-name"><strong>Zenith</strong></h1>
+        <h1 className="logo-name"><strong>Airlines</strong></h1>
+      </div>
       <div>
         <ul className="nav-links">
-            <li><a href="http://localhost:3000/createaflight">Create A Flight</a></li>
+            <li><Link to="/createaflight">Create A Flight</Link></li>
+            <li><Link to="/about">About</Link></li>
         </ul>
       </div>
     </nav>
