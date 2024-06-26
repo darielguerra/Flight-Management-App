@@ -15,10 +15,6 @@
  }
 
 
-a { /*link styling*/
-    text-decoration: none; /*removes the link underline*/
-    color: white;
-}
 
 .logo {
 
@@ -27,7 +23,7 @@ a { /*link styling*/
 
 .title {
   display: flex;
-  
+  margin-left: 7rem;
 }
 
 .logo-image{
@@ -60,14 +56,25 @@ a { /*link styling*/
 }
 
 .nav-links {
-   
-}
+   margin-right: 5.5rem;
+   display: flex;
+   font-size: 20px;
+  }
 
 .nav-links li {
     list-style: none;
     margin-left: 2.5rem;
-    position: relative;
+    
 }
+
+a { /*link styling*/
+  text-decoration: none; /*removes the link underline*/
+  color: var(--primary-light-color);
+}
+
+
+
+
 /*
 @media screen and (max-width:651px) {
     .logo-name  {

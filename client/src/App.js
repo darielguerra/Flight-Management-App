@@ -1,6 +1,7 @@
 //import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CreateAFlight, FlightList, UpdateAFlight, About, Error} from './pages';
+import { CreateAFlight, FlightList, UpdateAFlight, Error} from './pages';
+import { About } from './pages/About'; //had to import seperately with /About added
 import { Navbar } from './components/navbar/Navbar';
 import { ThemeProvider } from '@mui/material/styles';
 import { Theme } from './theme/Theme';
