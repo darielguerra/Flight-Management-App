@@ -39,10 +39,10 @@ export const CreateAFlight = () => {
     return (
         <>
         <html>
-        <div class="background">
+        <div class="backgroun">
         <div class="title"><h1>Create A Flight</h1></div>
 
-        <form className="MyForm" onSubmit={handleSubmit} >
+        <form className="myform" onSubmit={handleSubmit} >
             <div class="grid-container">
             
                 <div class="item">

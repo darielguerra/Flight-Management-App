@@ -5,11 +5,21 @@ html, body {
     padding: 0px;
     display: flex;
     flex-direction: column;
+    background-color: var(--primary-dark-color);
+      
 }
+
+.p {
+    border: 1px solid black;
+}
+
+
+
 
 .pilots {
   
     width: 20%;
+    height: 70rem;
     margin-top: 3rem;
     margin-left: 4rem;
     margin-right: 2rem;
@@ -17,21 +27,30 @@ html, body {
     background-color: var(--primary-light-color);
 }
 
-.page {
-    background-color: var(--primary-dark-color);
+.page { 
     margin: 0px;
     padding: 0px;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 75px); /*scrollbar was not going to the bottom of page
+                                 so use this to go to bottom*/
     display: flex;   
-}
 
+    /*below makes the page start below fixed navbar */
+    position: fixed;
+    top: 4.4rem; /* same height as navbar */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto; /*scrollbar, should appear when elements pass page*/
+    border: 3px solid black;
+}
+    
 .flights {
    margin-left: 2rem;
    margin-top: 3rem;
+   padding-bottom: 20rem;
    width: 70%;
 }
-
 
 .flight-card {
     width: 95%;
@@ -39,6 +58,17 @@ html, body {
     height: 14.5rem;
     margin-bottom: 5rem;
     border-bottom: 7px solid var(--secondary-dark2-color);
+    display: flex;
+ 
+}
+
+.flight {
+    display: flex;
+    height: 100%;
+}
+
+.flight-info {
+    width: 97%;
 }
 
 .flightnumber {
@@ -48,7 +78,7 @@ html, body {
     background-color: var(--tertiary-dark-color);
     color: var(--primary-medium-color);
     font-family: var(--font-family-main);
-     font-weight: 500;
+    font-weight: 500;
     width: 14rem;
     height: 3rem;
     /*border-bottom: 7px solid var(--tertiary-light2-color);*/
@@ -59,11 +89,11 @@ html, body {
 }  
 
 
-.flight-info {
-   margin-top: 1.7rem;
+.flight-details {
+    margin-top: 1.7rem;
     display: flex;
     justify-content: space-around;
-    }
+}
 
 .airports {
     margin-left: 3.2rem;
@@ -71,7 +101,9 @@ html, body {
     font-family: var(--font-family-main);
     color: var(--secondary-text-color);
     font-weight: 600;
-    font-size: 40px;
+    font-size: 36px;
+    padding-left: 1.8rem;  /*bigger then length of text*/
+    padding-right: 1.8rem;
 }
 
 
@@ -102,31 +134,43 @@ html, body {
 }
 
 
-
-
-
-    .buttons {
-   
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 2rem;
-    }
-
-    .btn {
-        border: 2.5px solid black;
-        color: black;
-    }
-/*
-    .btn2 {
-        border-bottom: 1px solid rgb(0, 0, 0);
-    }
-*/
-
-.something {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    font-family: "Century Gothic";
-    padding: 50px;
-    margin: 20px;
-    box-shadow: 0 0 5px 1px rgb(188, 188, 188);
+.flight-buttons {
+    width: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 2rem;
 }
+
+.btn {
+    width: 2.2rem;
+    height: 1.7rem;
+    border: 1px solid var(--tertiary-dark2-color);
+    
+}
+
+.update {
+    margin-top: 3.3rem;
+    background-color: var(--flight-edit-button-color);
+}
+
+.delete {
+    margin-bottom: 4.3rem;
+    font-weight: 600;
+    background-color: var(--flight-delete-button-color);
+}
+
+.update:hover {
+    background-color: #9dbcfa;
+}
+
+.delete:hover {
+    background-color: #ff9090;
+}
+
+.bottom-margin {
+    height: 4rem;
+}
+
+
+

@@ -12,6 +12,9 @@
 
   --secondary-text-color: #4B2222;
 
+  --flight-edit-button-color: #B5C7EA;
+  --flight-delete-button-color: #FFA5A5;
+
   --font-family-main:"Inter", sans-serif;
   --font-title-main:"EB Garamond", sans-serif;
 
@@ -33,6 +36,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
 }
 
 code {

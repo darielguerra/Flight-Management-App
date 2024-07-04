@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import { EditIcon } from '../components/icons/EditIcon';
+import { DeleteIcon } from '../components/icons/DeleteIcon';
 import './FlightList.css';
 
 import Card from '@mui/material/Card';
@@ -62,32 +64,34 @@ export const FlightList = () => {
       <div className="flights">
         {flights.map((flight, index) => {
           return (
-            <div key={flight._id} className="flight-card" >                               
-              <div className="flightnumber"><p>Flight# {flight.flightNumber}</p></div>
-              {/*<div className="flightnumber"><p><strong>Flight# </strong>{flight.flightNumber}</p></div>*/}
-              <div className="flight-info">
-                <div className="airports">{flight.departureAirport}-&gt;<br />
-                  {flight.arrivalAirport}
-                </div>
-                <div className="pilot-departure-arrival">
-                  <h2>Pilot</h2>
-                  Ron Perlman
-                </div>
-                <div className="pilot-departure-arrival">
-                  <h2>Departs</h2>
-                  <p>{formatDate(flight.departureDate)}<br /> at {formatTime(flight.departureTime)}</p>
-                  {/*<div><strong>Current Number Of Passengers:  </strong>{flight.currentNumberOfPassengers}</div>*/}                  
-                </div> 
-                <div className="pilot-departure-arrival">
-                  <h2>Arrives</h2>
-                  {formatDate(flight.arrivalDate)}<br /> at {formatTime(flight.arrivalTime)}
-                  {/*<div><strong>Passenger Limit:  </strong>{flight.passengerLimit}</div>*/}
-                </div>   
-              </div>  
-              <div className="buttons">
-                <Link to={"/updateaflight/"+flight.flightNumber} className="btn">Update</Link>
-                <a href="http://localhost:3000/editaflight"><button onClick={() => handleDelete(flight.flightNumber)} className="btn">Delete</button></a>                        
-              </div>
+            <div key={flight._id} className="flight-card">            
+              <div className="flight-info">                         
+                <div className="flightnumber"><p>Flight# {flight.flightNumber}</p></div>
+                {/*<div className="flightnumber"><p><strong>Flight# </strong>{flight.flightNumber}</p></div>*/}
+                <div className="flight-details">
+                  <div className="airports">{flight.departureAirport}-&gt;<br />
+                    {flight.arrivalAirport}
+                  </div>
+                  <div className="pilot-departure-arrival">
+                    <h2>Pilot</h2>
+                    Ron Perlman
+                  </div>
+                  <div className="pilot-departure-arrival">
+                    <h2>Departs</h2>
+                    <p>{formatDate(flight.departureDate)}<br /> at {formatTime(flight.departureTime)}</p>
+                    {/*<div><strong>Current Number Of Passengers:  </strong>{flight.currentNumberOfPassengers}</div>*/}                  
+                  </div> 
+                  <div className="pilot-departure-arrival">
+                    <h2>Arrives</h2>
+                    {formatDate(flight.arrivalDate)}<br /> at {formatTime(flight.arrivalTime)}
+                    {/*<div><strong>Passenger Limit:  </strong>{flight.passengerLimit}</div>*/}
+                  </div>   
+                </div>                   
+              </div>      
+              <div className="flight-buttons">
+                <button className="btn update"><Link to={"/updateaflight/"+flight.flightNumber } className="update-text"><EditIcon /></Link></button>
+                <button onClick={() => handleDelete(flight.flightNumber)} className="btn delete">X</button>                    
+              </div>                       
             </div>
           );
         })}
