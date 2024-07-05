@@ -76,7 +76,7 @@ html, body {
     display: flex;
     text-align: center;
     background-color: var(--tertiary-dark-color);
-    color: var(--primary-medium-color);
+    color: var(--primary-light-color);
     font-family: var(--font-family-main);
     font-weight: 500;
     width: 14rem;
@@ -97,7 +97,7 @@ html, body {
 
 .airports {
     margin-left: 3.2rem;
-    width: 7rem;
+    width: 7.3rem;
     font-family: var(--font-family-main);
     color: var(--secondary-text-color);
     font-weight: 600;
@@ -107,7 +107,12 @@ html, body {
 }
 
 
-
+.arrow-icon {
+    fill: var(--secondary-text-color);
+    width: 2.2rem;
+    position: relative;
+    top: .3rem;
+}
 
 
 .pilot-departure-arrival {
@@ -149,23 +154,41 @@ html, body {
     
 }
 
-.update {
+.edit {
     margin-top: 3.3rem;
-    background-color: var(--flight-edit-button-color);
+    background-color: #e8dad5;
+    /*background-color: var(--flight-edit-button-color);*/
 }
+
+.edit-icon {   
+    height: 1rem;
+    width: 20px;
+  }
+
+.edit:hover{
+    /*background-color: #9dbcfa;*/
+    background-color: #b9d0ff7a;
+    cursor: pointer;
+}
+
+.edit:hover .edit-icon {
+    fill: #070092;
+}
+
 
 .delete {
     margin-bottom: 4.3rem;
     font-weight: 600;
-    background-color: var(--flight-delete-button-color);
+    background-color: var(--primary-dark-color);
+    /*background-color: var(--flight-delete-button-color);*/
 }
 
-.update:hover {
-    background-color: #9dbcfa;
-}
 
 .delete:hover {
-    background-color: #ff9090;
+    /*background-color: #ff9090;*/
+    background-color: #fbbfbf;
+    cursor: pointer;
+    color: #450000;
 }
 
 .bottom-margin {

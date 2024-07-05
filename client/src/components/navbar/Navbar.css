@@ -30,6 +30,7 @@
 .logo-image{
     /*cropping excess of top and bottom of image*/
     width: 5.2rem;
+    margin-top: .3rem;
     margin-left: 9rem;
     margin-bottom: .2rem;
     /*height: 4rem; /*would shrink down to 4rem height*/

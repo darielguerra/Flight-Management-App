@@ -1,4 +1,4 @@
-import "./EditIcon.css"
+import "../../pages/FlightList.css";
 
 export const EditIcon = () => {
   return (

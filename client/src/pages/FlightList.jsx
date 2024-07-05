@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { EditIcon } from '../components/icons/EditIcon';
-import { DeleteIcon } from '../components/icons/DeleteIcon';
+import { ArrowIcon } from '../components/icons/ArrowIcon';
 import './FlightList.css';
 
 import Card from '@mui/material/Card';
@@ -69,7 +69,7 @@ export const FlightList = () => {
                 <div className="flightnumber"><p>Flight# {flight.flightNumber}</p></div>
                 {/*<div className="flightnumber"><p><strong>Flight# </strong>{flight.flightNumber}</p></div>*/}
                 <div className="flight-details">
-                  <div className="airports">{flight.departureAirport}-&gt;<br />
+                  <div className="airports">{flight.departureAirport}<ArrowIcon /><br />
                     {flight.arrivalAirport}
                   </div>
                   <div className="pilot-departure-arrival">
@@ -89,7 +89,7 @@ export const FlightList = () => {
                 </div>                   
               </div>      
               <div className="flight-buttons">
-                <button className="btn update"><Link to={"/updateaflight/"+flight.flightNumber } className="update-text"><EditIcon /></Link></button>
+                <button className="btn edit"><Link to={"/updateaflight/"+flight.flightNumber } className="update-text"><EditIcon /></Link></button>
                 <button onClick={() => handleDelete(flight.flightNumber)} className="btn delete">X</button>                    
               </div>                       
             </div>
