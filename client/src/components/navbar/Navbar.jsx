@@ -12,8 +12,8 @@ export const Navbar = () => {
    return (
 
     <nav className="nav">          
-      <a className="logo" href={`${API}`}>
-        <img className="logo-image" src="images/logo 11.png" alt="logo" />
+      <a className="logo" href="/">
+        <img className="logo-image" src="images/Logo 11.png" alt="logo" />
       </a>
       <div className="title">
         <h1 className="logo-name"><strong>Zenith</strong></h1>
