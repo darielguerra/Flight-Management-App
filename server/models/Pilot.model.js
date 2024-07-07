@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const pilotSchema = new Schema({
      name: String,
-     yearsOfService:Number
+     yearsOfService: Number
 });
 
 const Pilot = mongoose.model('Pilot', pilotSchema, 'Pilots');
