@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { API } from "../../App"
 import { Link } from 'react-router-dom';
 import { EditIcon } from '../../assets/svg-icons/EditIcon';
 import { ArrowIcon } from '../../assets/svg-icons/ArrowIcon';
@@ -10,7 +11,7 @@ export const FlightCard = (props) => {
     console.log(props.flight.flightNumber);
 
     const handleDelete = (key) => {
-      axios.delete(`http://localhost:8085/flights/${key}`)
+      axios.delete(`${API}/flights/${key}`)
       .then (res => {
           if ( res.status === "201") {
               alert("deleted");

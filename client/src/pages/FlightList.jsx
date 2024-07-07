@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { API } from "../App"
 import { useState, useEffect } from "react";
 import { FlightCard } from '../components/flight-card/FlightCard';
 import './FlightList.css';
@@ -8,7 +9,7 @@ export const FlightList = () => {
     const [flights, setFlights] = useState([]);
   
     useEffect(() => {
-        axios.get('http://localhost:8085/flights')
+        axios.get(`${API}/flights`)
             .then(res => setFlights(res.data));
     }, []);
 

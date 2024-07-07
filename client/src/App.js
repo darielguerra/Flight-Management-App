@@ -6,6 +6,8 @@ import { Navbar } from './components/navbar/Navbar';
 import { ThemeProvider } from '@mui/material/styles';
 import { Theme } from './theme/Theme';
 
+export const API = process.env.REACT_APP_SERVER_URL;
+
 function App() {
   return (
     <ThemeProvider theme={Theme}>
