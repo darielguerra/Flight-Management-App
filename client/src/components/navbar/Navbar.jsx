@@ -1,12 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import { API } from "../../App"
 import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
@@ -18,7 +12,7 @@ export const Navbar = () => {
    return (
 
     <nav className="nav">          
-      <a className="logo" href="http://localhost:3000/" >
+      <a className="logo" href={`${API}`}>
         <img className="logo-image" src="images/logo 11.png" alt="logo" />
       </a>
       <div className="title">
