@@ -12,8 +12,7 @@ const flightSchema = new Schema({
     arrivalTime: String,
     departureAirport: String,
     arrivalAirport: String,
-    currentNumberOfPassengers: Number,
-    passengerLimit: Number
+    pilot: String
 });
 
 const Flight = mongoose.model('Flight', flightSchema, 'Flights');
