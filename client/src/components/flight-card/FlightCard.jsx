@@ -47,7 +47,7 @@ export const FlightCard = (props) => {
     }
 
     return (
-        <div key={props.flight._id} className="flight-card">            
+        <div key={props.flight._id} className="flight-card">    
           <div className="flight-info">                         
             <div className="flightnumber"><p>Flight# {props.flight.flightNumber}</p></div>
             {/*<div className="flightnumber"><p><strong>Flight# </strong>{flight.flightNumber}</p></div>*/}

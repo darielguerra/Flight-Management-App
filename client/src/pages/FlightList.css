@@ -58,8 +58,7 @@ html, body {
     height: 14.5rem;
     margin-bottom: 5rem;
     border-bottom: 7px solid var(--secondary-dark2-color);
-    display: flex;
- 
+    display: flex; 
 }
 
 .flight {
@@ -167,7 +166,8 @@ html, body {
 
 .edit:hover{
     /*background-color: #9dbcfa;*/
-    background-color: #b9d0ff7a;
+    /*background-color: #b9d0ff7a; last one*/
+    background-color: #d5d5da;
     cursor: pointer;
 }
 
@@ -186,9 +186,10 @@ html, body {
 
 .delete:hover {
     /*background-color: #ff9090;*/
-    background-color: #fbbfbf;
+    /*background-color: #fbbfbf; last one*/
+    background-color: #ff777778;
     cursor: pointer;
-    color: #450000;
+    color: #6d2323;
 }
 
 .bottom-margin {

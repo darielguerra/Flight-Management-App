@@ -10,8 +10,12 @@ const flightSchema = new Schema({
     arrivalDate: String,
     departureTime: String,
     arrivalTime: String,
+    departureAirport: String,
+    arrivalAirport: String,
+    /*
     departureAirport: [{ type: Schema.Types.ObjectId, ref: 'Airport' }],
     arrivalAirport: [{ type: Schema.Types.ObjectId, ref: 'Airport' }],
+    */
     pilot: [{ type: Schema.Types.ObjectId, ref: 'Pilot' }]
 });
 
