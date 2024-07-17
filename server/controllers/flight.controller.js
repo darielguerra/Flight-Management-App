@@ -40,7 +40,7 @@ const updateAFlight = async ({flightNumber, departureDate, arrivalDate, departur
             flightNumber, departureDate, arrivalDate, departureTime, 
             arrivalTime, departureAirport, arrivalAirport, pilot
         }
-        );
+    );
     if (flight == null) {
         throw `no flight with a flight number ${flightNumber} exists`
     }

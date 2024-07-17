@@ -2,9 +2,20 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const airportSchema = new Schema({
-     code: String,
-     city: String,
-     state: String
+     code: {
+          type: String,
+          required: true,
+          min: 3,
+          max: 3
+      },
+     city: {
+          type: String,
+          required: true
+      },
+     state: {
+          type: String,
+          required: true
+      }
 });
 
 const Airport = mongoose.model('Airport', airportSchema, 'Airports');

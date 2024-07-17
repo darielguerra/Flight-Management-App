@@ -1,6 +1,6 @@
-require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config();
 const logger = require('./middleware/logger');
 
 const cors = require('cors'); // Cross Origin Resource Sharing
