@@ -1,6 +1,7 @@
+import axios from 'axios';
+import { API } from "../App"
 import { useRef } from "react";
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import './CreateAFlight.css';
 
 export const CreateAFlight = () => {
@@ -19,7 +20,7 @@ export const CreateAFlight = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            await axios.post('http://localhost:8085/flights', 
+            await axios.post(`${API}/flights`, 
                             { flightNumber: flightNumberRef.current.value,
                                 departureDate: departureDateRef.current.value,
                                 arrivalDate: arrivalDateRef.current.value,

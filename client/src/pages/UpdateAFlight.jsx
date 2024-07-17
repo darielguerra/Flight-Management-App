@@ -1,6 +1,7 @@
+import axios from 'axios';
+import { API } from "../App"
 import { useRef } from "react";
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import './UpdateAFlight.css';
 
 export const UpdateAFlight = (flightNumber) => {
@@ -20,7 +21,7 @@ export const UpdateAFlight = (flightNumber) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            await axios.put('http://localhost:8085/flights/' + flightNumber, 
+            await axios.put(`${API}/flights/` + flightNumber, 
             {
                 flightNumber: flightNumberRef.current.value,
                 departureDate: departureDateRef.current.value,
