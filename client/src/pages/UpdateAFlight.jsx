@@ -4,7 +4,29 @@ import { useRef } from "react";
 import { useNavigate } from 'react-router-dom';
 import './UpdateAFlight.css';
 
-export const UpdateAFlight = (flightNumber) => {
+import { useLocation } from "react-router-dom";
+
+export const UpdateAFlight = (props) => {
+
+    const location = useLocation();
+    console.log(location);
+    const flightNumber = location.state;
+    console.log(flightNumber);
+
+
+    //const { flightNumber } = this.props.location.state;
+    //const { state } = props.location;
+    //const flightNumber = state ? state.flightNumber : null;
+
+    //const location = useLocation();
+    //const { state } = location;
+    //const { state } = useLocation();
+    //console.log(state);
+    //const flightNumber = state ? state.flightNumber : null;
+    //const { flightNumber } = props.state;
+
+    //const location = useLocation();
+    //const { flightNumber } = location.props.flightNumber;
 
     const flightNumberRef = useRef(); 
     const departureDateRef = useRef();
@@ -17,11 +39,14 @@ export const UpdateAFlight = (flightNumber) => {
     const passengerLimitRef = useRef();
     const navigate = useNavigate();
 
-    //connects to the back end when submitted
+    //connects to the backend when submitted
     const handleSubmit = async (event) => {
+        console.log(flightNumber);
+        //console.log(state);
+        //console.log(location);
         event.preventDefault();
         try {
-            await axios.put(`${API}/flights/` + flightNumber, 
+            await axios.put(`${API}/flights/${flightNumber}`, 
             {
                 flightNumber: flightNumberRef.current.value,
                 departureDate: departureDateRef.current.value,
@@ -34,7 +59,7 @@ export const UpdateAFlight = (flightNumber) => {
                 passengerLimit: passengerLimitRef.current.value 
             });
         navigate('../', {replace: true});            
-        console.log(`flight number with id ${flightNumber} updated`);
+        //console.log(`flight number with id ${flightNumber} updated`);
         alert("Flight updated");        
         } catch (error) {
                 console.log('Something Went Wrong');
@@ -43,11 +68,10 @@ export const UpdateAFlight = (flightNumber) => {
 
     return (
         <>
-        <html>
-        <div class="title"><h1>Update A Flight</h1></div>
+        <div className="title"><h1>Update A Flight</h1></div>
 
         <form className="Form" onSubmit={handleSubmit} >
-            <div class="grid-container">
+            <div className="grid-container">
             
                 <div class="item">
                     <label class="flightnumber-label" htmlFor="flightnumber">Flight Number</label>
@@ -60,7 +84,7 @@ export const UpdateAFlight = (flightNumber) => {
                 </div>
              
                 <div class="item">
-                <div classNamme ="col-lg-2">
+                <div className ="col-lg-2">
                     <label htmlFor="arrivalDate">Arrival Date</label>
                     <input id="arrivalDate" type="Date" placeholder="Arrival Date" ref={arrivalDateRef} />
                 </div>
@@ -112,7 +136,6 @@ export const UpdateAFlight = (flightNumber) => {
                
                 </div>
             </form>
-            </html>
         </>
     );
 }

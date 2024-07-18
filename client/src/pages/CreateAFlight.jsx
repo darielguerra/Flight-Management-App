@@ -39,7 +39,6 @@ export const CreateAFlight = () => {
 
     return (
         <>
-        <html>
         <div class="backgroun">
         <div class="title"><h1>Create A Flight</h1></div>
 
@@ -110,7 +109,6 @@ export const CreateAFlight = () => {
                 </div>
             </form>
             </div>
-            </html>
         </>
     );
 }

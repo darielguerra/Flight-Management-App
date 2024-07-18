@@ -7,8 +7,9 @@ import '../../pages/FlightList.css';
 
 export const FlightCard = (props) => {
     
-  
+    const { flightNumber } = props.flight.flightNumber;
     console.log(props.flight.flightNumber);
+    //const { flightNumber } = this.props.flightNumber;
 
     const handleDelete = (key) => {
       axios.delete(`${API}/flights/${key}`)
@@ -72,7 +73,10 @@ export const FlightCard = (props) => {
             </div>                   
           </div>      
           <div className="flight-buttons">
-            <button className="btn edit"><Link to={"/updateaflight/"+props.flight.flightNumber } className="update-text"><EditIcon /></Link></button>
+          <button className="btn edit"><Link to={`/updateaflight/${props.flight.flightNumber}`} state={props.flight.flightNumber}  className="update-text"><EditIcon /></Link></button>
+            {/*<button className="btn edit"><Link to={{ pathname:`/updateaflight/${props.flight.flightNumber}`, state:{flightNumber} }} className="update-text"><EditIcon /></Link></button>*/}
+            {/*<Link to={"/updateaflight/"+props.flight.flightNumber }*/}
+            {/*<button className="btn edit"><Link to={"/updateaflight/"+flightNumber } className="update-text"><EditIcon /></Link></button>*/}
             <button onClick={() => handleDelete(props.flight.flightNumber)} className="btn delete">X</button>                    
           </div>                       
         </div>
