@@ -6,27 +6,15 @@ import './UpdateAFlight.css';
 
 import { useLocation } from "react-router-dom";
 
-export const UpdateAFlight = (props) => {
+export const UpdateAFlight = () => {
+
+    //alt way of passing flightNumber would be to recieve 
+    //flightNumber props sent from the commentend out flightCard link
+    //that update work but when console logged show a blank flightNumber obect
 
     const location = useLocation();
-    console.log(location);
     const flightNumber = location.state;
-    console.log(flightNumber);
-
-
-    //const { flightNumber } = this.props.location.state;
-    //const { state } = props.location;
-    //const flightNumber = state ? state.flightNumber : null;
-
-    //const location = useLocation();
-    //const { state } = location;
-    //const { state } = useLocation();
-    //console.log(state);
-    //const flightNumber = state ? state.flightNumber : null;
-    //const { flightNumber } = props.state;
-
-    //const location = useLocation();
-    //const { flightNumber } = location.props.flightNumber;
+    console.log("updating flightNumber: " + flightNumber);    
 
     const flightNumberRef = useRef(); 
     const departureDateRef = useRef();
@@ -42,8 +30,6 @@ export const UpdateAFlight = (props) => {
     //connects to the backend when submitted
     const handleSubmit = async (event) => {
         console.log(flightNumber);
-        //console.log(state);
-        //console.log(location);
         event.preventDefault();
         try {
             await axios.put(`${API}/flights/${flightNumber}`, 
@@ -60,7 +46,7 @@ export const UpdateAFlight = (props) => {
             });
         navigate('../', {replace: true});            
         //console.log(`flight number with id ${flightNumber} updated`);
-        alert("Flight updated");        
+        //alert("Flight updated");        
         } catch (error) {
                 console.log('Something Went Wrong');
             }
@@ -73,66 +59,66 @@ export const UpdateAFlight = (props) => {
         <form className="Form" onSubmit={handleSubmit} >
             <div className="grid-container">
             
-                <div class="item">
-                    <label class="flightnumber-label" htmlFor="flightnumber">Flight Number</label>
+                <div className="item">
+                    <label className="flightnumber-label" htmlFor="flightnumber">Flight Number</label>
                     <input id="flightnumber" type="text" placeholder="Flight Number" ref={flightNumberRef} />
                 </div>
 
-                <div class="item">
-                    <label class="departuredate-label" htmlFor="departureDate">Departure Date</label>
+                <div className="item">
+                    <label className="departuredate-label" htmlFor="departureDate">Departure Date</label>
                     <input id="departureDate" type="Date" placeholder="Departure Date" ref={departureDateRef} />
                 </div>
              
-                <div class="item">
+                <div className="item">
                 <div className ="col-lg-2">
                     <label htmlFor="arrivalDate">Arrival Date</label>
                     <input id="arrivalDate" type="Date" placeholder="Arrival Date" ref={arrivalDateRef} />
                 </div>
                 </div>
                 
-                <div class="item">
-                <div class ="col-lg-4">
+                <div className="item">
+                <div className ="col-lg-4">
                     <label htmlFor="departureTime">Departure Time</label>
                     <input id="departureTime" type="time" placeholder="Departure Time" ref={departureTimeRef} />
                 </div> 
                 </div>
                 
-                <div class="item">             
-                <div class ="col-lg-4">
+                <div className="item">             
+                <div className ="col-lg-4">
                     <label htmlFor="arrivalTime">Arrival Time</label>
                     <input id="arrivalTime" type="time" placeholder="Arrival Time" ref={arrivalTimeRef} />
                 </div>
                 </div>
                              
-                <div class="item">
-                <div class ="col-lg-3">
+                <div className="item">
+                <div className ="col-lg-3">
                     <label htmlFor="departureAirport">Departure Airport</label>
                     <input id="departureAirport" type="text" placeholder="Departure Airport" ref={departureAirportRef} />
                 </div>
                 </div>
 
-                <div class="item">
-                <div class ="col-lg-3">
+                <div className="item">
+                <div className ="col-lg-3">
                     <label htmlFor="arrivalAirport">Arrival Airport</label>
                     <input id="arrivalAirport" type="text" placeholder="Arrival Airport" ref={arrivalAirportRef} />
                 </div>
                 </div>
 
-                <div class="item"> 
-                <div class ="col-lg-3">
+                <div className="item"> 
+                <div className ="col-lg-3">
                 <label htmlFor="currentNumberOfPassenger">Current Number Of Passengers</label>
                 <input id="currentNumberOfPassenger" type="number" placeholder="Current Number Of Passengers" ref={currentNumberOfPassengerRef} />
                 </div>
                 </div>
 
-                <div class="item">
-                <div class ="col-lg-3">
+                <div className="item">
+                <div className ="col-lg-3">
                     <label htmlFor="passengerLimit">Passenger Limit</label>
                     <input id="passengerLimit" type="number" placeholder="Passenger Limit" ref={passengerLimitRef} />
                 </div>
                 </div>
 
-                <input class="add" type="submit" value="UPDATE" />
+                <input className="add" type="submit" value="UPDATE" />
                
                 </div>
             </form>
