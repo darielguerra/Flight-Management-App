@@ -9,10 +9,14 @@ export const FlightList = () => {
     const [flights, setFlights] = useState([]);
   
     useEffect(() => {
-        axios.get(`${API}/flights`)
-            .then(res => setFlights(res.data));
+        getFlights();
     }, []);
 
+    const getFlights = () => {
+      axios.get(`${API}/flights`)
+            .then(res => setFlights(res.data));
+    }
+ 
     return (
       <div className="page" >        
       
@@ -23,7 +27,7 @@ export const FlightList = () => {
       <div className="flights">
         {flights.map((flight, index) => {
           return (
-             <FlightCard flight={flight} key={flight._id}/>
+             <FlightCard flight={flight} key={flight._id} refresh={getFlights}/>
           );
         })}
       </div>

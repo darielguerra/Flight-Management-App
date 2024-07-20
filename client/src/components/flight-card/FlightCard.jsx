@@ -5,7 +5,7 @@ import { EditIcon } from '../../assets/svg-icons/EditIcon';
 import { ArrowIcon } from '../../assets/svg-icons/ArrowIcon';
 import '../../pages/FlightList.css';
 
-export const FlightCard = (props) => {
+export const FlightCard = (props,{refresh}) => {
     
     //const { flightNumber } = props.flight.flightNumber;
     console.log(props.flight.flightNumber);
