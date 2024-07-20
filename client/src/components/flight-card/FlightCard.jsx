@@ -5,22 +5,21 @@ import { EditIcon } from '../../assets/svg-icons/EditIcon';
 import { ArrowIcon } from '../../assets/svg-icons/ArrowIcon';
 import '../../pages/FlightList.css';
 
-export const FlightCard = (props,{refresh}) => {
+export const FlightCard = (props) => {
     
     //const { flightNumber } = props.flight.flightNumber;
     console.log(props.flight.flightNumber);
     //const { flightNumber } = this.props.flightNumber;
 
-    const handleDelete = (key) => {
-      axios.delete(`${API}/flights/${key}`)
-      .then (res => {
-          if ( res.status === "201") {
-              alert("deleted");
-              this.loadData();
-          } else {               
-          }
-      });
-  }
+    const handleDelete = async (flightNumber) => {
+      try{
+        await axios.delete(`${API}/flights/${flightNumber}`);
+        props.refresh();
+      }
+      catch (err) {
+        console.log(err);
+      }
+    }
 
     // Format date using the slice method, original format: yyyy-mm-dd
     // slice syntax: slice(indexStart) or slice(indexStart, indexEnd) */    
