@@ -7,18 +7,24 @@ import '../../pages/FlightList.css';
 
 export const FlightCard = (props) => {
     
-    //const { flightNumber } = props.flight.flightNumber;
     console.log(props.flight.flightNumber);
-    //const { flightNumber } = this.props.flightNumber;
-
+   
     const handleDelete = async (flightNumber) => {
-      try{
-        await axios.delete(`${API}/flights/${flightNumber}`);
-        props.refresh();
-      }
-      catch (err) {
-        console.log(err);
-      }
+      // deltion prompt
+      //const isConfirmed = window.confirm("Are you sure you want to delete this flight?");
+      //if (isConfirmed) {
+        try{
+          await axios.delete(`${API}/flights/${flightNumber}`);
+          props.refresh(); //calls FlightList's getFlights
+          return (
+            <div className="popup">HEYYY</div>
+          )
+        }
+        catch (err) {
+          console.log(err);
+        }
+        // else {
+        console.log("Stopped deletetion")
     }
 
     // Format date using the slice method, original format: yyyy-mm-dd
