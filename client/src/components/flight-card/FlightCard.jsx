@@ -1,13 +1,17 @@
 import axios from 'axios';
 import { API } from "../../App"
+import { useState } from "react";
 import { Link } from 'react-router-dom';
 import { EditIcon } from '../../assets/svg-icons/EditIcon';
 import { ArrowIcon } from '../../assets/svg-icons/ArrowIcon';
+import { DeleteModal } from '../delete-modal/DeleteModal';
 import '../../pages/FlightList.css';
 
 export const FlightCard = (props) => {
     
     console.log(props.flight.flightNumber);
+
+    const [deleteModal, setDeleteModal] = useState(false);
    
     const handleDelete = async (flightNumber) => {
       // deltion prompt
@@ -81,7 +85,12 @@ export const FlightCard = (props) => {
              {/*Alt way of passing flightNumber through props:*/}
              {/*<button className="btn edit"><Link to={"/updateaflight/"+props.flight.flightNumber} className="update-text"><EditIcon /></Link></button>*/}
              <button className="btn edit"><Link to={`/updateaflight/${props.flight.flightNumber}`} state={props.flight.flightNumber}  className="update-text"><EditIcon /></Link></button>
-             <button onClick={() => handleDelete(props.flight.flightNumber)} className="btn delete">X</button>                    
+             {/*<button onClick={() => handleDelete(props.flight.flightNumber)} className="btn delete">X</button>*/}
+
+             <button onClick={() => setDeleteModal(true)} className="btn delete">X</button>
+             {deleteModal && <DeleteModal flightNumber={props.flight.flightNumber} closeModal={setDeleteModal}/> }
+
+
           </div>                       
         </div>
       )
