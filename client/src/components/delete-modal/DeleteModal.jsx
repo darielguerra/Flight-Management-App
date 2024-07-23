@@ -9,7 +9,7 @@ export const DeleteModal = (props) => {
                   <p>Are you sure you want to delete <strong>Flight {props.flightNumber}</strong></p>
               </div>
               <div className="modal-buttons">
-                  <button className="button delete-btn">Delete</button>
+                  <button onClick={() => props.delete(props.flightNumber)}className="button delete-btn">Delete</button>
                   <button onClick={() => props.closeModal(false)}className="button cancel-btn">Cancel</button>
               </div>
           </div>

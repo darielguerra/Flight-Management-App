@@ -88,7 +88,7 @@ export const FlightCard = (props) => {
              {/*<button onClick={() => handleDelete(props.flight.flightNumber)} className="btn delete">X</button>*/}
 
              <button onClick={() => setDeleteModal(true)} className="btn delete">X</button>
-             {deleteModal && <DeleteModal flightNumber={props.flight.flightNumber} closeModal={setDeleteModal}/> }
+             {deleteModal && <DeleteModal flightNumber={props.flight.flightNumber} closeModal={setDeleteModal} delete={handleDelete} />}
 
 
           </div>                       
