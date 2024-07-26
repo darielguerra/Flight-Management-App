@@ -7,8 +7,7 @@ const getAllFlights = async () => {
 
 // create flight
 const createFlight = async ({flightNumber, departureDate, arrivalDate, departureTime, 
-    arrivalTime, departureAirport, arrivalAirport, currentNumberOfPassenger,
-    passengerLimit}) => {
+    arrivalTime, departureAirport, arrivalAirport}) => {
     try {
         const flight = new Flight({
             flightNumber,

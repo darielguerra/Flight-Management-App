@@ -112,60 +112,16 @@ label {
     margin-right: 12px;
 }
 
+.form-bottom {
+    height: 8rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;    
+}
+
 .add-flight {
-    margin-top: 4rem;
-    margin-left: 28.4rem;
     width: 90px;
     background-color: #e8dad5;
     border: 1px solid black;
+    border-radius: 3px;
 }
-
-
-/*
-title { 
-    text-align: center;
-}
-
-.myfForm {
-    justify-content: center;
-    padding-left: 50px;
-    background-color: var(--primary-dark-color);
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    gap: 10;
-}
-s
-.flightnumber-label {    
-     margin-top: 20px;
-}
-
-.departuredate-label {
-    margin-bottom: 20px;
-}
-
-.item {
-    margin-top: 70px;
-    margin-left: 40px;
-    margin-right: 40px;
-   
-    align-items: center;
-    justify-content: center;
-    color:white;
-    font-size: 20px;
-    height: 3em; *//* 3 times the height of font-size. AKA 90px height *//*
-}
-
-.add {
-    height: 25px;
-    width: 150px;
-    margin-top: 180px;
-    margin-right: 2000px;
-    margin-bottom: 50px;
-    color: rgb(52, 80, 172);
-    font-weight: bold;
-}
-
-*/

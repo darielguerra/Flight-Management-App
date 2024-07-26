@@ -13,11 +13,10 @@ export const CreateAFlight = () => {
     const arrivalTimeRef = useRef();
     const departureAirportRef = useRef();
     const arrivalAirportRef = useRef();
-    const currentNumberOfPassengerRef = useRef();
-    const passengerLimitRef = useRef();
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
+      console.log(flightNumberRef.current.value);
         event.preventDefault();
         try {
             await axios.post(`${API}/flights`, 
@@ -27,9 +26,7 @@ export const CreateAFlight = () => {
                                 departureTime: departureTimeRef.current.value,
                                 arrivalTime: arrivalTimeRef.current.value,
                                 departureAirport: departureAirportRef.current.value,
-                                arrivalAirport: arrivalAirportRef.current.value,
-                                currentNumberOfPassenger: currentNumberOfPassengerRef.current.value,
-                                passengerLimit: passengerLimitRef.current.value     
+                                arrivalAirport: arrivalAirportRef.current.value
                             });
             navigate('../', {replace: true});
         } catch (error) {
@@ -92,15 +89,15 @@ export const CreateAFlight = () => {
                   <div className="item arrival-Time">             
                     <label className="arrivalTime-label">Arrival Time</label>
                     <input className="arrivalTime-input" type="time" placeholder="Arrival Time" ref={arrivalTimeRef} />
-                  </div>    
-
+                  </div>
                 </div> 
-
             </div> 
 
-              <input className="add-flight" type="submit" value="ADD" />   
-      
-           </form>
+            <div className="form-bottom">
+              <button className="add-flight">ADD</button>   
+            </div>
+
+          </form>
         </div>
       </div>
    
