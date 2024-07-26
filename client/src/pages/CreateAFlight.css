@@ -1,7 +1,127 @@
-.backgroun {
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
     background-color: var(--primary-dark-color);
 }
 
+.p {
+    border: 1px solid black;
+}
+
+.page-layout {
+    display: flex;
+    justify-content: space-evenly; /*centers horizontally*/
+    /*align-items: center; centers vertically*/
+}
+
+
+.flight-info-card {
+    margin-top: 3.8rem;
+    width: 65%;
+    height: 33rem;
+    background-color: var(--primary-light-color);
+    border-bottom: 7px solid var(--secondary-dark2-color);
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+
+.flight-number {
+   height: 2.1rem;
+   font-size: 45px;
+   background-color: var(--tertiary-dark-color);
+   font-family: var(--font-family-main);
+   font-weight: 500;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.flight-number label {
+    color: var(--primary-light-color);
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.flightNumber-input {
+    height: 19px;
+    width: 60px;
+    font-size: 15px;
+}
+
+.flight-titles {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titles {
+    width: 50%;
+    text-align: center;
+}
+
+.flight-information {
+    display: flex;
+}
+
+.departure {
+    width: 50%;
+}
+
+.arrival {
+    
+}
+
+.form {
+    height: 100%;
+    width: 100%;
+}
+
+
+.info-column {
+    width: 50%;
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+
+.item {  
+    /*border: 1px solid black;*/
+    margin-left: 7rem;
+}
+
+.center-line {
+    width: 0px;
+    border-right: 1px solid black;    
+    height: 240px;
+    margin-top: 25px;
+}
+ 
+
+label {
+    color: black;
+    font-size: 18px;
+    font-family: var(--font-family-main);
+    font-weight: 500;
+    margin-right: 12px;
+}
+
+.add-flight {
+    margin-top: 4rem;
+    margin-left: 28.4rem;
+    width: 90px;
+    background-color: #e8dad5;
+    border: 1px solid black;
+}
+
+
+/*
 title { 
     text-align: center;
 }
@@ -35,7 +155,7 @@ s
     justify-content: center;
     color:white;
     font-size: 20px;
-    height: 3em; /* 3 times the height of font-size. AKA 90px height */
+    height: 3em; *//* 3 times the height of font-size. AKA 90px height *//*
 }
 
 .add {
@@ -47,3 +167,5 @@ s
     color: rgb(52, 80, 172);
     font-weight: bold;
 }
+
+*/

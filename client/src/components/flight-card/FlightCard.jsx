@@ -14,21 +14,13 @@ export const FlightCard = (props) => {
     const [deleteModal, setDeleteModal] = useState(false);
    
     const handleDelete = async (flightNumber) => {
-      // deltion prompt
-      //const isConfirmed = window.confirm("Are you sure you want to delete this flight?");
-      //if (isConfirmed) {
         try{
           await axios.delete(`${API}/flights/${flightNumber}`);
           props.refresh(); //calls FlightList's getFlights
-          return (
-            <div className="popup">HEYYY</div>
-          )
         }
         catch (err) {
           console.log(err);
         }
-        // else {
-        console.log("Stopped deletetion")
     }
 
     // Format date using the slice method, original format: yyyy-mm-dd

@@ -19,20 +19,20 @@ export const FlightList = () => {
  
     return (
       <div className="page" >        
-      
-      <div className="pilots">
-        <div><strong>Pilot:  </strong></div>
-      </div>
-
-      <div className="flights">
-        {flights.map((flight, index) => {
-          return (
-             <FlightCard flight={flight} key={flight._id} refresh={getFlights}/>
-          );
-        })}
-      </div>
-            
+        
+        <div className="pilots">
+          <div><strong>Pilot:  </strong></div>
         </div>
+
+        <div className="flights">
+          {flights.map((flight, index) => {
+            return (
+              <FlightCard flight={flight} key={flight._id} refresh={getFlights}/>
+            );
+          })}
+        </div>
+            
+      </div>
     );
 }
 

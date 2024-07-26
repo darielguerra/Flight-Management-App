@@ -59,59 +59,59 @@ export const UpdateAFlight = () => {
         <form className="Form" onSubmit={handleSubmit} >
             <div className="grid-container">
             
-                <div className="item">
+                <div className="items">
                     <label className="flightnumber-label" htmlFor="flightnumber">Flight Number</label>
                     <input id="flightnumber" type="text" placeholder="Flight Number" ref={flightNumberRef} />
                 </div>
 
-                <div className="item">
+                <div className="items">
                     <label className="departuredate-label" htmlFor="departureDate">Departure Date</label>
                     <input id="departureDate" type="Date" placeholder="Departure Date" ref={departureDateRef} />
                 </div>
              
-                <div className="item">
+                <div className="items">
                 <div className ="col-lg-2">
                     <label htmlFor="arrivalDate">Arrival Date</label>
                     <input id="arrivalDate" type="Date" placeholder="Arrival Date" ref={arrivalDateRef} />
                 </div>
                 </div>
                 
-                <div className="item">
+                <div className="items">
                 <div className ="col-lg-4">
                     <label htmlFor="departureTime">Departure Time</label>
                     <input id="departureTime" type="time" placeholder="Departure Time" ref={departureTimeRef} />
                 </div> 
                 </div>
                 
-                <div className="item">             
+                <div className="items">             
                 <div className ="col-lg-4">
                     <label htmlFor="arrivalTime">Arrival Time</label>
                     <input id="arrivalTime" type="time" placeholder="Arrival Time" ref={arrivalTimeRef} />
                 </div>
                 </div>
                              
-                <div className="item">
+                <div className="items">
                 <div className ="col-lg-3">
                     <label htmlFor="departureAirport">Departure Airport</label>
                     <input id="departureAirport" type="text" placeholder="Departure Airport" ref={departureAirportRef} />
                 </div>
                 </div>
 
-                <div className="item">
+                <div className="items">
                 <div className ="col-lg-3">
                     <label htmlFor="arrivalAirport">Arrival Airport</label>
                     <input id="arrivalAirport" type="text" placeholder="Arrival Airport" ref={arrivalAirportRef} />
                 </div>
                 </div>
 
-                <div className="item"> 
+                <div className="items"> 
                 <div className ="col-lg-3">
                 <label htmlFor="currentNumberOfPassenger">Current Number Of Passengers</label>
                 <input id="currentNumberOfPassenger" type="number" placeholder="Current Number Of Passengers" ref={currentNumberOfPassengerRef} />
                 </div>
                 </div>
 
-                <div className="item">
+                <div className="items">
                 <div className ="col-lg-3">
                     <label htmlFor="passengerLimit">Passenger Limit</label>
                     <input id="passengerLimit" type="number" placeholder="Passenger Limit" ref={passengerLimitRef} />
