@@ -5,6 +5,17 @@ const getAllFlights = async () => {
     return flights;
 } 
 
+// get last flight number
+const getLastFlight = async () => {
+    try {
+        const flight = await Flight.findOne().sort({_id:-1});
+        return flight.flightNumber;
+    }
+    catch (err) {
+        console.error(err);
+    }
+}
+
 // create flight
 const createFlight = async ({flightNumber, departureDate, arrivalDate, departureTime, 
     arrivalTime, departureAirport, arrivalAirport}) => {
@@ -61,5 +72,5 @@ const deleteAFlight = async (flightNum) => {
     }
 }
 
-module.exports = { createFlight, getAllFlights, updateAFlight, deleteAFlight };
+module.exports = { createFlight, getAllFlights, getLastFlight, updateAFlight, deleteAFlight };
 

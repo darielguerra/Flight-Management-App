@@ -7,7 +7,7 @@ const cors = require('cors'); // Cross Origin Resource Sharing
 console.log(process.env.MONGO_URI);
 
 const app = express();
-const PORT = process.env.PORT || 8080; // Default to 8080 if not in .env
+const PORT = process.env.PORT || 8085; // Default to 8080 if not in .env
 app.use(express.json()); // This is middleware that auto parses JSON into JS objects between each HTTP request and the endpoint
 app.use(cors()); // Allow all traffic
 app.use(logger);
