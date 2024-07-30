@@ -6,7 +6,7 @@ export const DeleteModal = (props) => {
         <div  onClick={() => props.closeModal(false)} className="overlay">
           <div className="modal-container">
               <div className="modal-title">
-                  <p>Are you sure you want to delete <strong>Flight {props.flightNumber}</strong></p>
+                  <p>Are you sure you want to delete <strong>Flight# {props.flightNumber}</strong>?</p>
               </div>
               <div className="modal-buttons">
                   <button onClick={() => props.delete(props.flightNumber)}className="button delete-btn">Delete</button>
