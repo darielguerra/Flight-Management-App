@@ -11,7 +11,9 @@ router.get('/', async (req, res) => {
 // get last flight number
 router.get('/last', async (req, res) => {
     const flightNumber= await getLastFlight();
-    res.json(flightNumber);
+    res.json(JSON.stringify(flightNumber));
+    //res.json(parseInt(flightNumber));  doens't work
+    //json.parse(flightNumber);
 })
 
 // create a flight

@@ -3,11 +3,11 @@ import { API } from "../App"
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import './CreateAFlight.css';
+//import { set } from 'mongoose';
 
 export const CreateAFlight = () => {
     
-    const [flightNumber, setFlightNumber] = useState();
-    let flightNumberNew = flightNumber + 1; 
+    const [flightNumber, setFlightNumber] = useState(0);
     const departureDateRef = useRef();
     const arrivalDateRef = useRef();
     const departureTimeRef = useRef();
@@ -18,21 +18,24 @@ export const CreateAFlight = () => {
 
     useEffect(() => {
       getLastFlight();
-    }, []);
+    }, []);    
 
-    const getLastFlight = () => {
-      axios.get(`${API}/flights/last`)
-          .then(res => setFlightNumber(res.data));
-          console.log(flightNumber);
-          setFlightNumber(flightNumber => flightNumber + 1);          
-    }
- 
+    const getLastFlight = async () => {
+      const res = await axios.get(`${API}/flights/last`);
+       if (res.data.length === 0) { //if empty because there are no records
+        setFlightNumber(101); 
+      }
+      else {
+        setFlightNumber(JSON.parse(res.data) + 1); //increment by 1
+      }
+     }
+
     const handleSubmit = async (event) => {
-      console.log(flightNumberNew);
+      console.log(flightNumber);
         event.preventDefault();
         try {
             await axios.post(`${API}/flights`, 
-                            { flightNumber: flightNumberNew,
+                            { flightNumber: flightNumber,
                                 departureDate: departureDateRef.current.value,
                                 arrivalDate: arrivalDateRef.current.value,
                                 departureTime: departureTimeRef.current.value,
@@ -54,8 +57,7 @@ export const CreateAFlight = () => {
           <form className="form" onSubmit={handleSubmit} >           
         
             <div className="flight-number">
-              <label className="flightNumber-label">Flight# {flightNumberNew}</label>
-              {/*<input className="flightNumber-input" type="text" placeholder="" ref={flightNumberRef} />*/}
+              <label className="flightNumber-label">Flight# {flightNumber}</label>
             </div>
 
             <div className="flight-titles">
