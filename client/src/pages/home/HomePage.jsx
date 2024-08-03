@@ -1,10 +1,10 @@
 import axios from 'axios';
-import { API } from "../App"
+import { API } from "../../App"
 import { useState, useEffect } from "react";
-import { FlightCard } from '../components/flight-card/FlightCard';
-import './FlightList.css';
+import { FlightCard } from '../../components/flight-card/FlightCard';
+import './HomePage.css';
 
-export const FlightList = () => {  
+export const HomePage = () => {  
 
     const [flights, setFlights] = useState([]);
   

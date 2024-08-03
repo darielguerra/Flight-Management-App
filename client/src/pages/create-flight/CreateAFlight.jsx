@@ -1,9 +1,8 @@
 import axios from 'axios';
-import { API } from "../App"
+import { API } from "../../App"
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import './CreateAFlight.css';
-//import { set } from 'mongoose';
 
 export const CreateAFlight = () => {
     

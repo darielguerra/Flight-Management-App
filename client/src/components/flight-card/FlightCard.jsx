@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { EditIcon } from '../../assets/svg-icons/EditIcon';
 import { ArrowIcon } from '../../assets/svg-icons/ArrowIcon';
 import { DeleteModal } from '../delete-modal/DeleteModal';
-import '../../pages/FlightList.css';
+import '../../pages/home/HomePage.css';
 
 export const FlightCard = (props) => {
     
