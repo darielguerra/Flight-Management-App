@@ -3,7 +3,7 @@ import { API } from "../../App"
 import { useRef } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
-import './UpdateAFlight.css';
+import '.././Create-UpdateAFlight.css';
 
 export const UpdateAFlight = () => {
 
@@ -51,76 +51,71 @@ export const UpdateAFlight = () => {
             }
         }
 
-    return (
-        <>
-        <div className="title"><h1>Update A Flight</h1></div>
-
-        <form className="Form" onSubmit={handleSubmit} >
-            <div className="grid-container">
+        return (   
+          <div className="page-layout">
             
-                <div className="items">
-                    <label className="flightnumber-label" htmlFor="flightnumber">Flight Number</label>
-                    <input id="flightnumber" type="text" placeholder="Flight Number" ref={flightNumberRef} />
+            <div className="flight-info-card">
+    
+              <form className="form" onSubmit={handleSubmit} >           
+            
+                <div className="flight-number-upateflight">
+                  <label className="flightNumber-label">Flight# {flightNumber}</label>
                 </div>
-
-                <div className="items">
-                    <label className="departuredate-label" htmlFor="departureDate">Departure Date</label>
-                    <input id="departureDate" type="Date" placeholder="Departure Date" ref={departureDateRef} />
+    
+                <div className="flight-titles">
+                  <div className="titles">
+                    <h2>Departing from:</h2>
+                  </div>
+                  <div className="titles">
+                    <h2>Arriving from:</h2>
+                  </div>
                 </div>
-             
-                <div className="items">
-                <div className ="col-lg-2">
-                    <label htmlFor="arrivalDate">Arrival Date</label>
-                    <input id="arrivalDate" type="Date" placeholder="Arrival Date" ref={arrivalDateRef} />
-                </div>
-                </div>
-                
-                <div className="items">
-                <div className ="col-lg-4">
-                    <label htmlFor="departureTime">Departure Time</label>
-                    <input id="departureTime" type="time" placeholder="Departure Time" ref={departureTimeRef} />
+    
+                <div className="flight-information">
+    
+                    <div className="info-column departure">  
+    
+                      <div className="item departure-airport">
+                        <label className="departureAirport-label">Departure Airport</label>
+                        <input className="departureAirport-input" type="text" placeholder="Departure Airport" ref={departureAirportRef} />
+                      </div>
+                      <div className="item departure-date">
+                        <label className="departureDate-label">Departure Date</label>
+                        <input className="departureDate-input" type="Date" placeholder="Departure Date" ref={departureDateRef} />
+                      </div>
+                      <div className="item departure-time">
+                         <label className="departureTime-label">Departure Time</label>
+                         <input className="departureTime-input" type="time" placeholder="Departure Time" ref={departureTimeRef} />
+                      </div>
+                      
+                    </div>     
+    
+                    <div className="center-line"></div>
+    
+                    <div className="info-column arrival">
+    
+                      <div className="item arrival-airport">
+                        <label className="arrivalAirport-label">Arrival Airport</label>
+                        <input className="arrivalAirport" type="text" placeholder="Arrival Airport" ref={arrivalAirportRef} />
+                      </div>
+                      <div className="item arrival-date">
+                        <label className="arrivalDate-label">Arrival Date</label>
+                        <input className="arrivalDate-input" type="Date" placeholder="Arrival Date" ref={arrivalDateRef} />
+                      </div>
+                      <div className="item arrival-Time">             
+                        <label className="arrivalTime-label">Arrival Time</label>
+                        <input className="arrivalTime-input" type="time" placeholder="Arrival Time" ref={arrivalTimeRef} />
+                      </div>
+                    </div> 
                 </div> 
+    
+                <div className="form-bottom">
+                  <button className="add-flight">ADD</button>   
                 </div>
-                
-                <div className="items">             
-                <div className ="col-lg-4">
-                    <label htmlFor="arrivalTime">Arrival Time</label>
-                    <input id="arrivalTime" type="time" placeholder="Arrival Time" ref={arrivalTimeRef} />
-                </div>
-                </div>
-                             
-                <div className="items">
-                <div className ="col-lg-3">
-                    <label htmlFor="departureAirport">Departure Airport</label>
-                    <input id="departureAirport" type="text" placeholder="Departure Airport" ref={departureAirportRef} />
-                </div>
-                </div>
-
-                <div className="items">
-                <div className ="col-lg-3">
-                    <label htmlFor="arrivalAirport">Arrival Airport</label>
-                    <input id="arrivalAirport" type="text" placeholder="Arrival Airport" ref={arrivalAirportRef} />
-                </div>
-                </div>
-
-                <div className="items"> 
-                <div className ="col-lg-3">
-                <label htmlFor="currentNumberOfPassenger">Current Number Of Passengers</label>
-                <input id="currentNumberOfPassenger" type="number" placeholder="Current Number Of Passengers" ref={currentNumberOfPassengerRef} />
-                </div>
-                </div>
-
-                <div className="items">
-                <div className ="col-lg-3">
-                    <label htmlFor="passengerLimit">Passenger Limit</label>
-                    <input id="passengerLimit" type="number" placeholder="Passenger Limit" ref={passengerLimitRef} />
-                </div>
-                </div>
-
-                <input className="add" type="submit" value="UPDATE" />
-               
-                </div>
-            </form>
-        </>
-    );
+    
+              </form>
+            </div>
+          </div>
+       
+        );
 }

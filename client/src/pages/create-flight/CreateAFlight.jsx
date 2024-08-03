@@ -2,7 +2,7 @@ import axios from 'axios';
 import { API } from "../../App"
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import './CreateAFlight.css';
+import '.././Create-UpdateAFlight.css';
 
 export const CreateAFlight = () => {
     
@@ -34,14 +34,15 @@ export const CreateAFlight = () => {
         event.preventDefault();
         try {
             await axios.post(`${API}/flights`, 
-                            { flightNumber: flightNumber,
-                                departureDate: departureDateRef.current.value,
-                                arrivalDate: arrivalDateRef.current.value,
-                                departureTime: departureTimeRef.current.value,
-                                arrivalTime: arrivalTimeRef.current.value,
-                                departureAirport: departureAirportRef.current.value,
-                                arrivalAirport: arrivalAirportRef.current.value
-                            });
+            { 
+                flightNumber: flightNumber,
+                departureDate: departureDateRef.current.value,
+                arrivalDate: arrivalDateRef.current.value,
+                departureTime: departureTimeRef.current.value,
+                arrivalTime: arrivalTimeRef.current.value,
+                departureAirport: departureAirportRef.current.value,
+                arrivalAirport: arrivalAirportRef.current.value
+            });
             navigate('../', {replace: true});
         } catch (error) {
             console.log('Something Went Wrong');
