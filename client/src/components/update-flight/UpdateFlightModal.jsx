@@ -2,7 +2,6 @@ import axios from 'axios';
 import { API } from "../../App"
 import { useRef } from "react";
 import { useNavigate } from 'react-router-dom';
-//import '.././././Create-UpdateAFlight.css';
 
 export const UpdateFlightModal = (props) => {
 
