@@ -15,8 +15,6 @@ export const UpdateFlightModal = (props) => {
     const arrivalTimeRef = useRef();
     const departureAirportRef = useRef();
     const arrivalAirportRef = useRef();
-    const currentNumberOfPassengerRef = useRef();
-    const passengerLimitRef = useRef();
     const navigate = useNavigate();
 
     //connects to the backend when submitted
