@@ -99,22 +99,35 @@ html, body {
 }
 
 .airports {
-    margin-left: 3.2rem;
-    width: 7.3rem;
+    margin-top: .1rem;
+    margin-left: 3.5rem;
+    width: 9rem;
     font-family: var(--font-family-main);
     color: var(--secondary-text-color);
     font-weight: 600;
     font-size: 36px;
-    padding-left: 1.8rem;  /*bigger then length of text*/
-    padding-right: 1.8rem;
+    padding-left: 1.5rem;
+   }
+
+.departure-airport {
+  display: flex;
+  height: 2.6rem;
+  margin-top: .1rem;
 }
 
+.departure-airport-name {
+  width: 50%;
+}
 
 .arrow-icon {
+    margin-top: .1rem;
     fill: var(--secondary-text-color);
-    width: 2.2rem;
-    position: relative;
-    top: .3rem;
+    width: 2.2rem;    
+}
+
+.arrival-airport-name {
+  height: .5rem;
+
 }
 
 
@@ -198,6 +211,12 @@ html, body {
 
 .bottom-margin {
     height: 4rem;
+}
+
+.flight-info-card {
+  margin-top: 7.5rem;
+  position: absolute;
+  z-index: 2;
 }
 
 

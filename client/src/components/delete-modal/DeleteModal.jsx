@@ -4,7 +4,7 @@ export const DeleteModal = (props) => {
     return (
       <div className="modal">
         <div  onClick={() => props.closeModal(false)} className="overlay">
-          <div className="modal-container">
+          <div onClick={(e) => e.stopPropagation()} className="modal-container">
               <div className="modal-title">
                   <p>Are you sure you want to delete <strong>Flight# {props.flightNumber}</strong>?</p>
               </div>

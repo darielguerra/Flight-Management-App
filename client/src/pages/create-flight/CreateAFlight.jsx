@@ -52,7 +52,7 @@ export const CreateAFlight = () => {
     return (   
       <div className="page-layout">
         
-        <div className="flight-info-card">
+        <div className="flight-info-card-create">
 
           <form className="form" onSubmit={handleSubmit} >           
         

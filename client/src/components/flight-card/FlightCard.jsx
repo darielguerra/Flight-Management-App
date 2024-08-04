@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 import { EditIcon } from '../../assets/svg-icons/EditIcon';
 import { ArrowIcon } from '../../assets/svg-icons/ArrowIcon';
+import { UpdateFlightModal } from '../update-flight/UpdateFlightModal';
 import { DeleteModal } from '../delete-modal/DeleteModal';
 import '../../pages/home/HomePage.css';
 
@@ -12,6 +13,7 @@ export const FlightCard = (props) => {
     console.log(props.flight.flightNumber);
 
     const [deleteModal, setDeleteModal] = useState(false);
+    const [updateModal, setUpdateModal] = useState(false);
    
     const handleDelete = async (flightNumber) => {
         try{
@@ -54,8 +56,12 @@ export const FlightCard = (props) => {
             <div className="flightnumber"><p>Flight# {props.flight.flightNumber}</p></div>
             {/*<div className="flightnumber"><p><strong>Flight# </strong>{flight.flightNumber}</p></div>*/}
             <div className="flight-details">
-              <div className="airports">{props.flight.departureAirport}<ArrowIcon /><br />
-                {props.flight.arrivalAirport}
+              <div className="airports">
+                <div className="departure-airport">
+                  <div className="departure-airport-name">{props.flight.departureAirport}</div>
+                  <div><ArrowIcon /></div>
+                </div>
+                <div className="arrival-airport-name">{props.flight.arrivalAirport}</div>
               </div>
               <div className="pilot-departure-arrival">
                 <h2>Pilot</h2>
@@ -74,13 +80,12 @@ export const FlightCard = (props) => {
             </div>                   
           </div>      
           <div className="flight-buttons">
-             {/*Alt way of passing flightNumber through props:*/}
-             {/*<button className="btn edit"><Link to={"/updateaflight/"+props.flight.flightNumber} className="update-text"><EditIcon /></Link></button>*/}
-             <button className="btn edit"><Link to={`/updateaflight/${props.flight.flightNumber}`} state={props.flight.flightNumber}  className="update-text"><EditIcon /></Link></button>
-             {/*<button onClick={() => handleDelete(props.flight.flightNumber)} className="btn delete">X</button>*/}
+            {/*<button className="btn edit"><Link to={`/updateaflight/${props.flight.flightNumber}`} state={props.flight.flightNumber}  className="update-text"><EditIcon /></Link></button>*/}
+            <button onClick={() => setUpdateModal(true)} className="btn edit"><EditIcon /></button>
+            {updateModal && <UpdateFlightModal flight={props.flight} closeModal={setUpdateModal} refresh={props.refresh}/>}
 
-             <button onClick={() => setDeleteModal(true)} className="btn delete">X</button>
-             {deleteModal && <DeleteModal flightNumber={props.flight.flightNumber} closeModal={setDeleteModal} delete={handleDelete} />}
+            <button onClick={() => setDeleteModal(true)} className="btn delete">X</button>
+            {deleteModal && <DeleteModal flightNumber={props.flight.flightNumber} closeModal={setDeleteModal} delete={handleDelete} />}
 
 
           </div>                       

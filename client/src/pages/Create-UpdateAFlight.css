@@ -16,7 +16,7 @@ html, body {
     /*align-items: center; centers vertically*/
 }
 
-.flight-info-card {
+.flight-info-card-create {
     margin-top: 3.8rem;
     width: 65%;
     height: 33rem;
@@ -24,6 +24,16 @@ html, body {
     border-bottom: 7px solid var(--secondary-dark2-color);
     display: flex; 
     justify-content: space-evenly;
+}
+
+.flight-info-card-update {
+  margin-top: 7.5rem;
+  width: 65%;
+  height: 33rem;
+  background-color: var(--primary-light-color);
+  border-bottom: 7px solid var(--secondary-dark2-color);
+  display: flex; 
+  justify-content: space-evenly;
 }
 
 .flight-number {
@@ -77,8 +87,14 @@ html, body {
 }
 
 .departure {
-    width: 50%;
+  
 }
+
+
+.departureAirport-input {
+  height: 20px;
+}
+
 
 .arrival {
     
