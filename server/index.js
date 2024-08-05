@@ -14,6 +14,8 @@ app.use(logger);
 
 // router connections
 app.use('/flights', require('./routes/flight.route'));
+app.use('/pilots', require('./routes/pilot.route'));
+app.use('/airports', require('./routes/airport.route'));
 
 app.all('*', (req, res) => {
     res.status(404).send('We don\'t have the resource you\'re looking for.');
