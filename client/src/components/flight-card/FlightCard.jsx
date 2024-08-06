@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { API } from "../../App"
 import { useState } from "react";
-import { Link } from 'react-router-dom';
 import { EditIcon } from '../../assets/svg-icons/EditIcon';
 import { ArrowIcon } from '../../assets/svg-icons/ArrowIcon';
 import { UpdateFlightModal } from '../update-flight/UpdateFlightModal';
@@ -65,7 +64,7 @@ export const FlightCard = (props) => {
               </div>
               <div className="pilot-departure-arrival">
                 <h2>Pilot</h2>
-                Ron Perlman
+                Pete Mitchell
               </div>
               <div className="pilot-departure-arrival">
                 <h2>Departs</h2>

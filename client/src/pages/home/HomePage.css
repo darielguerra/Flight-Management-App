@@ -20,16 +20,7 @@ html, body {
     background-color: var(--primary-dark-color);
 }
 
-.pilots {
-  
-    width: 20%;
-    height: 70rem;
-    margin-top: 3rem;
-    margin-left: 4rem;
-    margin-right: 2rem;
-    color: #305263;
-    background-color: var(--primary-light-color);
-}
+
 
 .page { 
     margin: 0px;
@@ -59,7 +50,7 @@ html, body {
 .flight-card {
     width: 95%;
     background-color: var(--primary-light-color);
-    height: 14.5rem;
+    height: 12rem;
     margin-bottom: 5rem;
     border-bottom: 7px solid var(--secondary-dark2-color);
     display: flex; 
@@ -83,7 +74,7 @@ html, body {
     font-family: var(--font-family-main);
     font-weight: 500;
     width: 14rem;
-    height: 3rem;
+    height: 2rem;
     /*border-bottom: 7px solid var(--tertiary-light2-color);*/
 }
 
@@ -156,17 +147,18 @@ html, body {
 
 
 .flight-buttons {
+    margin-top:1rem;
     width: 7%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-top: 2rem;
 }
 
 .btn {
     width: 2.2rem;
-    height: 1.7rem;
+    height: 20rem;
     border: 1px solid var(--tertiary-dark2-color);
+    margin-bottom: 1rem;
     
 }
 
@@ -194,7 +186,7 @@ html, body {
 
 
 .delete {
-    margin-bottom: 4.3rem;
+    margin-bottom:3rem;
     font-weight: 600;
     background-color: var(--primary-dark-color);
     /*background-color: var(--flight-delete-button-color);*/
