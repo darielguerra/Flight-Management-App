@@ -1,5 +1,5 @@
 .pilot-panel {  
-  width: 20%;
+  width: 18%;
   height: 47rem;
   margin-top: 3rem;
   margin-left: 4rem;
@@ -55,6 +55,6 @@
 }
 
 .line {
-  width: 16rem;
+  width: 12rem;
   border-bottom: 1px solid black;
 }

@@ -1,0 +1,55 @@
+.airport-panel {
+  margin-top: 2rem;
+  width: 90.5%;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-light-color);
+  border-bottom: 7px solid var(--secondary-dark2-color);
+}
+
+.airport-card-container {
+  display: flex;
+}
+
+.airport-title {
+  font-size: 24px;
+  display: flex;
+  text-align: center;
+  background-color: var(--tertiary-dark-color);
+  color: var(--primary-light-color);
+  font-family: var(--font-family-main);
+  font-weight: 500;
+  width: 14rem;
+  height: 2rem;
+  position: absolute;
+  z-index: 0;
+}
+
+.airport-title p {
+  margin: auto; /*centers*/   
+}
+
+.airport-card {
+  display: flex;
+}
+
+.airport-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.9rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 12rem;
+}
+
+.code {
+  font-weight: 500;
+}
+
+.airport-line {
+  margin-top: 0rem;
+  height: 6rem;
+  border-left: 1px solid black;
+}

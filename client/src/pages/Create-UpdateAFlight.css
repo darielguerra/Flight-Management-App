@@ -27,7 +27,7 @@ html, body {
 }
 
 .flight-info-card-update {
-  margin-top: 7.5rem;
+  margin-top: 6.4rem;
   width: 65%;
   height: 33rem;
   background-color: var(--primary-light-color);
@@ -47,7 +47,7 @@ html, body {
    align-items: center;
 }
 
-.flight-number-upateflight {
+.flight-number-updateflight {
   height: 2.1rem;
    font-size: 45px;
    background-color: var(--secondary-dark2-color);

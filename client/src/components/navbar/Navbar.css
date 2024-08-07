@@ -3,6 +3,7 @@
 
 .nav {
   /* background-color: rgb(255, 158, 109);*/
+    
     position: sticky;
     top: 0;
     background-color: var(--secondary-dark-color);

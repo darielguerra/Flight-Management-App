@@ -3,6 +3,7 @@ import { API } from "../../App"
 import { useState, useEffect } from "react";
 import { FlightCard } from '../../components/flight-card/FlightCard';
 import { PilotCard} from '../../components/pilot-card/PilotCard';
+import { AirportCard } from '../../components/airport-card/AirportCard';
 import './HomePage.css';
 
 export const HomePage = () => {  
@@ -14,6 +15,7 @@ export const HomePage = () => {
     useEffect(() => {
         getFlights();
         getPilots();
+        getAirports();
     }, []);
 
     const getFlights = () => {
@@ -26,10 +28,35 @@ export const HomePage = () => {
           .then(res => { 
           setPilots(res.data);
           console.log(res.data)});
+    } 
+
+    const getAirports = () => {
+      axios.get(`${API}/airports`)
+          .then(res => {
+            setAirports(res.data);
+            console.log(res.data);
+            console.log(airports)});
     }
- 
+
     return (
-      <div className="page" >        
+      <div className="page">
+
+        <div className="top-page">
+         <div className="airport-panel">
+          <div className="airport-title"><p>Airports</p></div> 
+          <div className="airport-card-container">
+          {airports.map(airport => {
+            return (
+              <AirportCard airport={airport} key={airport._id} refresh={getAirports}/>
+            )
+          })} 
+          </div>          
+        </div>    
+       </div>
+
+      <div className="pilots-flights-area" >  
+
+       
         
         <div className="pilot-panel">
           <div className="pilot-title"><p>Pilots</p></div>
@@ -49,6 +76,8 @@ export const HomePage = () => {
         </div>
             
       </div>
+
+    </div>
     );
 }
 
