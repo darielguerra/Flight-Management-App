@@ -59,7 +59,7 @@ html, body {
     width: 96.7%;
     background-color: var(--primary-light-color);
     height: 12rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     border-bottom: 7px solid var(--secondary-dark2-color);
     display: flex; 
 }
