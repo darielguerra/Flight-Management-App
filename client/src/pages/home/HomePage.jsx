@@ -41,6 +41,9 @@ export const HomePage = () => {
     return (
       <div className="page">
 
+     {/* Airports panel will be moved to new tab
+
+
         <div className="top-page">
          <div className="airport-panel">
           <div className="airport-title"><p>Airports</p></div> 
@@ -53,6 +56,7 @@ export const HomePage = () => {
           </div>          
         </div>    
        </div>
+       */}
 
       <div className="pilots-flights-area" >  
 
