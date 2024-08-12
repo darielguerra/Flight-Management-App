@@ -1,0 +1,30 @@
+/*
+.about-page {
+  width: 100%;
+  height: 38rem;
+  border: 1px solid black;  
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  background-color: var(--primary-light-color);
+  border-radius: 120px;
+  /*border: 3px solid var(--tertiary-dark-color);*//*
+  border: 7px solid var(--secondary-dark-color);
+  width: 25rem; 
+  height: 24rem;
+  margin: auto;
+  display: flex;
+}
+
+/*
+.about-card-inside {
+  background-color: var(--primary-light-color);
+  border-radius: 50px;
+  border: 3px solid  #757575; 
+  width: 30rem; 
+  height: 22rem;
+  margin: auto;
+}
+  */
