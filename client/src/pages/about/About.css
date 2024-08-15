@@ -11,7 +11,7 @@
 
   /*border: 3px solid var(--tertiary-dark-color);*/
   width: 30rem; 
-  height: 18rem;
+  height: 20rem;
   border-bottom: 7px solid var(--secondary-dark2-color);
   margin: auto;
   display: flex;
@@ -52,6 +52,46 @@
 .about-info p {
   
 }
+
+.link-icons {
+  /*border: 1px solid black;*/
+  display: flex;
+  justify-content: space-evenly;
+  
+  /*fill: #ab6a55;*/
+  width: 30%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+
+.linkedin-anchor  {
+  fill: #000000
+}
+
+.github-anchor {
+  fill: #000000
+}
+
+.linkedin-icon {
+  width: 2rem;
+  /*fill: #827976;*/
+}
+
+.github-icon {
+  width: 2rem;
+}
+
+.linkedin-icon:hover {
+  fill: #a88418;
+}
+
+.github-icon:hover {
+  fill: #a88418;
+}
+
+
+
 
 /*
 .about-card-inside {

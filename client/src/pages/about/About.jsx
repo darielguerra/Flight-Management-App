@@ -1,4 +1,6 @@
 import './About.css';
+import { LinkedInIcon } from '../../assets/svg-icons/LinkedInIcon';
+import { GithubIcon } from '../../assets/svg-icons/GithubIcon';
 
 export const About = () => {   
 
@@ -16,7 +18,15 @@ export const About = () => {
                 for the database.  This site was created by 
                 <bold> Dariel Guerra</bold>.
               </p>
-            </div>    
+            </div>
+          <div className="link-icons">
+            <a  className="linkedin-anchor"href="https://www.linkedin.com/in/darielguerra" target="_blank" rel="noreferrer">
+              <LinkedInIcon />
+            </a>
+            <a className=".github-anchor " href="https://github.com/darielguerra/Flight-Management-App" target="_blank" rel="noreferrer">
+              <GithubIcon />
+            </a>
+          </div>   
         </div>
       </div> 
     );
