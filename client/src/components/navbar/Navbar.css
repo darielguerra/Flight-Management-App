@@ -4,8 +4,9 @@
 .nav {
   /* background-color: rgb(255, 158, 109);*/
     
+  /* sticky 
     position: sticky;
-    top: 0;
+    top: 0;  */
     background-color: var(--secondary-dark-color);
     height: 4.4rem;
     display: flex;

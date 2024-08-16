@@ -11,13 +11,16 @@ html, body {
 }
 
 .page-layout {
+    overflow-y:hidden;
+   
     display: flex;
     justify-content: space-evenly; /*centers horizontally*/
     /*align-items: center; centers vertically*/
+    margin-bottom: 3rem;
 }
 
 .flight-info-card-create {
-    margin-top: 1.9rem;
+    margin-top: 3.3rem;
     width: 65%;
     height: 33rem;
     background-color: var(--primary-light-color);

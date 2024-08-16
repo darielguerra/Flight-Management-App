@@ -26,12 +26,15 @@ html, body {
   margin-left: 2rem;
 
   /*below makes the page start below fixed navbar */
+  /*
   position: fixed;
   top: 4.4rem; /* same height as navbar */
+  /*
   left: 0;
   right: 0;
-  bottom: 0;
-  overflow-y: auto; /*scrollbar, should appear when elements pass page*/  
+  bottom: 0;*/
+  /*overflow-y: auto; scrollbar, should appear when elements pass page*/  
+  
 }
 
 .top-page {

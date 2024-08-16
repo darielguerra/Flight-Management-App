@@ -26,6 +26,8 @@
   --spacing-small: 1.2rem;
   
   --border-radius-small: 0.4rem;
+   
+
 }
 
 
@@ -37,7 +39,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-
+  
 }
 
 code {
