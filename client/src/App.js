@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HomePage, CreateAFlight, About, Error  } from './pages';
 import { Navbar } from './components/navbar/Navbar';
-import { Footer } from './components/footer/Footer'
 
 export const API = process.env.REACT_APP_SERVER_URL;
 
@@ -15,8 +14,7 @@ function App() {
                     <Route path="/home" element={<HomePage />} />
                     <Route path="/about" element={<About />} />
                     <Route path="*" element={<Error />} />
-                </Routes>
-                <Footer />
+                </Routes>                
          </BrowserRouter>
   );
 }

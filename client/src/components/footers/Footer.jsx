@@ -1,10 +1,10 @@
-import './Footer.css'
+import './Footers.css'
 
 export const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-title">
-       Alphon Media © 2024 
+       © 2024 Alphon Media  
       </div>
       {/*Dariel Guerra 2024 © */}
     </div>

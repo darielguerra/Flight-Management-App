@@ -1,0 +1,39 @@
+/*
+  2 footers, 1 for scolling pages (HomePage)
+  the other for no scroll pages
+*/
+
+
+.footer-home {
+  /*margin-top: auto;*/
+  width: 100%;
+  height: 1.5rem;
+  background-color: var(--secondary-dark-color);
+  position: relative;
+  bottom: 0; 
+  left: 0; 
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer {
+  /*margin-top: auto;*/
+  width: 100%;
+  height: 1.5rem;
+  background-color: var(--secondary-dark-color);
+  position: absolute;
+  bottom: 0; 
+  left: 0; 
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-title {
+  margin: auto;
+  color: #FEE9DD;
+  font-size: 14px;
+
+}
+
