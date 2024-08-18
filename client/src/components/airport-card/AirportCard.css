@@ -1,6 +1,7 @@
 .airport-panel {
-  margin-top: 2rem;
-  width: 90.5%;
+  margin-top: 3rem;
+  margin-bottom: 35rem;
+  width: 74%;
   height: 6rem;
   display: flex;
   flex-direction: column;

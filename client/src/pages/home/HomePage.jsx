@@ -52,27 +52,16 @@ export const HomePage = () => {
           </div>
         </div>
 
-      {/* Airports panel will be moved to new tab
+      {/* Airports panel will be moved to new tab*/}
 
+        
+          {/*<div className="top-page"></div>*/}
 
-          <div className="top-page">
-          <div className="airport-panel">
-            <div className="airport-title"><p>Airports</p></div> 
-            <div className="airport-card-container">
-            {airports.map(airport => {
-              return (
-                <AirportCard airport={airport} key={airport._id} refresh={getAirports}/>
-              )
-            })} 
-            </div>          
-          </div>    
-        </div>
-        */}
+     
+        
 
         <div className="pilots-flights-area" >  
 
-        
-          
           <div className="pilot-panel">
             <div className="pilot-title"><p>Pilots</p></div>
             {pilots.map(pilot => {
@@ -82,6 +71,7 @@ export const HomePage = () => {
             })}
           </div>
 
+        {!showAirports && (
           <div className="flights">
             {flights.map((flight, index) => {
               return (
@@ -89,6 +79,20 @@ export const HomePage = () => {
               );
             })}
           </div>
+        )}
+
+          {showAirports && (
+            <div className="airport-panel">
+              <div className="airport-title"><p>Airports</p></div> 
+              <div className="airport-card-container">
+              {airports.map(airport => {
+                return (
+                  <AirportCard airport={airport} key={airport._id} refresh={getAirports}/>
+                )
+              })} 
+              </div>          
+            </div>    
+          )}          
               
         </div>
       </div>  

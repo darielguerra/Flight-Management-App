@@ -22,7 +22,7 @@
   background-color: var(--primary-light-color);
   /*background-color: #ddd;*/
   border-radius: 20px;
-  box-shadow: inset 0 0 0 2px #ccc;
+  /*box-shadow: inset 0 0 0 2px #d5c8c0;*/
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -40,11 +40,13 @@
   transition: transform 0.3s ease-in-out;
 }
 
+/*move toggle circle*/
 .switch input[type="checkbox"]:checked + .switch-background .switch-circle {
   transform: translateX(1.5rem);
 }
 
+/*change background coller on toggle*/
 .switch input[type="checkbox"]:checked + .switch-background {
   background-color: #d6b5a8;
-  box-shadow: inset 0 0 0 2px #b6aeab;
+  /*box-shadow: inset 0 0 0 2px #b6aeab;*/
 }
