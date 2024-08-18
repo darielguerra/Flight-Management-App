@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { API } from "../../App"
 import { useState, useEffect } from "react";
+import { Switch } from '../../components/switch/Switch';
 import { FlightCard } from '../../components/flight-card/FlightCard';
 import { PilotCard} from '../../components/pilot-card/PilotCard';
 import { AirportCard } from '../../components/airport-card/AirportCard';
@@ -9,6 +10,7 @@ import './HomePage.css';
 
 export const HomePage = () => {  
 
+    const [showAirports, setShowAirports] = useState(false);
     const [flights, setFlights] = useState([]);
     const [pilots, setPilots] = useState([]);
     const [airports, setAirports] = useState([]);
@@ -40,8 +42,15 @@ export const HomePage = () => {
     }
 
     return (
-      <>
-      `` <div className="page">
+      <div className="homepage">
+
+        <div className="page">
+   
+        <div className="swith-area"> 
+          <div className="switch-labels">
+            <p>Flights </p><Switch setShowAirports={setShowAirports} showAirports={showAirports} /><p>Airports</p>
+          </div>
+        </div>
 
       {/* Airports panel will be moved to new tab
 
@@ -84,7 +93,7 @@ export const HomePage = () => {
         </div>
       </div>  
         < FooterHome />      
-    </>
+    </div>
     );
 }
 

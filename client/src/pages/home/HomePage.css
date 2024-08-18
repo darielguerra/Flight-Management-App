@@ -34,8 +34,32 @@
   align-items: space-around;
 }
 
+.swith-area {
+  /*border: 1px solid black;*/
+  display: flex;
+  margin-top: 1.1rem;
+  margin-right: 6.2rem;
+  align-self: flex-end;
+}
+
+.switch-labels {
+  background-color: var(--tertiary-dark-color);
+  color: var(--primary-light-color);
+  height: 2rem;
+  width: 14rem;
+  display: flex;
+  justify-content: space-around;
+  font-family: var(--font-family-main);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.switch-labels p {
+  margin: auto;
+}
+
 .pilots-flights-area { 
-    margin-top: 0rem;
+    margin-top: -2rem;
     width: 100%;
     /* height: calc(100% - 75px); scrollbar was not going to the bottom of page
                                  so use this to go to bottom*/
