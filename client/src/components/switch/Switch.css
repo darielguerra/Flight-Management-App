@@ -45,7 +45,7 @@
   transform: translateX(1.5rem);
 }
 
-/*change background coller on toggle*/
+/*change background color on toggle*/
 .switch input[type="checkbox"]:checked + .switch-background {
   background-color: #d6b5a8;
   /*box-shadow: inset 0 0 0 2px #b6aeab;*/

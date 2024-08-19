@@ -2,15 +2,24 @@
   margin-top: 3rem;
   margin-bottom: 35rem;
   width: 74%;
-  height: 6rem;
+  
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-light-color);
-  border-bottom: 7px solid var(--secondary-dark2-color);
+  /*background-color: var(--primary-light-color);*/
+ 
+  /*border-bottom: 7px solid var(--secondary-dark2-color);*/
 }
 
+/*
 .airport-card-container {
   display: flex;
+}*/
+
+.airport-card-container {
+  display: grid;
+  /*grid-template-columns: 20% 20% 20% 20% 20%;  */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  
+  /*container-type: size; this is to put blue line under bottom row*/ 
 }
 
 .airport-title {
@@ -33,24 +42,112 @@
 
 .airport-card {
   display: flex;
+  background-color: var(--primary-light-color); 
+  height: 7rem;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.code {
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: .5rem;
+  font-family: "Manrope";
+  color: var(--secondary-text-color);
+}
+
+.add-airport-btn {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.add-airport-btn:hover .add-airport  {
+  background-color: #fffab7;
+} 
+
+.add-airport {
+  display: flex;
+  background-color: var(--primary-light-color); 
+  height: 7rem;
+  border-bottom: 1px solid black;
+  font-weight: 200;
+  font-size: 85px;
+  margin-bottom: .5rem;
+  font-family: "Manrope";
+  display: flex;
+  justify-content: space-around;
+  color: var(--secondary-text-color);
+}
+
+.airport-plus-sign {
+  margin: auto;
 }
 
 .airport-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2.9rem;
+  margin-top: 2.6rem;
   margin-left: 1rem;
   margin-right: 1rem;
   width: 12rem;
 }
 
-.code {
-  font-weight: 500;
-}
 
-.airport-line {
+
+/* first used lines to make borders
+.airport-line-right {
   margin-top: 0rem;
-  height: 6rem;
+  height: 7rem;
   border-left: 1px solid black;
 }
+
+.airport-line-bottom {
+  margin-top: .9rem;
+  width: 14rem;
+  border-bottom: 1px solid black;
+}
+*/
+
+/* removes the right line from the last collumn*/
+.airport-card:nth-child(5n)  {
+  display: flex;
+  background-color: var(--primary-light-color); 
+  height: 7rem;
+  border-right: 0px solid black;
+}
+
+/* changes the color of every even airport
+.airport-card:nth-child(even)  {
+  background-color: #ead8d1;
+}
+*/
+
+/*
+@media .airport-card-container (min-height: 400px) {
+	.airport-card:nth-last-child(-n + 2) {
+    border-bottom: 7px solid var(--secondary-dark2-color);
+   }
+}*/
+
+/*this is to put blue line under bottom row
+  when container-type: size for .airport-card-container
+  is on. When on, it cause airport title to dissapear
+  and moves footer
+  but need some calc because this only affect last 2 cell
+@container (max-height: 50px) {
+	.airport-card:nth-last-child(-n + 2) {
+    border-bottom: 7px solid var(--secondary-dark2-color);
+   }
+}*/
+
+/*removes right line on last cell*/
+.airport-card:nth-last-child(-n+1) .airport-line-right {
+  border-left: 0px solid black;
+}
+

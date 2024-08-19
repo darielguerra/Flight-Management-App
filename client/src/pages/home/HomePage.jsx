@@ -85,11 +85,16 @@ export const HomePage = () => {
             <div className="airport-panel">
               <div className="airport-title"><p>Airports</p></div> 
               <div className="airport-card-container">
-              {airports.map(airport => {
-                return (
-                  <AirportCard airport={airport} key={airport._id} refresh={getAirports}/>
-                )
-              })} 
+                {airports.map(airport => {
+                  return (
+                    <AirportCard airport={airport} key={airport._id} refresh={getAirports}/>
+                  )
+                })} 
+                 <button className="add-airport-btn">
+                   <div className="add-airport">
+                      <div className="airport-plus-sign">+</div>
+                 </div>
+                </button>
               </div>          
             </div>    
           )}          

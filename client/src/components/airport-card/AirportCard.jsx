@@ -10,8 +10,9 @@ export const AirportCard = (props) => {
       <div className="airport-info">
         <div className="code">{airport.code}</div>
         <div className="city-state">{airport.city}, {airport.state}</div>
+        {/*<div className="airport-line-bottom"></div>*/}
       </div>
-      <div className="airport-line"></div>
+      {/*<div className="airport-line-right"></div>*/}
     </div>
   )
 
