@@ -14,7 +14,6 @@ export const PilotCard = (props) => {
         {/*<div className="years-of-service">Years of Service: {pilot.yearsOfService}</div>*/}
         <div className="line"></div>
       </div>
-
     </div>
   )
 }

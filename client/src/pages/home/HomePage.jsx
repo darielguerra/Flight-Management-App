@@ -100,9 +100,10 @@ export const HomePage = () => {
           )}          
               
         </div>
+        <div className="push"></div>
       </div>  
-        < FooterHome />      
-    </div>
+       < FooterHome />   
+    </div>   
     );
 }
 

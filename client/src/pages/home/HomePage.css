@@ -10,11 +10,17 @@
     background-color: var(--primary-dark-color);
 }
 
+.homepage{  
+}
+
 .page {
   display: flex;
   flex-direction: column;
-  
-  
+  min-height: 100vh; /*this made footer go to bottom of
+                       page even on scroll */
+
+  /*position:relative;*/
+ 
 
   /*below makes the page start below fixed navbar */
   /*
@@ -69,8 +75,8 @@
 .flights {
    margin-left: 2rem;
    margin-top: 3rem;
-   padding-bottom: 12rem; /* currenlty keeping pilots form touching bottom*/
-   width: 65rem;
+   padding-bottom: 20rem; /* currenlty keeping pilots form touching bottom*/
+   width: 65rem; 
 }
 
 .flight-card {
