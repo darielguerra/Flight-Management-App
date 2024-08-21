@@ -2,11 +2,12 @@
 .switch {
   position: relative; /* this keeps swith from becoming huge
                           due to backgound being 100% */
-  display: inline-block;
+  /*display: inline-block;*/
   width: 3rem;
   height: 1.35rem;
   cursor: pointer;
   margin-top: .35rem;
+  margin-right: 1.12rem;
 }
 
 .switch input[type="checkbox"] {
@@ -19,34 +20,39 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--primary-light-color);
-  /*background-color: #ddd;*/
+  
+  background-color: var(--primary-light-color);/*
+  background-color: #ddd;*/
   border-radius: 20px;
   /*box-shadow: inset 0 0 0 2px #d5c8c0;*/
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out; /*background color time to take to change*/
 }
 
 .switch-circle {
   position: absolute;
-  top: 1.5px;  /* center circle */
+  top: 1.15px;  /* center circle */
   left: 3px; /* adds a little left margin */
-  width: 1.1rem;
-  height: 1.1rem;
-  background-color: var(--tertiary-dark-color);
+  width: 1.056rem;
+  height: 1.056rem;
+  /*background-color: var(--tertiary-dark-color);*/
   /*background-color: rgb(204, 122, 122);*/
-  /*background-color: #fff;*/
+  background-color: #E98074;
+  border: 1px solid var(--secondary-dark-color);
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out; /*movement time*/
 }
 
 /*move toggle circle*/
 .switch input[type="checkbox"]:checked + .switch-background .switch-circle {
-  transform: translateX(1.5rem);
+  transform: translateX(1.4rem);
 }
 
 /*change background color on toggle*/
 .switch input[type="checkbox"]:checked + .switch-background {
-  background-color: #d6b5a8;
+  /*background-color: #9997bd;*/
+  /*background-color: #d6b5a8;*/
+  background-color: #ffc1a8;
+  /*background-color: #ecad94;*/
   /*box-shadow: inset 0 0 0 2px #b6aeab;*/
 }

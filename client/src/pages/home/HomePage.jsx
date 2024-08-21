@@ -42,13 +42,16 @@ export const HomePage = () => {
     }
 
     return (
+      <>
       <div className="homepage">
 
         <div className="page">
    
         <div className="swith-area"> 
           <div className="switch-labels">
-            <p>Flights </p><Switch setShowAirports={setShowAirports} showAirports={showAirports} /><p>Airports</p>
+            <p className="flights-switch-label">Flights</p>
+            <Switch setShowAirports={setShowAirports} showAirports={showAirports} />
+            <p className="airports-switch-label">Airports</p>
           </div>
         </div>
 
@@ -102,8 +105,9 @@ export const HomePage = () => {
         </div>
         <div className="push"></div>
       </div>  
-       < FooterHome />   
     </div>   
+    < FooterHome />
+    </>   
     );
 }
 
