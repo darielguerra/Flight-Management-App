@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
         res.status(201).json({_id: airportId});
     }
     catch (err) {
-        res.status(err?.status || 5000).json(err);
+        res.status(err?.status || 500).json(err);
     }
 });
 

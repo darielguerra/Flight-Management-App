@@ -2,7 +2,7 @@ import axios from 'axios';
 import { API } from "../../App"
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import { Footer } from '../../components/footers/Footer';
+import { Footer } from '../../components/global-components/footers/Footer';
 import '.././Create-UpdateAFlight.css';
 
 export const CreateAFlight = () => {

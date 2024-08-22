@@ -1,6 +1,6 @@
 import { LinkedInIcon } from '../../assets/svg-icons/LinkedInIcon';
 import { GithubIcon } from '../../assets/svg-icons/GithubIcon';
-import { Footer } from '../../components/footers/Footer';
+import { Footer } from '../../components/global-components/footers/Footer';
 import './About.css';
 
 export const About = () => {   

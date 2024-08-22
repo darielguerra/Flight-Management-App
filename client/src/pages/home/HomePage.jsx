@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { API } from "../../App"
 import { useState, useEffect } from "react";
-import { Switch } from '../../components/switch/Switch';
-import { FlightCard } from '../../components/flight-card/FlightCard';
-import { PilotCard} from '../../components/pilot-card/PilotCard';
-import { AirportCard } from '../../components/airport-card/AirportCard';
-import { FooterHome } from '../../components/footers/FooterHome';
+import { Switch } from '../../components/home-components/switch/Switch';
+import { FlightCard } from '../../components/flight-components/flight-card/FlightCard';
+import { PilotCard} from '../../components/pilot-components/pilot-card/PilotCard';
+import { AirportCard } from '../../components/airport-components/airport-card/AirportCard';
+import { AddAirportButton } from '../../components/airport-components/add-airport-button/AddAirportButton';
+import { FooterHome } from '../../components/global-components/footers/FooterHome';
 import './HomePage.css';
 
 export const HomePage = () => {  
@@ -93,11 +94,13 @@ export const HomePage = () => {
                     <AirportCard airport={airport} key={airport._id} refresh={getAirports}/>
                   )
                 })} 
+                < AddAirportButton />
+                {/*
                  <button className="add-airport-btn">
                    <div className="add-airport">
                       <div className="airport-plus-sign">+</div>
                  </div>
-                </button>
+                </button>*/}
               </div>          
             </div>    
           )}          

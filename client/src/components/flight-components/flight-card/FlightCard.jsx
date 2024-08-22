@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { API } from "../../App"
+import { API } from "../../../App"
 import { useState } from "react";
-import { EditIcon } from '../../assets/svg-icons/EditIcon';
-import { ArrowIcon } from '../../assets/svg-icons/ArrowIcon';
-import { UpdateFlightModal } from '../update-flight/UpdateFlightModal';
-import { DeleteModal } from '../delete-modal/DeleteModal';
-import '../../pages/home/HomePage.css';
+import { EditIcon } from '../../../assets/svg-icons/EditIcon';
+import { ArrowIcon } from '../../../assets/svg-icons/ArrowIcon';
+import { UpdateFlightModal } from '../../flight-components/flight-modals/update-flight/UpdateFlightModal';
+import { DeleteModal } from '../../flight-components/flight-modals/delete-modal/DeleteModal';
+import '../../../pages/home/HomePage.css';
 
 export const FlightCard = (props) => {
     
