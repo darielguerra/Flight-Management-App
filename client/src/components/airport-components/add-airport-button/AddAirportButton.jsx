@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AddAirportModal } from "../airport-modals/AddAirportModal";
 
 
-export const AddAirportButton = () => {
+export const AddAirportButton = (props) => {
 
   const [addAirportModal, setAddAirportModal] = useState(false);
 
@@ -13,7 +13,8 @@ export const AddAirportButton = () => {
           <div className="airport-plus-sign">+</div>
         </div>
       </button>
-      {addAirportModal && <AddAirportModal closeModal={setAddAirportModal} />}
+      {addAirportModal && 
+        <AddAirportModal refresh={props.refresh} closeModal={setAddAirportModal} />}
     </> 
   )
 }

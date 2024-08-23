@@ -94,7 +94,7 @@ export const HomePage = () => {
                     <AirportCard airport={airport} key={airport._id} refresh={getAirports}/>
                   )
                 })} 
-                < AddAirportButton />
+                < AddAirportButton refresh={getAirports} />
                 {/*
                  <button className="add-airport-btn">
                    <div className="add-airport">

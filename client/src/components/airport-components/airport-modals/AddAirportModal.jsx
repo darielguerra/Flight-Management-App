@@ -22,6 +22,7 @@ export const AddAirportModal = (props) => {
         console.log(error);
       }
       props.closeModal(false);
+      props.refresh();
   }
 
   return(
