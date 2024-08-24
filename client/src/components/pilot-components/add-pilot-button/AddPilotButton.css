@@ -1,0 +1,30 @@
+
+.add-pilot-btn-container {
+  display: flex;
+  height: 2rem;
+}
+
+.add-pilot-btn {
+  display: flex;
+  justify-content: space-around;
+  height: 1.7rem;
+  width: 2.2rem;
+  margin-right: .3rem;
+  margin-top: .16rem;
+  background-color: #e4dad6;
+  border: .07rem solid black;
+}
+
+.add-pilot-btn:hover {
+  cursor: pointer;
+  background-color: #c6efa9;
+}
+
+/*for some reason could not cent the plus sighn
+  so I made position absolute*/
+.pilot-add-sign {
+  position: absolute; 
+  top: 132px;
+  margin: auto;
+  font-size: 30px;
+}

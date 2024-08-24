@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Switch } from '../../components/home-components/switch/Switch';
 import { FlightCard } from '../../components/flight-components/flight-card/FlightCard';
 import { PilotCard} from '../../components/pilot-components/pilot-card/PilotCard';
+import { AddPilotButton } from '../../components/pilot-components/add-pilot-button/AddPilotButton';
 import { AirportCard } from '../../components/airport-components/airport-card/AirportCard';
 import { AddAirportButton } from '../../components/airport-components/add-airport-button/AddAirportButton';
 import { FooterHome } from '../../components/global-components/footers/FooterHome';
@@ -67,7 +68,7 @@ export const HomePage = () => {
         <div className="pilots-flights-area" >  
 
           <div className="pilot-panel">
-            <div className="pilot-title"><p>Pilots</p></div>
+            <div className="pilot-title"><p>Pilots</p><AddPilotButton /></div>
             {pilots.map(pilot => {
               return (
                 <PilotCard pilot={pilot} key={pilot._id} refresh={getPilots} />
