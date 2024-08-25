@@ -39,20 +39,52 @@
 
 .pilot-info {
   /*border: 1px solid blue;*/
-  margin-top: 1rem;
+  margin-top: 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: .5rem;
   padding-bottom: 1rem;
- 
+}
+
+.pilot-btn {
+  width: 80%;
+  background-color: var(--primary-light-color);
+  border-top: none;
+  border-bottom: 1px solid black;
+  border: none;
+}
+
+.pilot-btn:hover{
+  /*background-color: #9dbcfa;*/
+  /*background-color: #b9d0ff7a; last one*/
+  /*background-color: #f8f8b3;*/
+  cursor: pointer;
+  border: 1px solid #e2e20987; 
 }
 
 .pilot-image {
   height: 6rem;
   opacity: 0.8;
   margin-bottom: .5rem;
+  margin-top: 1rem;
 }
+
+.pilot-icon {
+  height: 6rem;
+  fill: rgb(118, 110, 104);
+  margin-bottom: .5rem;
+  margin-top: 1rem;
+}
+
+.pilot-btn:hover .pilot-icon {
+  fill: #99990787; 
+}
+
+.pilot-btn:hover .pilot-name {
+   color: #666600; 
+}
+
 
 .pilot-name {
   margin-top: .5rem;

@@ -1,3 +1,4 @@
+import { PilotIcon } from '../../../assets/svg-icons/PilotIcon';
 import './PilotCard.css'
 
 
@@ -9,9 +10,11 @@ export const PilotCard = (props) => {
   return (
     <div key={pilot._id} className="pilot-card">
       <div className="pilot-info">
-        <img className="pilot-image" src="images/Pilot1.png" alt="logo"></img>
+        <button className="pilot-btn">
+        {/*<img className="pilot-image" src="images/Pilot1.png" alt="logo"></img>*/}
+        <PilotIcon />
         <div className="pilot-name"><p>{pilot.firstName}{" "}{pilot.lastName}</p></div>
-        {/*<div className="years-of-service">Years of Service: {pilot.yearsOfService}</div>*/}
+        </button>
         <div className="line"></div>
       </div>
     </div>
