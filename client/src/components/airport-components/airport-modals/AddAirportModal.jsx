@@ -32,15 +32,15 @@ export const AddAirportModal = (props) => {
         <div onClick={(e) => e.stopPropagation()} className="add-airport-modal">
        <form onSubmit={handleSubmit} >
           <div className="airport-code">
-            <label className="airport-code-label">Airport 3-Letter Code</label>
+            <label className="airport-code-label">Airport 3-Letter Code:</label>
             <input className="airport-code-input" type="text" ref={code} />
           </div>
           <div className="airport-city">
-            <label className="airport-city-label">City</label>
+            <label className="airport-city-label">City:</label>
             <input className="airport-city-input" type="text" ref={city} />
           </div>
           <div className="airport-state">
-            <label className="airport-state-label">State</label>
+            <label className="airport-state-label">State:</label>
             <input className="airport-state-input" type="text" ref={state} />
           </div>
           <div className="add-aiport-submit">
