@@ -7,10 +7,11 @@ const getAllPilots = async () => {
 }
 
 // add a pilot
-const addPilot = async ({name, yearsOfService}) => {
+const addPilot = async ({firstName, lastName, yearsOfService}) => {
   try {
       const pilot = new Pilot({
-          name,
+          firstName,
+          lastName,
           yearsOfService
       });
       await pilot.save();
@@ -24,11 +25,12 @@ const addPilot = async ({name, yearsOfService}) => {
 }
 
 //update airport
-const updatePilot = async ({name, yearsOfService}) => {
+const updatePilot = async ({firstName, lastName, yearsOfService}) => {
   try {
       const pilot = await Pilot.findOneAndUpdate({_id:_id},
           {
-            name,
+            firstName,
+            lastName,
             yearsOfService
           }
       );
