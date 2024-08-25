@@ -7,24 +7,28 @@
 .add-pilot-btn {
   display: flex;
   justify-content: space-around;
-  height: 1.7rem;
-  width: 2.2rem;
+  height: 1.5rem;
+  width: 2rem;
   margin-right: .3rem;
-  margin-top: .16rem;
-  background-color: #e4dad6;
+  margin-top: .25rem;
+  background-color: #dfd2cd;
   border: .07rem solid black;
 }
 
 .add-pilot-btn:hover {
   cursor: pointer;
-  background-color: #c6efa9;
+  /*background-color: #c6efa9;*/
+  background-color: #eaeab4;
 }
 
 /*for some reason could not cent the plus sighn
   so I made position absolute*/
 .pilot-add-sign {
   position: absolute; 
-  top: 132px;
+  top: 133.7px;
   margin: auto;
   font-size: 30px;
+  font-family: "Manrope";
+  font-weight: 400;
+  color: var(--secondary-text-color);
 }

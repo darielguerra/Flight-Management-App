@@ -49,7 +49,7 @@ export const HomePage = () => {
 
         <div className="page">
    
-        <div className="swith-area"> 
+        <div className="switch-area"> 
           <div className="switch-labels">
             <p className="flights-switch-label">Flights</p>
             <Switch setShowAirports={setShowAirports} showAirports={showAirports} />
@@ -68,7 +68,9 @@ export const HomePage = () => {
         <div className="pilots-flights-area" >  
 
           <div className="pilot-panel">
-            <div className="pilot-title"><p>Pilots</p><AddPilotButton /></div>
+            <div className="pilot-title"><p>Pilots</p>
+              <AddPilotButton refresh={getPilots}/>
+            </div>
             {pilots.map(pilot => {
               return (
                 <PilotCard pilot={pilot} key={pilot._id} refresh={getPilots} />
