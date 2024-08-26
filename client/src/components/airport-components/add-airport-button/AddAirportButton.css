@@ -1,25 +1,37 @@
 
-
-
-.add-airport-btn {
-  background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+.add-airport-container {
+  display: flex;
+  justify-content: center;
+  width: 14rem;
+  border-bottom: 1px solid black; 
+  background-color: var(--primary-light-color); 
+  height: 7rem;
 }
 
-.add-airport-btn:hover .add-airport  {
-  background-color: #fffab7;
+.add-airport-btn {
+  height: 99%;
+  width: 99%;
+  background-color: var(--primary-light-color);
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.add-airport-btn:hover  {
+  cursor: pointer;  
+  border:2px solid #e2e209a7; 
+  background-color: var(--primary-light-color);
+  border-top: none;  
+} 
+
+.add-airport-btn:hover .airport-plus-sign {
+  color: #99991b; 
 } 
 
 .add-airport {
   display: flex;
-  background-color: var(--primary-light-color); 
-  height: 7rem;
-  border-bottom: 1px solid black;
+  background-color: var(--primary-light-color);  
+  height: 6.9rem;
   font-weight: 200;
   font-size: 70px;
   margin-bottom: .5rem;

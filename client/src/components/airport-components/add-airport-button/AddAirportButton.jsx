@@ -7,7 +7,7 @@ export const AddAirportButton = (props) => {
   const [addAirportModal, setAddAirportModal] = useState(false);
 
   return (
-    <>   
+    <div className="add-airport-container">   
       <button onClick={() => setAddAirportModal(true)} className="add-airport-btn">
         <div className="add-airport">
           <div className="airport-plus-sign">+</div>
@@ -15,6 +15,6 @@ export const AddAirportButton = (props) => {
       </button>
       {addAirportModal && 
         <AddAirportModal refresh={props.refresh} closeModal={setAddAirportModal} />}
-    </> 
+    </div> 
   )
 }

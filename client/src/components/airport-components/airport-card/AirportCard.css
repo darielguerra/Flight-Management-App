@@ -42,10 +42,40 @@
 
 .airport-card {
   display: flex;
+  justify-content: space-around;;
   background-color: var(--primary-light-color); 
   height: 7rem;
+  border-top: none;
+  border-left: none;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
+  width: 14rem;
+}
+
+.airport-btn {
+  height: 99%;
+  width: 99%;
+  background-color: var(--primary-light-color);
+  border:none; 
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.airport-btn:hover {
+  cursor: pointer;
+  border: 2px solid #e2e209a7; 
+  background-color: var(--primary-light-color);
+  border-top: none; 
+}
+
+.airport-card:hover .code {
+  color: #99991b; 
+}
+
+.airport-card:hover .city-state {
+  color: #58580e; 
 }
 
 .code {
@@ -100,6 +130,7 @@
   margin-right: 1rem;
   width: 12rem;
 }
+
 
 
 

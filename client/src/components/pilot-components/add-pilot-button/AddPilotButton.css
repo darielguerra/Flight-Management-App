@@ -18,7 +18,8 @@
 .add-pilot-btn:hover {
   cursor: pointer;
   /*background-color: #c6efa9;*/
-  background-color: #eaeab4;
+  /*background-color: #eaeab4;*/
+  border: 2px solid #e2e209a7; 
 }
 
 /*for some reason could not cent the plus sighn
