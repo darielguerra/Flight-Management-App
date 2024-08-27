@@ -5,7 +5,7 @@ import { EditIcon } from '../../../assets/svg-icons/EditIcon';
 import { ArrowIcon } from '../../../assets/svg-icons/ArrowIcon';
 import { UpdateFlightModal } from '../../flight-components/flight-modals/update-flight/UpdateFlightModal';
 import { DeleteModal } from '../../flight-components/flight-modals/delete-modal/DeleteModal';
-import '../../../pages/home/HomePage.css';
+import './FlightCard.css';
 
 export const FlightCard = (props) => {
     
@@ -55,7 +55,7 @@ export const FlightCard = (props) => {
             <div className="flightnumber"><p>Flight# {props.flight.flightNumber}</p></div>
             {/*<div className="flightnumber"><p><strong>Flight# </strong>{flight.flightNumber}</p></div>*/}
             <div className="flight-details">
-              <div className="airports">
+              <div className="flight-card-airports">
                 <div className="departure-airport">
                   <div className="departure-airport-name">{props.flight.departureAirport}</div>
                   <div><ArrowIcon /></div>
