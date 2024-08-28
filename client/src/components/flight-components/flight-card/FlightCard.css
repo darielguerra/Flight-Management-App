@@ -1,12 +1,56 @@
 
 .flight-card {
-  width: 97.9%;
+  width: 63.7rem; /* was 97.9%; */
   background-color: var(--primary-light-color);
   height: 12rem;
   margin-bottom: 3rem;
   border-bottom: 7px solid var(--secondary-dark2-color);
-  display: flex; 
+   
 }
+
+/* this was made to add hover border line underneath*/
+.flight-details {
+  display: flex; 
+  height: 12rem;  
+  width: 100%; 
+}
+/*
+.flight-card-hover-border {
+  height: 11.6rem;
+  position: absolute;
+  width: 62.8rem;
+ 
+  }
+
+.flight-card-hover-border:hover {
+  cursor: pointer;
+  border: 1px solid #c4c406; 
+  background-color: transparent;
+  pointer-events: none;
+  }
+*/
+
+.flight-card:hover {
+  /*background-color: #ffff8e87;*/
+  background-color: #ffff7c87; 
+  border-bottom: 7px solid rgba(255, 255, 124, 0.529);;
+  background-clip: padding-box;
+  cursor: pointer;
+}
+
+.flight-card:hover .flightnumber{
+  background-color: transparent;
+  color: var(--secondary-text-color);
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+
+.flight-card:hover .flight-border-line  {
+  border-top: 1px solid black;
+  width: 63.7rem;
+}
+
 
 .flight {
   display: flex;
