@@ -34,8 +34,8 @@ export const UpdateFlightModal = (props) => {
             });
             navigate('../', {replace: true});            
             } catch (error) {
-                    console.log('Something Went Wrong');
-                    console.log(error);
+              console.log('Something Went Wrong');
+              console.log(error);
             }
             props.closeModal(false);
             props.refresh();

@@ -24,26 +24,31 @@ const addPilot = async ({firstName, lastName, yearsOfService}) => {
   }
 }
 
-//update airport
-const updatePilot = async ({firstName, lastName, yearsOfService}) => {
+// update pilot
+const updatePilot = async ({ _id, firstName, lastName, yearsOfService }) => {
+  console.log('updatePilot called with:', { _id, firstName, lastName, yearsOfService }); // Add logging
+
   try {
-      const pilot = await Pilot.findOneAndUpdate({_id:_id},
-          {
-            firstName,
-            lastName,
-            yearsOfService
-          }
-      );
-      if (pilot == null) {
-          throw `There is no pilot with id ${_id}`
-      }
-      return pilot;
-  }  
-  catch (err) {
-      console.error(err)
-      throw {status: 400, message: err}
+    const pilot = await Pilot.findOneAndUpdate(
+      { _id },
+      {
+        firstName,
+        lastName,
+        yearsOfService
+      },
+      { new: true } // This option returns the updated pilot instead of the old one
+    );
+
+    if (!pilot) {
+      throw `There is no pilot with id ${_id}`;
+    }
+
+    return pilot;
+  } catch (err) {
+    console.error(err);
+    throw { status: 400, message: err };
   }
-}
+};
 
 //delete airport
 const deletePilot = async (id) => {

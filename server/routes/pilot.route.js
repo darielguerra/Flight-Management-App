@@ -21,15 +21,16 @@ router.post('/', async (req, res) => {
 
  //update pilot
  router.put('/:id', async (req, res) => {
-    try{
-        const pilot = await updatePilot(req.body);
-        res.status(201).json({_id: pilot});
-    }
-    catch (err) {
-        console.log(err);
-        res.status(err?.status || 400).json(err);
-    }
- });
+  const { id } = req.params;
+  const { firstName, lastName, yearsOfService } = req.body;
+
+  try {
+    const updatedPilot = await updatePilot({ _id: id, firstName, lastName, yearsOfService });
+    res.status(200).json(updatedPilot);
+  } catch (err) {
+    res.status(err.status || 500).json({ message: err.message || 'Internal Server Error' });
+  }
+});
 
  //delete pilot
  router.delete('/:id', async (req, res) =>{
