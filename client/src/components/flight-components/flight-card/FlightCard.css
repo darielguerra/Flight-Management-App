@@ -33,7 +33,7 @@
 .flight-card:hover {
   /*background-color: #ffff8e87;*/
   background-color: #ffff7c87; 
-  border-bottom: 7px solid rgba(255, 255, 124, 0.529);;
+  border-bottom: 7px solid rgba(255, 255, 124, 0.529);
   background-clip: padding-box;
   cursor: pointer;
 }

@@ -51,8 +51,10 @@
 /*change background color on toggle*/
 .switch input[type="checkbox"]:checked + .switch-background {
   /*background-color: #9997bd;*/
-  /*background-color: #d6b5a8;*/
-  background-color: #ffc1a8;
+  /*background-color: #d6b5a8;*/  
   /*background-color: #ecad94;*/
   /*box-shadow: inset 0 0 0 2px #b6aeab;*/
+
+  background-color: #ffc1a8;
+  /*background-color: #ffe1aa;*/ 
 }
