@@ -30,7 +30,7 @@ export const UpdatePilot = (props) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="pilot-first-name">
-        <label className="pilot-first-name-label">First ame:</label>
+        <label className="pilot-first-name-label">First Name:</label>
         <input className="pilot-first-name-input" type="text" ref={firstName} />
       </div>
       <div className="pilot-last-name">

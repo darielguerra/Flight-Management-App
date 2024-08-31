@@ -1,18 +1,4 @@
 
-.modal, .overlay{
-    width: 100vw; /*100% of weiwport width*/
-    height: 100vh; /*100% of weiwport height*/
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-}
-
-.overlay {
-    background-color: #3232328c;
-}
-
 .modal-container {
     border: 3px solid #ffeedd;
     position: absolute;

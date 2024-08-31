@@ -10,7 +10,8 @@ export const EditPilotModal = (props) => {
   return (
     <div className="modal">
       <div onClick={() => props.closeModal(false)} className="overlay">
-        <div onClick={(e) => e.stopPropagation()} className="edit-delete-pilot-modal">
+        <div onClick={(e) => e.stopPropagation()} className="pilot-modal">
+          <div className="pilot-modal-title"></div>
         {!showUpdatePilot && (
           <button onClick={() => setShowUpdatePilot(true)} className="edit-pilot-button">
             Edit

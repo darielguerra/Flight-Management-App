@@ -30,7 +30,7 @@ export const AddPilotModal = (props) => {
     <div className="modal">
       <div  onClick={() => props.closeModal(false)} className="overlay">
       <div className="add-pilot-layout">
-        <div onClick={(e) => e.stopPropagation()} className="add-pilot-modal">
+        <div onClick={(e) => e.stopPropagation()} className="pilot-modal">
         <form onSubmit={handleSubmit} >
           <div className="pilot-first-name">
             <label className="pilot-first-name-label">First Name:</label>
