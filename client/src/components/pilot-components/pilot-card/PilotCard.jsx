@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { EditPilotModal } from '../pilot-modals/EditPilotModal';
-import { PilotIcon } from '../../../assets/svg-icons/PilotIcon';
+import { PilotCardIcon } from '../../../assets/svg-icons/PilotCardIcon';
 import './PilotCard.css'
 
 
@@ -16,7 +16,7 @@ export const PilotCard = (props) => {
       <div className="pilot-info">
         <button onClick={() => setEditPilotModal(true)} className="pilot-btn">
         {/*<img className="pilot-image" src="images/Pilot1.png" alt="logo"></img>*/}
-        <PilotIcon />
+        <PilotCardIcon />
         <div className="pilot-name"><p>{pilot.firstName}{" "}{pilot.lastName}</p></div>
         </button>
         <div className="line"></div>

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { API } from "../../../App"
 import { useRef } from "react";
+import '../pilot-modals/PilotModals.css';
 
 export const UpdatePilot = (props) => {
 
@@ -28,7 +29,7 @@ export const UpdatePilot = (props) => {
   }  
    
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="pilot-modal-form" onSubmit={handleSubmit}>
       <div className="pilot-first-name">
         <label className="pilot-first-name-label">First Name:</label>
         <input className="pilot-first-name-input" type="text" ref={firstName} />
@@ -41,7 +42,7 @@ export const UpdatePilot = (props) => {
         <label className="years-of-service-label">Years of Service:</label>
         <input className="years-of-service-input" type="text" ref={yearsOfService} />
       </div>
-      <button type="submit">Update</button>
+      <button type="submit" className="update-pilot-btn">Update</button>
     </form>
   )
 }

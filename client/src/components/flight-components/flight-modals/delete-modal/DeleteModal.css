@@ -1,5 +1,5 @@
 
-.modal-container {
+.delete-modal {
     border: 3px solid #ffeedd;
     position: absolute;
     top: 50%;
@@ -11,14 +11,14 @@
     border-radius: 20px;
 }
 
-.modal-title {
+.delete-modal-title {
     padding-top: .4rem;
     margin: auto; /*centers*/  
     width: 13rem;
     text-align: center;
 }
 
-.modal-buttons {
+.delete-modal-buttons {
     padding-top: .5rem;
     display: flex;
     margin: auto; 
@@ -32,7 +32,7 @@
     border: none;
 }
 
-.delete-btn {
+.delete-modal-btn {
     background-color: #ff00005c;
     color: rgb(0, 0, 0);
     border-radius: 5px;

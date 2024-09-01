@@ -1,6 +1,4 @@
 
-
-
 .nav {
   /* background-color: rgb(255, 158, 109);*/
     
@@ -16,13 +14,6 @@
     border-bottom: 2.4px solid var(--border-color-altdarker2);
    
  }
-
-
-
-.logo {
-
-}
-
 
 .title {
   display: flex;

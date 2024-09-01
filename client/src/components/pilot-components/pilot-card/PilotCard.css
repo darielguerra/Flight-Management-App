@@ -72,14 +72,14 @@
   margin-top: 1rem;
 }
 
-.pilot-icon {
+.pilot-card-icon {
   height: 6rem;
   fill: rgb(118, 110, 104);
   margin-bottom: .5rem;
   margin-top: 1rem;
 }
 
-.pilot-btn:hover .pilot-icon {
+.pilot-btn:hover .pilot-card-icon {
   fill: #99990787; 
 }
 
