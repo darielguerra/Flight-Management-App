@@ -15,7 +15,7 @@ export const About = () => {
                 showcase a Flight Management App where the user can 
                 add, edit, and remove flights, pilots, and airports.  
                 The site was developed using React for the front end, 
-                Express.js and Node.js. for the back end, and MongoDB, 
+                Express.js and Node.js. for the back end, and MongoDB 
                 for the database.  This site was created by 
                 <bold> Dariel Guerra</bold>.
               </p>
