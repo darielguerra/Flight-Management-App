@@ -53,8 +53,8 @@
 }
 
 .airport-btn {
-  height: 99%;
-  width: 99%;
+  height: 100%;
+  width: 100%;
   background-color: var(--primary-light-color);
   border:none; 
   display: flex;
@@ -66,16 +66,20 @@
 .airport-btn:hover {
   cursor: pointer;
   border: 2px solid #e2e209a7; 
-  background-color: var(--primary-light-color);
+  /*background-color: #dcdc2063;*/
+  /*background-color: #ffff7d63;
+  background-color: #ffff6c63;*/
+  background-color: #f8f8114f; 
   border-top: none; 
 }
 
 .airport-card:hover .code {
-  color: #99991b; 
+  /*color: #99991b; 
+  color: #666600; */
 }
 
 .airport-card:hover .city-state {
-  color: #58580e; 
+  /*color: #58580e; */
 }
 
 .code {
