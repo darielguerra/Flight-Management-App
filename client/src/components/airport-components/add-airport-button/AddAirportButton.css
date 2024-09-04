@@ -9,8 +9,8 @@
 }
 
 .add-airport-btn {
-  height: 99%;
-  width: 99%;
+  height: 100%;
+  width: 100%;
   background-color: var(--primary-light-color);
   border: none;
   display: flex;
@@ -20,13 +20,17 @@
 .add-airport-btn:hover  {
   cursor: pointer;  
   border:2px solid #e2e209a7; 
-  background-color: var(--primary-light-color);
+  background-color: #f8f8114f;
+  /*background-color: var(--primary-light-color); */
   border-top: none;  
 } 
 
 .add-airport-btn:hover .airport-plus-sign {
-  color: #99991b; 
+ /*color: #99991b;*/
+ background-color: #f8f8114f;
+ 
 } 
+
 
 .add-airport {
   display: flex;
@@ -42,5 +46,16 @@
 }
 
 .airport-plus-sign {
+  height: 6rem;
+  padding-top: 1rem;
+  background-color: transparent;
+  
+}
+
+
+
+.airport-plus-sign p {
+  /*height: 6.9rem;*/
+  margin-top: 1rem;
   margin: auto;
 }
