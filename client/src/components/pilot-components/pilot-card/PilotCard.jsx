@@ -21,7 +21,7 @@ export const PilotCard = (props) => {
         </button>
         <div className="line"></div>
       </div>
-      {editPilotModal && <EditPilotModal pilot={pilot} closeModal={setEditPilotModal} refresh={props.refresh} />}
+      {editPilotModal && <EditPilotModal pilot={pilot} modalOpen={setEditPilotModal} refresh={props.refresh} />}
     </div>
   )
 }

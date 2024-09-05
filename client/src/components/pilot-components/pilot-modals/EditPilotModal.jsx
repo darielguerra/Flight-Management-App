@@ -11,14 +11,14 @@ export const EditPilotModal = (props) => {
 
   return (
     <div className="modal">
-      <div onClick={() => props.closeModal(false)} className="overlay">
+      <div onClick={() => props.modalOpen(false)} className="overlay">
         <div onClick={(e) => e.stopPropagation()} className="pilot-modal">
          
         {!showUpdatePilot && (
           <>
             <div className="pilot-modal-title">
               <p>Pilot</p>
-              <button className="pilot-exit-btn" onClick={() => props.closeModal(false)}>X</button>
+              <button className="pilot-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div>
             <EditPilotIcon className="edit-pilot-icon"/>
             <div className="edit-pilot-modal-info">
@@ -35,9 +35,9 @@ export const EditPilotModal = (props) => {
           <>
             <div className="pilot-modal-title">
               <p>Update {pilot.firstName}{" "}{pilot.lastName}</p>
-              <button className="pilot-exit-btn" onClick={() => props.closeModal(false)}>X</button>
+              <button className="pilot-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div>
-            <UpdatePilot pilotId={pilot._id} closeModal={props.closeModal} refresh={props.refresh} />
+            <UpdatePilot pilotId={pilot._id} modalOpen={props.modalOpen} refresh={props.refresh} />
           </>
         )}
         </div>          

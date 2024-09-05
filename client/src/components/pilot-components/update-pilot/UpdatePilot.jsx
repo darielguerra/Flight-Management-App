@@ -24,7 +24,7 @@ export const UpdatePilot = (props) => {
         catch (error) {
           console.log(error);
         }
-        props.closeModal(false);
+        props.modalOpen(false);
         props.refresh();      
   }  
    

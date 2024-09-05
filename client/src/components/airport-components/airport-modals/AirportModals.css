@@ -1,0 +1,82 @@
+
+
+.airport-modal {
+  width: 22rem;
+  height: 21rem;
+  background-color: var(--primary-light-color);
+  display: flex; 
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 28px;
+}
+
+.airport-modal-title {
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  height: 2rem;
+  font-size: 24px;
+  background-color: var(--tertiary-dark-color);
+  font-family: var(--font-family-main);
+  color: var(--primary-light-color);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.airport-modal-title p  {
+  margin: auto auto auto 9.3rem; /*centers*/    
+
+}  
+
+.airport-exit-btn {
+  margin-right: 1.5rem;
+  height: 1.4rem;
+  width: 1.7rem;
+  font-size: 18px;
+  font-weight: 500;
+  border: .07rem solid black;
+  background-color: #dfd2cd;
+  border-radius: 5px;
+}
+
+.airport-exit-btn:hover {
+  cursor: pointer;
+  border: 2px solid #e2e209a7; 
+}
+
+.airport-modal-info {
+  width: 20rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 6rem;
+}
+
+.airport-modal-code {
+  margin: .5rem auto 0rem; /*top 1, left/right auto bottom 0 */
+  height: 1rem;
+  font-family: var(--font-family-main);
+  font-weight: 600;
+  margin-bottom: 1.2rem;  
+  font-size: 25px;
+}
+
+.airport-modal-code p {
+  margin: auto;
+}
+
+.airport-modal-city-state {
+  height: 2rem;
+  margin: .1rem auto;
+  font-family: var(--font-family-main);
+  font-weight: 400;
+}
+
+.airport-modal-city-state p {
+  margin: auto;
+}
