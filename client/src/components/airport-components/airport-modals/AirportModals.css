@@ -48,13 +48,24 @@
   border: 2px solid #e2e209a7; 
 }
 
+.airport-image-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.airport-image {
+  width: 12rem;
+}
+
 .airport-modal-info {
   width: 20rem;
   height: 4rem;
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 6rem;
+  margin-top: 0rem;
 }
 
 .airport-modal-code {

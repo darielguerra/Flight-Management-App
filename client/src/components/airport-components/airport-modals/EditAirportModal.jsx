@@ -16,7 +16,9 @@ export const EditAirportModal = (props) => {
             <p>Airport</p>
             <button className="airport-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
           </div>
-       
+          <div className="airport-image-container">
+            <img className="airport-image" src="images/Airport.png" alt="Airport" />
+          </div>
           <div className="airport-modal-info">
             <div className="airport-modal-code"><p>{airport.code}</p></div>
             <div className="airport-modal-city-state"><p>{airport.city}, {airport.state}</p></div>
