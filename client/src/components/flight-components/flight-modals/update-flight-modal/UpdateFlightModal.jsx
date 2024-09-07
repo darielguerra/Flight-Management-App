@@ -37,7 +37,8 @@ export const UpdateFlightModal = (props) => {
               console.log('Something Went Wrong');
               console.log(error);
             }
-            props.closeModal(false);
+            props.updateFlightOpen(false);
+            props.editFlightOpen(false);
             props.refresh();
     }
 

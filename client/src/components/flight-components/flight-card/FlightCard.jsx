@@ -3,7 +3,8 @@ import { API } from "../../../App"
 import { useState } from "react";
 import { EditIcon } from '../../../assets/svg-icons/EditIcon';
 import { ArrowIcon } from '../../../assets/svg-icons/ArrowIcon';
-import { UpdateFlightModal } from '../../flight-components/flight-modals/update-flight/UpdateFlightModal';
+import { EditFlightModal } from '../flight-modals/edit-flight-modal/EditFlightModal';
+import { UpdateFlightModal } from '../flight-modals/update-flight-modal/UpdateFlightModal';
 import { DeleteModal } from '../../flight-components/flight-modals/delete-modal/DeleteModal';
 import './FlightCard.css';
 
@@ -13,6 +14,8 @@ export const FlightCard = (props) => {
 
     const [deleteModal, setDeleteModal] = useState(false);
     const [updateModal, setUpdateModal] = useState(false);
+
+    const [editFlightModal, setEditFlightModal] = useState(false);
    
     const handleDelete = async (flightNumber) => {
         try{
@@ -52,7 +55,7 @@ export const FlightCard = (props) => {
     return (
       <>
 
-        <div key={props.flight._id} className="flight-card">
+         <div onClick={() => setEditFlightModal(true)} key={props.flight._id} className="flight-card">
           
           <div className="flight-details">
             
@@ -89,15 +92,15 @@ export const FlightCard = (props) => {
               {updateModal && <UpdateFlightModal flight={props.flight} closeModal={setUpdateModal} refresh={props.refresh}/>}
 
               <button onClick={() => setDeleteModal(true)} className="btn delete">X</button>
-              {deleteModal && <DeleteModal flightNumber={props.flight.flightNumber} closeModal={setDeleteModal} delete={handleDelete} />}
+              {deleteModal && <DeleteModal flightNumber={props.flight.flightNumber} modalOpen={setDeleteModal} delete={handleDelete} />}
+            </div>
 
-
-            </div>                
           </div>  
           <div className="flight-border-line"></div>                
         </div> 
-       
-        </>
+
+        {editFlightModal && <EditFlightModal flight={props.flight} editFlightOpen={setEditFlightModal} refresh={props.refresh} />} 
+      </>
         
       )
 }

@@ -73,7 +73,8 @@
   font-weight: 500;
   width: 14rem;
   height: 2rem;
-  /*border-bottom: 7px solid var(--tertiary-light2-color);*/
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
 }
 
 .flightnumber p  {
