@@ -1,8 +1,8 @@
 
 
 .pilot-modal {
-  width: 22rem;
-  height: 21rem;
+  width: 22.5rem;
+  height: 23rem;
   background-color: var(--primary-light-color);
   display: flex; 
   flex-direction: column;
@@ -28,7 +28,7 @@
 }
 
 .pilot-modal-title p  {
-  margin: auto auto auto 9.3rem; /*centers*/    
+  margin: auto auto auto 9.8rem; /*centers*/    
 
 }  
 
@@ -49,6 +49,22 @@
   border: 2px solid #e2e209a7; 
 }
 
+.edit-pilot-image-container {
+  margin: auto;  
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  /*border-right: 1px solid black;
+  border-left: 1px solid black;*/
+  width: 16rem;
+}
+
+.edit-pilot-image {
+  opacity: .7;
+  width: 9.8rem;
+}
+
 .edit-pilot-icon {
   /*fill: #877269;*/
   fill:rgb(118, 110, 104);
@@ -57,12 +73,14 @@
 }
 
 .edit-pilot-modal-info {
-  width: 20rem;
+  border-top: 1px solid black;
+  width: 17rem;
   height: 4rem;
   display: flex;
   flex-direction: column;
   margin: auto;
   margin-top: 0rem;
+  border-bottom: 1px solid black;
 }
 
 .edit-pilot-name {
