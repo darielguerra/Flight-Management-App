@@ -66,9 +66,10 @@
 }
 
 .edit-pilot-icon {
-  /*fill: #877269;*/
-  fill:rgb(118, 110, 104);
-  width: 9rem;
+  /*fill: #877269;
+  fill:rgb(118, 110, 104);*/
+  opacity: .7;
+  width: 9.8rem;
   margin: 1rem auto .8rem;
 }
 

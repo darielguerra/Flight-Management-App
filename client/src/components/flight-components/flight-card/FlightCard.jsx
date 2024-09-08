@@ -3,6 +3,7 @@ import { API } from "../../../App"
 import { useState } from "react";
 import { EditIcon } from '../../../assets/svg-icons/EditIcon';
 import { ArrowIcon } from '../../../assets/svg-icons/ArrowIcon';
+import { FlightPlaneIcon } from '../../../assets/svg-icons/FlightPlaneIcon';
 import { EditFlightModal } from '../flight-modals/edit-flight-modal/EditFlightModal';
 import { UpdateFlightModal } from '../flight-modals/update-flight-modal/UpdateFlightModal';
 import { DeleteModal } from '../../flight-components/flight-modals/delete-modal/DeleteModal';
@@ -85,16 +86,21 @@ export const FlightCard = (props) => {
                   {/*<div><strong>Passenger Limit:  </strong>{flight.passengerLimit}</div>*/}
                 </div>   
               </div>                   
-            </div>      
+            </div> 
+            {/*   
             <div className="flight-buttons">
-              {/*<button className="btn edit"><Link to={`/updateaflight/${props.flight.flightNumber}`} state={props.flight.flightNumber}  className="update-text"><EditIcon /></Link></button>*/}
               <button onClick={() => setUpdateModal(true)} className="btn edit"><EditIcon /></button>
               {updateModal && <UpdateFlightModal flight={props.flight} closeModal={setUpdateModal} refresh={props.refresh}/>}
 
               <button onClick={() => setDeleteModal(true)} className="btn delete">X</button>
               {deleteModal && <DeleteModal flightNumber={props.flight.flightNumber} modalOpen={setDeleteModal} delete={handleDelete} />}
             </div>
-
+          */}
+          {/*  
+          <div className="flight-card-icon">
+            <FlightPlaneIcon />
+          </div>
+          */}
           </div>  
           <div className="flight-border-line"></div>                
         </div> 

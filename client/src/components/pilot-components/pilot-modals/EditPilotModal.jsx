@@ -20,10 +20,10 @@ export const EditPilotModal = (props) => {
               <p>Pilot</p>
               <button className="pilot-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div>
-            {/*<EditPilotIcon className="edit-pilot-icon"/>*/}
-            <div className="edit-pilot-image-container">
-              <img className="edit-pilot-image" src="images/Pilot1DarkStraightened.png" alt="Pilot" />
-            </div>
+            <EditPilotIcon className="edit-pilot-icon"/>
+            {/*<div className="edit-pilot-image-container">
+              <img className="edit-pilot-image" src="images/Pilot1DarkStraightenedWebp.webp" alt="Pilot" />
+            </div>*/}
             <div className="edit-pilot-modal-info">
               <div className="edit-pilot-name"><p>{pilot.firstName}{" "}{pilot.lastName}</p></div>
               <div className="edit-pilot-yearsOfService"><p>Years of Service: {pilot.yearsOfService}</p></div>

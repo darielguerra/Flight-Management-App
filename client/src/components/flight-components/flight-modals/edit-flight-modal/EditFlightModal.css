@@ -1,8 +1,8 @@
 
 
 .edit-flight-modal {
-  width: 24rem;
-  height: 24.5rem;
+  width: 26rem;
+  height: 16rem;
   background-color: var(--primary-light-color);
   position: absolute;
   top: 50%;
@@ -14,8 +14,32 @@
 }
 
 .edit-flight-info {
-  margin: auto;
+  margin-top: 2rem;
 }
+
+
+.edit-flight-info-container {
+  margin: auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+
+  width: 25rem;
+}
+
+.plane-icon {
+  width: 15rem;
+  opacity: .7;
+}
+
+.edit-plane-img {
+
+  width: 15rem;
+  /* reverse
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);*/
+}
+
 
 .edit-flight-modal-btns {
   display: flex;

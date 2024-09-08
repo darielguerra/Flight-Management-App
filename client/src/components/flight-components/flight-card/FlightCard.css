@@ -60,7 +60,9 @@
 }
 
 .flight-info {
-  width: 97%;
+  /*width: 97%;*/
+  width: 63.7rem;
+  margin-right: 2rem;
 }
 
 .flightnumber {
@@ -143,6 +145,35 @@ height: .5rem;
 .arrival {
   
 }
+
+
+.flight-card-icon {
+  display: flex;
+  justify-content: center;
+  margin-right: 1.5rem;
+}
+
+.flight-plane-icon {
+   margin: auto;
+   width: 4rem;
+   padding-top: 1.8rem;
+   fill: var(--secondary-dark2-color);
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .flight-buttons {

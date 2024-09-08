@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { API } from "../../../../App"
 import { UpdateFlightModal } from '../update-flight-modal/UpdateFlightModal';
+import { PlaneIcon } from '../../../../assets/svg-icons/PlaneIcon';
 import { useState } from 'react';
 import './EditFlightModal.css'
 
@@ -24,11 +25,17 @@ export const EditFlightModal = (props) => {
     <div className="modal">
       <div onClick={() => props.editFlightOpen(false)} className="overlay">
         <div onClick={(e) => e.stopPropagation()} className="edit-flight-modal">
-          <div className="edit-flight-info">
-            <div className="edit-flight-airport-code">
-            {flight.departureAirport} - {flight.arrivalAirport}
+          <div className="edit-flight-info-container">
+            <div className="edit-flight-info">
+              <div className="edit-flight-airport-code">
+              {flight.departureAirport} - {flight.arrivalAirport}
+              </div>              
             </div>
-          </div>
+            <div className="edit-plane-img-container">
+              <PlaneIcon />
+              {/*<img className="edit-plane-img" src="images/EditPlane.png" alt="Plane" />*/}
+            </div>
+          </div> 
           <div className="edit-flight-modal-btns">
             <button onClick={handleDelete} className="edit-flight-btn">Delete</button>
             <button onClick={() => setUpdateFlightModal(true)} className="edit-flight-btn">Edit</button>
