@@ -25,10 +25,14 @@ export const EditFlightModal = (props) => {
     <div className="modal">
       <div onClick={() => props.editFlightOpen(false)} className="overlay">
         <div onClick={(e) => e.stopPropagation()} className="edit-flight-modal">
+          <div className="edit-flight-modal-title">
+            <p>Flight# {flight.flightNumber}</p>
+            <button className="edit-flight-modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
+          </div>   
           <div className="edit-flight-info-container">
             <div className="edit-flight-info">
               <div className="edit-flight-airport-code">
-              {flight.departureAirport} - {flight.arrivalAirport}
+              {flight.departureAirport} -{'>'} {flight.arrivalAirport}
               </div>              
             </div>
             <div className="edit-plane-img-container">
@@ -37,8 +41,8 @@ export const EditFlightModal = (props) => {
             </div>
           </div> 
           <div className="edit-flight-modal-btns">
-            <button onClick={handleDelete} className="edit-flight-btn">Delete</button>
-            <button onClick={() => setUpdateFlightModal(true)} className="edit-flight-btn">Edit</button>
+          <button onClick={() => setUpdateFlightModal(true)} className="edit-flight-btn">Edit</button>
+            <button onClick={handleDelete} className="delete-flight-btn">Delete</button>
           </div>
         </div>
         {updateFlightModal && <UpdateFlightModal flight={flight} editFlightOpen={props.editFlightOpen} updateFlightOpen={setUpdateFlightModal} refresh={props.refresh} />}
