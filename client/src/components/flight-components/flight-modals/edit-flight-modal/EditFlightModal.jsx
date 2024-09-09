@@ -27,7 +27,7 @@ export const EditFlightModal = (props) => {
         <div onClick={(e) => e.stopPropagation()} className="edit-flight-modal">
           <div className="edit-flight-modal-title">
             <p>Flight# {flight.flightNumber}</p>
-            <button className="edit-flight-modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
+            <button className="edit-flight-modal-exit-btn" onClick={() => props.editFlightOpen(false)}>X</button>
           </div>   
           <div className="edit-flight-info-container">
             <div className="edit-flight-info">
