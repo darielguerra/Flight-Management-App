@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
     const updatedPilot = await updatePilot({ _id: id, firstName, lastName, yearsOfService });
     res.status(200).json(updatedPilot);
   } catch (err) {
-    res.status(err.status || 500).json({ message: err.message || 'Internal Server Error' });
+    res.status(err.status || 500).json({ message: err.message || 'Server Error' });
   }
 });
 

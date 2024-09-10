@@ -26,7 +26,7 @@ const addPilot = async ({firstName, lastName, yearsOfService}) => {
 
 // update pilot
 const updatePilot = async ({ _id, firstName, lastName, yearsOfService }) => {
-  console.log('updatePilot called with:', { _id, firstName, lastName, yearsOfService }); // Add logging
+  console.log('updatePilot called with:', { _id, firstName, lastName, yearsOfService }); //logging
   try {
     const pilot = await Pilot.findOneAndUpdate({ _id },      
       {

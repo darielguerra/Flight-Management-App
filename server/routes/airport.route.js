@@ -19,7 +19,20 @@ router.post('/', async (req, res) => {
     }
 });
 
- //update airport
+//update airport
+router.put('/:id', async (req, res) => {
+  const { id } = req.params;
+  const { code, city, state } = req.body;
+  try {
+    const updatedAirport = await updateAirport({ _id: id, code, city, state });
+    res.status(200).json(updatedAirport);
+  } catch (err) {
+    res.status(err.status || 500).json({ message: err.message || 'Server Error' });
+  }
+});
+
+ //old update airport
+ /*
  router.put('/:id', async (req, res) => {
     try{
         const airport = await updateAirport(req.body);
@@ -30,6 +43,7 @@ router.post('/', async (req, res) => {
         res.status(err?.status || 400).json(err);
     }
  });
+ */
 
  //delete airport
  router.delete('/:id', async (req, res) =>{

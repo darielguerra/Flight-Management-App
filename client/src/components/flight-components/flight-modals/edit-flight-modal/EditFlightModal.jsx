@@ -41,7 +41,7 @@ export const EditFlightModal = (props) => {
             </div>
           </div> 
           <div className="edit-flight-modal-btns">
-          <button onClick={() => setUpdateFlightModal(true)} className="edit-flight-btn">Edit</button>
+            <button onClick={() => setUpdateFlightModal(true)} className="edit-flight-btn">Edit</button>
             <button onClick={handleDelete} className="delete-flight-btn">Delete</button>
           </div>
         </div>

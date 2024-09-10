@@ -25,6 +25,29 @@ const addAirport = async ({code, city, state}) => {
 }
 
 //update airport
+const updateAirport = async ({_id, code, city, state}) => {
+  try {
+    const airport = await Airport.findOneAndUpdate({_id},
+    {
+      code,
+      city,
+      state
+    },
+    { new: true } //returns updated pilot 
+  );
+  if (!airport){
+    throw `There is no airport with id ${_id}`;
+  }
+  return airport;
+  
+  } catch (err) {
+    console.error(err);
+    throw {status: 400, message: err};
+  }
+};
+
+// old update airport
+/*
 const updateAirport = async ({code, city, state}) => {
     try {
         const airport = await Airport.findOneAndUpdate({_id:_id},
@@ -32,7 +55,7 @@ const updateAirport = async ({code, city, state}) => {
                 code, city, state 
             }
         );
-        if (flight == null) {
+        if (airport == null) {
             throw `There is no airport with id ${_id}`
         }
         return airport;
@@ -42,6 +65,7 @@ const updateAirport = async ({code, city, state}) => {
         throw {status: 400, message: err}
     }
 }
+*/
 
 //delete airport
 const deleteAirport = async (id) => {
