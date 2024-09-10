@@ -13,3 +13,23 @@
 .overlay {
   background-color: #3232328c;
 }
+
+
+
+/* modal buttons  */
+.edit-btn  {
+  width: 4rem;
+  background-color: rgb(186, 225, 244);
+  border: 1px solid black;
+}
+
+.delete-btn {  
+  width: 4rem;
+  background-color: rgb(252, 183, 183);
+  border: 1px solid black;
+}
+
+.edit-btn:hover + .delete-btn:hover {
+  cursor: pointer;
+}
+

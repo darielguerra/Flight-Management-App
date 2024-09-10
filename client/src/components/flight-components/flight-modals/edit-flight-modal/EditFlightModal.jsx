@@ -41,8 +41,8 @@ export const EditFlightModal = (props) => {
             </div>
           </div> 
           <div className="edit-flight-modal-btns">
-            <button onClick={() => setUpdateFlightModal(true)} className="edit-flight-btn">Edit</button>
-            <button onClick={handleDelete} className="delete-flight-btn">Delete</button>
+            <button onClick={() => setUpdateFlightModal(true)} className="edit-btn flight-edit-btn">Edit</button>
+            <button onClick={handleDelete} className="delete-btn flight-delete-btn">Delete</button>
           </div>
         </div>
         {updateFlightModal && <UpdateFlightModal flight={flight} editFlightOpen={props.editFlightOpen} updateFlightOpen={setUpdateFlightModal} refresh={props.refresh} />}

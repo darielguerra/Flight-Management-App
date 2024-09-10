@@ -97,25 +97,11 @@
   margin-bottom: 1rem;
 }
 
-.delete-flight-btn {  
-  margin-left: 4rem;
-  width: 4rem;
-  background-color: rgb(252, 183, 183);
-  border: 1px solid black;
+.flight-edit-btn {  
+  margin-right: 4rem;
 }
 
-.edit-flight-btn  {
-  margin-right: 5rem;
-  width: 4rem;
-  background-color: rgb(186, 225, 244);
-  border: 1px solid black;
+.flight-delete-btn  {
+  margin-left: 5rem;
 }
 
-.delete-flight-btn:hover {
-  cursor: pointer;
-}
-
-
-.edit-flight-btn:hover {
-  cursor: pointer;
-}
