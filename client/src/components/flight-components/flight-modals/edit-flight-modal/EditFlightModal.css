@@ -29,24 +29,7 @@
 
 .edit-flight-modal-title p  {
   margin: auto auto auto 9.3rem; /*centers*/    
-
 }  
-
-.edit-flight-modal-exit-btn {
-  margin-right: 1.5rem;
-  height: 1.4rem;
-  width: 1.7rem;
-  font-size: 18px;
-  font-weight: 500;
-  border: .07rem solid black;
-  background-color: #dfd2cd;
-  border-radius: 5px;
-}
-
-.edit-flight-modal-exit-btn:hover {
-  cursor: pointer;
-  border: 2px solid #e2e209a7; 
-}
 
 .edit-flight-info-container {
   margin: auto;
@@ -88,13 +71,6 @@
   /* reverse
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);*/
-}
-
-
-.edit-flight-modal-btns {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 1rem;
 }
 
 .flight-edit-btn {  

@@ -29,25 +29,43 @@
 
 .airport-modal-title p  {
   margin: auto auto auto 9.3rem; /*centers*/    
-
 }  
 
-.airport-exit-btn {
-  margin-right: 1.5rem;
-  height: 1.4rem;
-  width: 1.7rem;
-  font-size: 18px;
+.update-airport-modal-title {
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  height: 2rem;
+  font-size: 24px;
+  background-color: var(--tertiary-dark-color);
+  font-family: var(--font-family-main);
+  color: var(--primary-light-color);
   font-weight: 500;
-  border: .07rem solid black;
-  background-color: #dfd2cd;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.airport-exit-btn:hover {
-  cursor: pointer;
-  border: 2px solid #e2e209a7; 
+.update-airport-modal-title p  {
+  margin: auto auto auto 6.7rem; /*centers*/    
+}  
+
+.add-airport-modal-title {
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  height: 2rem;
+  font-size: 24px;
+  background-color: var(--tertiary-dark-color);
+  font-family: var(--font-family-main);
+  color: var(--primary-light-color);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.add-airport-modal-title p  {
+  margin: auto auto auto 8.2rem; /*centers*/    
+}  
 
 .airport-image-container {
   margin: auto;
@@ -77,7 +95,6 @@
   margin-top: 0rem;  
   padding-bottom: .4rem; 
   border-top: 1px solid black;
-
 }
 
 
@@ -136,3 +153,50 @@
 .airport-modal-city-state p {
   margin: auto;
 }
+
+.airport-modal-form {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  flex-direction: column;
+  width: 15rem;
+  height: 13rem;
+}
+
+.airport-modal-form input[type=text] {
+ 
+  height: 1.5rem;
+  line-height: 15px;
+}
+
+.airport-code {
+  display: flex;
+}
+
+.airport-code-input {
+  width: 2rem;
+  margin-left: 4.6rem;
+}
+
+.airport-city-input {
+  width: 10.6rem;
+  margin-left: .7rem;
+}
+
+.airport-state {
+  display: flex;
+}
+
+.airport-state-input {
+  width: 10.6rem;
+}
+
+.airport-edit-btn {  
+  margin-right: 4rem;
+}
+
+.airport-delete-btn  {
+  margin-left: 4rem;
+}
+

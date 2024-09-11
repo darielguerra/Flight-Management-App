@@ -29,25 +29,8 @@
 
 .pilot-modal-title p  {
   margin: auto auto auto 9.8rem; /*centers*/    
-
 }  
 
-
-.pilot-exit-btn {
-  margin-right: 1.5rem;
-  height: 1.4rem;
-  width: 1.7rem;
-  font-size: 18px;
-  font-weight: 500;
-  border: .07rem solid black;
-  background-color: #dfd2cd;
-  border-radius: 5px;
-}
-
-.pilot-exit-btn:hover {
-  cursor: pointer;
-  border: 2px solid #e2e209a7; 
-}
 
 .edit-pilot-image-container {
   margin: auto;  
@@ -108,7 +91,6 @@
   margin: auto;
 }
 
-
 .edit-pilot-btn {
   height: 1.6rem;
   width: 4rem;
@@ -125,7 +107,6 @@
   flex-direction: column;
   width: 18rem;
 }
-
 
 .pilot-modal-form input[type=text] {
   width: 17rem;

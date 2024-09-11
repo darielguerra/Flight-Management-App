@@ -27,7 +27,7 @@ export const EditFlightModal = (props) => {
         <div onClick={(e) => e.stopPropagation()} className="edit-flight-modal">
           <div className="edit-flight-modal-title">
             <p>Flight# {flight.flightNumber}</p>
-            <button className="edit-flight-modal-exit-btn" onClick={() => props.editFlightOpen(false)}>X</button>
+            <button className="modal-exit-btn" onClick={() => props.editFlightOpen(false)}>X</button>
           </div>   
           <div className="edit-flight-info-container">
             <div className="edit-flight-info">
@@ -40,7 +40,7 @@ export const EditFlightModal = (props) => {
               {/*<img className="edit-plane-img" src="images/EditPlane.png" alt="Plane" />*/}
             </div>
           </div> 
-          <div className="edit-flight-modal-btns">
+          <div className="modal-bottom-btns">
             <button onClick={() => setUpdateFlightModal(true)} className="edit-btn flight-edit-btn">Edit</button>
             <button onClick={handleDelete} className="delete-btn flight-delete-btn">Delete</button>
           </div>

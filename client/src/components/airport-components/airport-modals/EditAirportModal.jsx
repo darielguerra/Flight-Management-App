@@ -29,7 +29,7 @@ export const EditAirportModal = (props) => {
             <>
               <div className="airport-modal-title">
                 <p>Airport</p>
-                <button className="airport-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
+                <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
               </div>         
               <div className="airport-image-container">
               {/* <img className="airport-image" src="images/Airport2DarkWebp500px.webp" alt="Airport" />*/}
@@ -39,13 +39,20 @@ export const EditAirportModal = (props) => {
                 <div className="airport-modal-code"><p>{airport.code}</p></div>
                 <div className="airport-modal-city-state"><p>{airport.city}, {airport.state}</p></div>
               </div>
-              <div className="edit-airport-modal-btns">
-                <button onClick={() => setUpdateAirport(true)} className="edit-airpot-btn">Edit</button>
-                <button onClick={handleDelete} className="delete-flight-btn">Delete</button>
+              <div className="modal-bottom-btns">
+                <button onClick={() => setUpdateAirport(true)} className="edit-btn airport-edit-btn">Edit</button>
+                <button onClick={handleDelete} className="delete-btn airport-delete-btn">Delete</button>
               </div>
             </>
           )}
-          {showUpdateAirport && <UpdateAirport airport={airport} />}
+          {showUpdateAirport && (
+          <>
+            <div className="update-airport-modal-title">
+              <p>Update Airport</p>
+              <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
+            </div> 
+            <UpdateAirport airport={airport} />
+          </>)}
         </div>
       </div>
     </div>

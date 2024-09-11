@@ -18,7 +18,7 @@ export const EditPilotModal = (props) => {
           <>
             <div className="pilot-modal-title">
               <p>Pilot</p>
-              <button className="pilot-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
+              <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div>
             <EditPilotIcon className="edit-pilot-icon"/>
             {/*<div className="edit-pilot-image-container">
