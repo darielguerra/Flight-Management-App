@@ -15,13 +15,15 @@ export const UpdateAirport = (props) => {
       await axios.put(`${API}/airports/${airportId}`,
       { 
         code: code.current.value,
-        city: code.current.value,
-        state: code.current.vale
+        city: city.current.value,
+        state: state.current.vale
       })
     }
     catch (error) {
       console.log(error)
     }
+    props.refresh();
+    props.modalOpen(false);
 
   }
 

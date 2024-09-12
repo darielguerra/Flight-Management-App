@@ -14,7 +14,7 @@ export const AddAirportButton = (props) => {
         </div>
       </button>
       {addAirportModal && 
-        <AddAirportModal refresh={props.refresh} closeModal={setAddAirportModal} />}
+        <AddAirportModal refresh={props.refresh} modalOpen={setAddAirportModal} />}
     </div> 
   )
 }

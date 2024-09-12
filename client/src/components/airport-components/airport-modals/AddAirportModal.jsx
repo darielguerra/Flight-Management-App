@@ -21,13 +21,13 @@ export const AddAirportModal = (props) => {
       catch (error) {
         console.log(error);
       }
-      props.closeModal(false);
+      props.modalOpen(false);
       props.refresh();
   }
 
   return(
     <div className="modal">
-      <div  onClick={() => props.closeModal(false)} className="overlay">
+      <div  onClick={() => props.modalOpen(false)} className="overlay">
         <div className="add-airport-layout">
           <div onClick={(e) => e.stopPropagation()} className="airport-modal">
             <div className="add-airport-modal-title">

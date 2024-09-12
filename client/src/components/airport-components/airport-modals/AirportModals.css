@@ -179,6 +179,10 @@
   margin-left: 4.6rem;
 }
 
+.airport-city {
+  display: flex;
+}
+
 .airport-city-input {
   width: 10.6rem;
   margin-left: .7rem;

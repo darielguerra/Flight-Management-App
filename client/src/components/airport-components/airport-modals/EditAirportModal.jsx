@@ -51,7 +51,7 @@ export const EditAirportModal = (props) => {
               <p>Update Airport</p>
               <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div> 
-            <UpdateAirport airport={airport} />
+            <UpdateAirport airport={airport} refresh={props.refresh} modalOpen={props.modalOpen} />
           </>)}
         </div>
       </div>
