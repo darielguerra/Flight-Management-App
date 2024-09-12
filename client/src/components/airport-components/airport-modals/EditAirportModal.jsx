@@ -1,4 +1,4 @@
-import { axios } from 'axios';
+import axios from 'axios';
 import { API } from '../../../App';
 import { useState } from "react";
 import { UpdateAirport} from '../update-airport/UpdateAirport';
@@ -13,11 +13,12 @@ export const EditAirportModal = (props) => {
   
   const handleDelete = async () => {
     try {
-      await axios.delete(`${API}/airport/${airport._id}`);
+      await axios.delete(`${API}/airports/${airport._id}`);
     }
     catch (error) {
       console.log(error);
     }
+    props.refresh();
     props.modalOpen(false);
   }
 

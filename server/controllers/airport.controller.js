@@ -68,10 +68,13 @@ const updateAirport = async ({code, city, state}) => {
 */
 
 //delete airport
-const deleteAirport = async (id) => {
+const deleteAirport = async ({_id}) => {
     try {
-        const airports = await Airport.deleteOne({_id:id});
-        return airports;
+        const airport = await Airport.findByIdAndDelete(_id);
+        if (!airport){
+          throw `There is no airport with id ${_id}`;
+        }
+        return airport;
     }
     catch (err) {
         console.error(err);

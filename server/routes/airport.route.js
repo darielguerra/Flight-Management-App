@@ -47,9 +47,10 @@ router.put('/:id', async (req, res) => {
 
  //delete airport
  router.delete('/:id', async (req, res) =>{
+    const { id } = req.params;
     try{
-        const airport = await deleteAirport(req.params.id);
-        res.status(201).json({_id: airport});
+        const airport = await deleteAirport({_id: id});
+        res.status(200).json({_id: airport._id});
     } catch (err) {
         console.log(err);
         res.status(err?.status || 400).json(err);
