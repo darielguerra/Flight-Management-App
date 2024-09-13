@@ -30,7 +30,9 @@ export const UpdateAirport = (props) => {
   return(
     <form onSubmit={handleSubmit} className="airport-modal-form">
       <div className="airport-code">
-        <label className="airport-code-label">Airport Code:</label>
+        <label className="airport-code-label">          
+          Airport Code: <a className="code-link" href="https://www.leonardsguide.com/us-airport-codes.shtml" target="_blank" rel="noreferrer">(List)</a>
+        </label>        
         <input className="airport-code-input" type="text" ref={code} />
       </div>
       <div className="airport-city">
