@@ -1,3 +1,5 @@
+import axios from 'axios';
+import { API } from '../../../App';
 import { useState } from "react";
 import { UpdatePilot } from '../update-pilot/UpdatePilot';
 import { EditPilotIcon } from '../../../assets/svg-icons/EditPilotIcon';
@@ -8,6 +10,16 @@ export const EditPilotModal = (props) => {
   const pilot = props.pilot;
   const [showUpdatePilot, setShowUpdatePilot ] = useState(false);
 
+  const handleDelete = () => {
+    try{
+      axios.delete(`${API}/pilots/${pilot._id}`);
+    }
+    catch (error){
+      console.log(error);
+    }
+    props.refresh();
+    props.modalOpen(false);
+  }
 
   return (
     <div className="modal">
@@ -28,10 +40,12 @@ export const EditPilotModal = (props) => {
               <div className="edit-pilot-name"><p>{pilot.firstName}{" "}{pilot.lastName}</p></div>
               <div className="edit-pilot-yearsOfService"><p>Years of Service: {pilot.yearsOfService}</p></div>
             </div>
-
-            <button onClick={() => setShowUpdatePilot(true)} className="edit-pilot-btn">
-              Edit
-            </button>
+            <div className="modal-bottom-btns">
+              <button onClick={() => setShowUpdatePilot(true)} className="edit-btn pilot-edit-btn">
+                Edit
+              </button>
+              <button onClick={handleDelete} className="delete-btn pilot-delete-btn">Delete</button>
+            </div>
           </>
         )}
           {showUpdatePilot && (

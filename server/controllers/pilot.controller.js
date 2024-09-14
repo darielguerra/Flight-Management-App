@@ -48,7 +48,7 @@ const updatePilot = async ({ _id, firstName, lastName, yearsOfService }) => {
   }
 };
 
-//delete airport
+//delete airport (works simpler then airport delete method)
 const deletePilot = async (id) => {
   try {
       const pilots = await Pilot.deleteOne({_id:id});

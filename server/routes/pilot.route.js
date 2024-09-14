@@ -32,7 +32,7 @@ router.post('/', async (req, res) => {
   }
 });
 
- //delete pilot
+ //delete pilot (works simpler then airport delete method)
  router.delete('/:id', async (req, res) =>{
     try{
         const pilot = await deletePilot(req.params.id);

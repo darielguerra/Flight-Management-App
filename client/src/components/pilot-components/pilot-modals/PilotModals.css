@@ -118,10 +118,17 @@
   width: 4rem;
 }
 
+.pilot-edit-btn {  
+  margin-right: 4rem;
+}
 
+.pilot-delete-btn  {
+  margin-left: 4rem;
+}
 
 .add-pilot-submit-btn {
   width: 4rem;
   height: 1.5rem;
   font-size: 18px;
 }
+
