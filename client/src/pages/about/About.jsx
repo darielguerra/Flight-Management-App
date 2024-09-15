@@ -29,6 +29,7 @@ export const About = () => {
             </a>
           </div>   
         </div>
+        <div className="under-construction"><p>Site is still being developed</p></div>
         < Footer />
       </div> 
     );

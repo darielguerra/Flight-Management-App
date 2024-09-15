@@ -92,6 +92,23 @@
   fill: #a88418;
 }
 
+.under-construction {
+  position: absolute;
+  top: 39rem;
+  left: 78rem;  
+  background-color: var(--primary-light-color);
+  border-radius: 25px;
+  border: 2px solid var(--tertiary-dark-color);
+  width: 14.5rem; 
+  height: 2.8rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.under-construction p{
+  margin: auto;
+}
 
 
 
