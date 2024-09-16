@@ -16,7 +16,7 @@ export const UpdateAirport = (props) => {
       { 
         code: code.current.value,
         city: city.current.value,
-        state: state.current.vale
+        state: state.current.value
       })
     }
     catch (error) {
