@@ -93,9 +93,12 @@
 }
 
 .under-construction {
-  position: absolute;
-  top: 39rem;
-  left: 78rem;  
+  top: 74%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;  
+  z-index: 1;
   background-color: var(--primary-light-color);
   border-radius: 25px;
   border: 2px solid var(--tertiary-dark-color);
