@@ -1,12 +1,15 @@
 import axios from 'axios';
 import { API } from "../../App"
+import { getAirports } from "../../services/Services";
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Footer } from '../../components/global-components/footers/Footer';
 import '.././Create-UpdateAFlight.css';
 
 export const CreateAFlight = () => {
-    
+
+    const [airports, setAirports] = useState([]);
+  
     const [flightNumber, setFlightNumber] = useState(0);
     const departureDateRef = useRef();
     const arrivalDateRef = useRef();
@@ -18,6 +21,8 @@ export const CreateAFlight = () => {
 
     useEffect(() => {
       getLastFlight();
+      fetchAirports();
+      console.log(airports)
     }, []);    
 
     const getLastFlight = async () => {
@@ -29,6 +34,16 @@ export const CreateAFlight = () => {
         setFlightNumber(JSON.parse(res.data) + 1); //increment by 1
       }
      }
+     
+     const fetchAirports = async () => {
+      try {
+        const airportsData = await getAirports();
+        setAirports(airportsData);
+        console.log(airportsData); 
+      } catch (error) {
+        console.error('Error fetching airports:', error);
+      }
+    };
 
     const handleSubmit = async (event) => {
       console.log(flightNumber);
