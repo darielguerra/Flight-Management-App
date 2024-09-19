@@ -52,7 +52,7 @@ export const EditPilotModal = (props) => {
           <>
             <div className="pilot-modal-title">
               <p>Update {pilot.firstName}{" "}{pilot.lastName}</p>
-              <button className="pilot-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
+              <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div>
             <UpdatePilot pilotId={pilot._id} modalOpen={props.modalOpen} refresh={props.refresh} />
           </>
