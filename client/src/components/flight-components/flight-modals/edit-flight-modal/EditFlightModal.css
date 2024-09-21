@@ -14,20 +14,10 @@
 }
 
 .edit-flight-modal-title {
-  border-top-left-radius: 28px;
-  border-top-right-radius: 28px;
-  height: 2rem;
-  font-size: 24px;
-  background-color: var(--tertiary-dark-color);
-  font-family: var(--font-family-main);
-  color: var(--primary-light-color);
-  font-weight: 400;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+   font-weight: 400; /*thinner font*/
 }
 
-.edit-flight-modal-title p  {
+.edit-flight-title {
   margin: auto auto auto 9.3rem; /*centers*/    
 }  
 

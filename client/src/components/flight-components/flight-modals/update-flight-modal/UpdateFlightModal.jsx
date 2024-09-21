@@ -54,7 +54,7 @@ export const UpdateFlightModal = (props) => {
                   
                   <form className="form" onSubmit={handleSubmit}>           
                 
-                    <div className="flight-number-updateflight">
+                    <div className="modal-title">
                       <label className="flightNumber-label">Flight# {flightNumber}</label>
                     </div>
         

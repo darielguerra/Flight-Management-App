@@ -28,7 +28,7 @@ export const EditPilotModal = (props) => {
          
         {!showUpdatePilot && (
           <>
-            <div className="pilot-modal-title">
+            <div className="modal-title">
               <p className="edit-pilot-title" >Pilot</p>
               <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div>
@@ -50,7 +50,7 @@ export const EditPilotModal = (props) => {
         )}
           {showUpdatePilot && (
           <>
-            <div className="pilot-modal-title">
+            <div className="modal-title">
               <p className="update-pilot-title">Update Pilot</p>
               <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div>

@@ -30,7 +30,7 @@ export const AddAirportModal = (props) => {
       <div  onClick={() => props.modalOpen(false)} className="overlay">
         <div className="add-airport-layout">
           <div onClick={(e) => e.stopPropagation()} className="airport-modal">
-            <div className="add-airport-modal-title">
+            <div className="modal-title">
                 <p className="add-airport-title">Add Airport</p>
                 <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div>  

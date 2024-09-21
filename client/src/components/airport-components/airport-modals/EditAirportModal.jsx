@@ -28,7 +28,7 @@ export const EditAirportModal = (props) => {
         <div onClick={(e) => e.stopPropagation()}  className="airport-modal"> 
           {!showUpdateAirport && (
             <>
-              <div className="airport-modal-title">
+              <div className="modal-title">
                 <p className="edit-airport-title">Airport</p>
                 <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
               </div>         
@@ -48,7 +48,7 @@ export const EditAirportModal = (props) => {
           )}
           {showUpdateAirport && (
           <>
-            <div className="update-airport-modal-title">
+            <div className="modal-title">
               <p className="update-airport-title">Update Airport</p>
               <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div> 

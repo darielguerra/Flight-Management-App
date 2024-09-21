@@ -14,7 +14,19 @@
   background-color: #3232328c;
 }
 
-
+.modal-title {
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  height: 2rem;
+  font-size: 24px;
+  background-color: var(--tertiary-dark-color);
+  font-family: var(--font-family-main);
+  color: var(--primary-light-color);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* modal buttons  */
 
