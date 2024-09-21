@@ -27,10 +27,18 @@
   align-items: center;
 }
 
-.pilot-modal-title p  {
-  margin: auto auto auto 9.8rem; /*centers*/    
+.edit-pilot-title  {
+  margin: auto auto auto 9.8rem;
 }  
 
+.update-pilot-title {
+  margin: auto auto auto 6.7rem; /*centers*/    
+}
+
+.add-pilot-title {
+  padding-left: .4rem;
+  width: 10rem;
+}
 
 .edit-pilot-image-container {
   margin: auto;  

@@ -31,7 +31,7 @@ export const AddAirportModal = (props) => {
         <div className="add-airport-layout">
           <div onClick={(e) => e.stopPropagation()} className="airport-modal">
             <div className="add-airport-modal-title">
-                <p>Add Airport</p>
+                <p className="add-airport-title">Add Airport</p>
                 <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div>  
             <form onSubmit={handleSubmit} className="airport-modal-form" >

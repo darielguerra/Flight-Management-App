@@ -89,7 +89,7 @@ export const CreateAFlight = () => {
 
                   <div className="info-column departure">  
 
-                    <div className="item departure-airport">
+                    <div className="item">
                       <label className="departureAirport-label">Departure Airport</label>
                       <input className="departureAirport-input" type="text" placeholder="Departure Airport" ref={departureAirportRef} />
                     </div>
@@ -104,7 +104,7 @@ export const CreateAFlight = () => {
                     
                   </div>     
 
-                  <div className="center-line"></div>
+                  {/*<div className="center-line"></div>*/}
 
                   <div className="info-column arrival">
 

@@ -55,7 +55,7 @@ html, body {
 .flight-number-updateflight {
   height: 2.1rem;
    font-size: 45px;
-   background-color: var(--secondary-dark2-color);
+   background-color: var(--tertiary-dark-color);
    font-family: var(--font-family-main);
    font-weight: 500;
    display: flex;
@@ -91,19 +91,7 @@ html, body {
     display: flex;
 }
 
-.departure {
-  
-}
 
-
-.departureAirport-input {
-  height: 20px;
-}
-
-
-.arrival {
-    
-}
 
 .form {
     height: 100%;

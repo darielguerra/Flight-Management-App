@@ -27,9 +27,6 @@
   align-items: center;
 }
 
-.airport-modal-title p  {
-  margin: auto auto auto 9.3rem; /*centers*/    
-}  
 
 .update-airport-modal-title {
   border-top-left-radius: 28px;
@@ -45,10 +42,6 @@
   align-items: center;
 }
 
-.update-airport-modal-title p  {
-  margin: auto auto auto 6.7rem; /*centers*/    
-}  
-
 .add-airport-modal-title {
   border-top-left-radius: 28px;
   border-top-right-radius: 28px;
@@ -63,9 +56,17 @@
   align-items: center;
 }
 
-.add-airport-modal-title p  {
-  margin: auto auto auto 8.2rem; /*centers*/    
+.edit-airport-title {
+  margin: auto auto auto 9.9rem; /*centers*/ 
+}
+
+.update-airport-title {
+  margin: auto auto auto 7rem; /*centers*/    
 }  
+
+.add-airport-title{
+  margin: auto auto auto 8rem; /*centers*/  
+}
 
 .airport-image-container {
   margin: auto;

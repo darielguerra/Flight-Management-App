@@ -32,7 +32,7 @@ export const AddPilotModal = (props) => {
       <div className="add-pilot-layout">
         <div onClick={(e) => e.stopPropagation()} className="pilot-modal">
           <div className="pilot-modal-title">
-            <p>New Pilot</p>
+            <p className="add-pilot-title">New Pilot</p>
             <button className="modal-exit-btn" onClick={() => props.closeModal(false)}>X</button>
           </div>
           <form onSubmit={handleSubmit} className="pilot-modal-form" >

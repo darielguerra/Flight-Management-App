@@ -29,7 +29,7 @@ export const EditAirportModal = (props) => {
           {!showUpdateAirport && (
             <>
               <div className="airport-modal-title">
-                <p>Airport</p>
+                <p className="edit-airport-title">Airport</p>
                 <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
               </div>         
               <div className="airport-image-container">
@@ -49,7 +49,7 @@ export const EditAirportModal = (props) => {
           {showUpdateAirport && (
           <>
             <div className="update-airport-modal-title">
-              <p>Update Airport</p>
+              <p className="update-airport-title">Update Airport</p>
               <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div> 
             <UpdateAirport airport={airport} refresh={props.refresh} modalOpen={props.modalOpen} />
