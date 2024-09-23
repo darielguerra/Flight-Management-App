@@ -3,13 +3,16 @@ import { API } from "../../App"
 import { getAirports } from "../../services/Services";
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { Dropdown } from '../../components/global-components/dropdown-menu/Dropdown';
+import { DropdownItem } from '../../components/global-components/dropdown-menu/dropdown-parts/DropdownItem';
 import { Footer } from '../../components/global-components/footers/Footer';
 import '.././Create-UpdateAFlight.css';
 
 export const CreateAFlight = () => {
 
     const [airports, setAirports] = useState([]);
-  
+    const [ departureAirport, setDeptureAirport] = useState([]);
+
     const [flightNumber, setFlightNumber] = useState(0);
     const departureDateRef = useRef();
     const arrivalDateRef = useRef();
@@ -44,6 +47,12 @@ export const CreateAFlight = () => {
         console.error('Error fetching airports:', error);
       }
     };
+
+    /*
+    const selectDepartureAirport = (airport) => {
+      setDeptureAirport(airport);
+      console.log(departureAirport.code);
+    }*/
 
     const handleSubmit = async (event) => {
       console.log(flightNumber);
@@ -89,10 +98,22 @@ export const CreateAFlight = () => {
 
                   <div className="info-column departure">  
 
-                    <div className="item">
-                      <label className="departureAirport-label">Departure Airport</label>
-                      <input className="departureAirport-input" type="text" placeholder="Departure Airport" ref={departureAirportRef} />
-                    </div>
+                    <div className="item departure-airport">
+                     {/* <label className="departureAirport-label">Departure Airport</label>
+                      <input className="departureAirport-input" type="text" placeholder="Departure Airport" ref={departureAirportRef} />*/}
+                     
+                      <Dropdown 
+                        buttonText="Departure Airport"
+                        content={
+                        <>
+                          {airports.map((airport)=> 
+                            <DropdownItem key={airport._id} /*onClick={selectDepartureAirport(airport)}*/>
+                            {`${airport.code} - ${airport.city}, ${airport.state}`}
+                            </DropdownItem>)} 
+                        </>}
+                      />
+                    </div> 
+
                     <div className="item departure-date">
                       <label className="departureDate-label">Departure Date</label>
                       <input className="departureDate-input" type="Date" placeholder="Departure Date" ref={departureDateRef} />

@@ -1,0 +1,69 @@
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  width: 15.5rem;
+  padding: .7rem;
+  background-color: white;
+  border-radius: .5rem;
+  box-shadow: rgba(149, 157, 165, 0.2)
+  0px 8px 24px;
+  cursor: pointer;
+}
+
+.dropdown-btn-open {
+  border: 2px solid rgb(147, 197, 253);
+}
+
+.dropdown-toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6rem;
+}
+
+.dropdown-content {
+  position: absolute;
+  /*min-width: 100%;*/
+  border-radius: .5rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin-top: .5rem;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2)
+  0px 8px 24px;
+  max-height: 30vh; /*so it never goes outside screen*/
+  overflow-y: scroll;
+  scrollbar-width: none; /*hide scroll bar*/
+  -ms-overflow-style: none; /*to work on every browser*/ 
+  opacity: 0; /*not visible unless open*/
+}
+
+/*additional styles to make sure scrollbar doesn't appear*/
+.dropdown-content::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.dropdown-content-open {
+  opacity: 1;
+}
+
+.dropdown-item {
+  padding: .5rem;
+  margin: .1rem;
+  width: 100%;
+  border-radius: .5rem;
+  cursor: pointer;
+} 
+
+.dropdown-item:hover {
+  background-color: #ffff7aae; 
+}

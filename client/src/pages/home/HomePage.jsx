@@ -57,14 +57,8 @@ export const HomePage = () => {
           </div>
         </div>
 
-      {/* Airports panel will be moved to new tab*/}
-
-        
-          {/*<div className="top-page"></div>*/}
-
-     
-        
-
+        {/*<div className="top-page"></div>*/}
+ 
         <div className="pilots-flights-area" >  
 
           <div className="pilot-panel">

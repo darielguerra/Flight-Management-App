@@ -105,6 +105,10 @@ html, body {
     margin-left: 7rem;
 }
 
+.departure-airport{
+  display: flex;
+}
+
 .center-line {
     width: 0px;
     border-right: 1px solid black;    
