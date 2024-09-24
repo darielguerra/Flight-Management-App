@@ -48,12 +48,12 @@ export const CreateAFlight = () => {
       }
     };
 
- /*   
+ 
     const selectDepartureAirport = (airport) => {
       setDepartureAirport(airport);
-      console.log(departureAirport.code);
+      console.log(airport.code);
     }
- */
+
 
     const handleSubmit = async (event) => {
       console.log(flightNumber);
@@ -109,7 +109,7 @@ export const CreateAFlight = () => {
                         content={
                         <>
                           {airports.map((airport)=> 
-                            <DropdownItem key={airport._id} onClick={() => setDepartureAirport(airport)}
+                            <DropdownItem key={airport._id} onClick={() => selectDepartureAirport(airport)}
                                           /*orignally setDepartureAirport(airport), rerenderd too much*/>
                             {`${airport.code} - ${airport.city}, ${airport.state}`}
                             </DropdownItem>)} 
