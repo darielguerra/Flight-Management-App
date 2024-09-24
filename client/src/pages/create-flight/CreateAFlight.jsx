@@ -11,7 +11,7 @@ import '.././Create-UpdateAFlight.css';
 export const CreateAFlight = () => {
 
     const [airports, setAirports] = useState([]);
-    const [ departureAirport, setDeptureAirport] = useState([]);
+    const [ departureAirport, setDepartureAirport] = useState({});
 
     const [flightNumber, setFlightNumber] = useState(0);
     const departureDateRef = useRef();
@@ -48,11 +48,12 @@ export const CreateAFlight = () => {
       }
     };
 
-    /*
+ /*   
     const selectDepartureAirport = (airport) => {
-      setDeptureAirport(airport);
+      setDepartureAirport(airport);
       console.log(departureAirport.code);
-    }*/
+    }
+ */
 
     const handleSubmit = async (event) => {
       console.log(flightNumber);
@@ -65,7 +66,8 @@ export const CreateAFlight = () => {
                 arrivalDate: arrivalDateRef.current.value,
                 departureTime: departureTimeRef.current.value,
                 arrivalTime: arrivalTimeRef.current.value,
-                departureAirport: departureAirportRef.current.value,
+                /*departureAirport: departureAirportRef.current.value,*/
+                departureAirport: departureAirport,
                 arrivalAirport: arrivalAirportRef.current.value
             });
             navigate('../', {replace: true});
@@ -107,7 +109,8 @@ export const CreateAFlight = () => {
                         content={
                         <>
                           {airports.map((airport)=> 
-                            <DropdownItem key={airport._id} /*onClick={selectDepartureAirport(airport)}*/>
+                            <DropdownItem key={airport._id} onClick={() => setDepartureAirport(airport)}
+                                          /*orignally setDepartureAirport(airport), rerenderd too much*/>
                             {`${airport.code} - ${airport.city}, ${airport.state}`}
                             </DropdownItem>)} 
                         </>}
