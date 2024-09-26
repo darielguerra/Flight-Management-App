@@ -2,8 +2,8 @@ const Flight = require('../models/Flight.model');
 
 const getAllFlights = async () => {
     /*const flights = await Flight.find();*/
-    const flights = await Flight.find().populate('departureAirport');/*.populate('arrivalAirport');*/
-    /*.populate('departureAirport', 'code');*/
+    const flights = await Flight.find().populate('departureAirport').populate('arrivalAirport');
+    /*.populate('departureAirport', 'code');*/;
     return flights;
 } 
 

@@ -44,6 +44,11 @@
   scrollbar-width: none; /*hide scroll bar*/
   -ms-overflow-style: none; /*to work on every browser*/ 
   opacity: 0; /*not visible unless open*/
+  transform: translateY(-5%);
+  transition: transform 150ms ease-in-out, /*adds slight motion down*/
+  opacity 100ms ease-in-out;
+  pointer-events: none;/*ALLOWS CURSOR TO NOT CLICK ON CONTENT WHEN CLOSED
+  without this, content will cover lower buttons even though not visible*/
 }
 
 /*additional styles to make sure scrollbar doesn't appear*/
@@ -54,6 +59,8 @@
 
 .dropdown-content-open {
   opacity: 1;
+  transform: translateY(0);
+  pointer-events: all; /*ALLOWS CURSOR TO NOT CLICK CONTENT WHEN OPEN*/
 }
 
 .dropdown-item {

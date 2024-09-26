@@ -11,7 +11,8 @@ import '.././Create-UpdateAFlight.css';
 export const CreateAFlight = () => {
 
     const [airports, setAirports] = useState([]);
-    const [ departureAirport, setDepartureAirport] = useState({});
+    const [departureAirport, setDepartureAirport] = useState({});
+     const [arrivalAirport, setArrivalAirport] = useState({});
 
     const [flightNumber, setFlightNumber] = useState(0);
     const departureDateRef = useRef();
@@ -54,6 +55,12 @@ export const CreateAFlight = () => {
       console.log(airport.code);
     }
 
+    const selectArrivalAirport = (airport) => {
+      setArrivalAirport(airport);
+      console.log(airport.code);
+    }
+
+
 
     const handleSubmit = async (event) => {
       console.log(flightNumber);
@@ -68,7 +75,8 @@ export const CreateAFlight = () => {
                 arrivalTime: arrivalTimeRef.current.value,
                 /*departureAirport: departureAirportRef.current.value,*/
                 departureAirport: departureAirport,
-                arrivalAirport: arrivalAirportRef.current.value
+                /*arrivalAirport: arrivalAirportRef.current.value*/
+                arrivalAirport: arrivalAirport
             });
             navigate('../', {replace: true});
         } catch (error) {
@@ -133,9 +141,22 @@ export const CreateAFlight = () => {
                   <div className="info-column arrival">
 
                     <div className="item arrival-airport">
-                      <label className="arrivalAirport-label">Arrival Airport</label>
-                      <input className="arrivalAirport" type="text" placeholder="Arrival Airport" ref={arrivalAirportRef} />
+                     {/*<label className="arrivalAirport-label">Arrival Airport</label>
+                      <input className="arrivalAirport" type="text" placeholder="Arrival Airport" ref={arrivalAirportRef} />*/}
+                       
+                       <Dropdown 
+                        buttonText="Arrival Airport"
+                        content={
+                        <>
+                          {airports.map((airport)=> 
+                            <DropdownItem key={airport._id} onClick={() => selectArrivalAirport(airport)}
+                                          /*orignally setDepartureAirport(airport), rerenderd too much*/>
+                            {`${airport.code} - ${airport.city}, ${airport.state}`}
+                            </DropdownItem>)} 
+                        </>}
+                      />          
                     </div>
+
                     <div className="item arrival-date">
                       <label className="arrivalDate-label">Arrival Date</label>
                       <input className="arrivalDate-input" type="Date" placeholder="Arrival Date" ref={arrivalDateRef} />

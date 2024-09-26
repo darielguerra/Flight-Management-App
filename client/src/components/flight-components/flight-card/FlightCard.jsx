@@ -82,7 +82,12 @@ export const FlightCard = (props) => {
                   </div>
                   <div><ArrowIcon /></div>
                 </div>
-                <div className="arrival-airport-name">{flight.arrivalAirport}</div>
+                <div className="arrival-airport-name">
+                  {/*{flight.arrivalAirport}*/}
+                  {flight.arrivalAirport && flight.arrivalAirport.map(airport =>
+                    <div key={airport._id}>{airport.code}</div>
+                  )}{/*will not load without flight.arrivalAirport && first */}
+                </div>
               </div>
               <div className="pilot-departure-arrival">
                 <h2>Pilot</h2>

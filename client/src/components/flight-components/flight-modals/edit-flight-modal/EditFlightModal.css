@@ -1,7 +1,7 @@
 
 
 .edit-flight-modal {
-  width: 26rem;
+  width: 27rem;
   height: 16rem;
   background-color: var(--primary-light-color);
   position: absolute;
@@ -26,15 +26,14 @@
   margin-top: 1.2rem;
   display: flex;
   justify-content: space-around;
-
-  width: 25rem;
+  width: 26rem;
 }
 
 .edit-flight-info {
   margin-top: 3.6rem;
   margin-left: .5rem;
   margin-right: .5rem;
-  width: 15rem;
+  width: 19rem;
 }
 
 .edit-flight-airport-code {
@@ -42,16 +41,17 @@
   font-weight: 600;
   margin-bottom: 1.2rem;  
   font-size: 25px;
+  display: flex;
 }
 
 .edit-plane-img-container {
-
+  margin-right: .3rem;
 }
 
 .plane-icon {
-  width: 14.8rem;
+  width: 15rem;
   opacity: .7;
-
+  
 }
 
 .edit-plane-img {
