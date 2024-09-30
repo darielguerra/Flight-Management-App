@@ -125,6 +125,16 @@ label {
     margin-right: 12px;
 }
 
+.flight-input {
+  height: 3rem;
+  border: .01rem solid rgb(147, 147, 147);
+  width: 8rem;
+  border-radius: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
 .form-bottom {
     height: 2rem;
     display: flex;

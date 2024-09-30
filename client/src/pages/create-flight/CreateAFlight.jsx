@@ -127,11 +127,11 @@ export const CreateAFlight = () => {
 
                     <div className="item departure-date">
                       <label className="departureDate-label">Departure Date</label>
-                      <input className="departureDate-input" type="Date" placeholder="Departure Date" ref={departureDateRef} />
+                      <input className="departureDate-input flight-input" type="Date" placeholder="Departure Date" ref={departureDateRef} />
                     </div>
                     <div className="item departure-time">
                       <label className="departureTime-label">Departure Time</label>
-                      <input className="departureTime-input" type="time" placeholder="Departure Time" ref={departureTimeRef} />
+                      <input className="departureTime-input flight-input" type="time" placeholder="Departure Time" ref={departureTimeRef} />
                     </div>
                     
                   </div>     
@@ -159,11 +159,11 @@ export const CreateAFlight = () => {
 
                     <div className="item arrival-date">
                       <label className="arrivalDate-label">Arrival Date</label>
-                      <input className="arrivalDate-input" type="Date" placeholder="Arrival Date" ref={arrivalDateRef} />
+                      <input className="arrivalDate-input flight-input" type="Date" placeholder="Arrival Date" ref={arrivalDateRef} />
                     </div>
                     <div className="item arrival-Time">             
                       <label className="arrivalTime-label">Arrival Time</label>
-                      <input className="arrivalTime-input" type="time" placeholder="Arrival Time" ref={arrivalTimeRef} />
+                      <input className="arrivalTime-input flight-input" type="time" placeholder="Arrival Time" ref={arrivalTimeRef} />
                     </div>
                   </div> 
               </div> 
