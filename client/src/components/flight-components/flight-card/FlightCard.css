@@ -5,13 +5,13 @@
   height: 12rem;
   margin-bottom: 3rem;
   border-bottom: 7px solid var(--secondary-dark2-color);
-   
+  order: 4px solid rgb(255, 0, 0);
 }
 
 /* this was made to add hover border line underneath*/
 .flight-details {
   display: flex; 
-  height: 12rem;  
+  
   width: 100%; 
 }
 /*
@@ -50,9 +50,17 @@
 
 .flight-card:hover .flight-border-line  {
   border-top: 1px solid black;
+  margin-top: 1.85rem;
   width: 63.7rem;
 }
 
+/* this is like its opening when hover
+.flight-card:hover .flight-border-line  {
+  border-top: 1px solid black;
+  margin-top: 5rem;
+  width: 63.7rem;
+}
+*/
 
 .flight {
   display: flex;
