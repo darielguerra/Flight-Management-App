@@ -1,0 +1,31 @@
+
+.flight-button-component{
+  margin-top: 3.2rem;
+}
+
+.flight-button-title{
+  width: 5.8rem;
+  height: 1.6rem;
+  font-size: 16px;
+  background-color: var(--tertiary-dark-color);
+  font-family: var(--font-family-main);
+  color: var(--primary-light-color);
+  font-weight: 500;
+  display: flex;
+}
+
+.flight-button-title p {
+  margin: auto;
+}
+
+
+.add-flight-button{
+  height: 4.5rem;
+  width: 5.8rem;
+  font-size: 60px;
+  font-family: "Manrope";
+  font-weight: 200;
+  color: var(--secondary-text-color);
+  background-color: var(--primary-light-color);  
+  border: 1px solid black;
+}

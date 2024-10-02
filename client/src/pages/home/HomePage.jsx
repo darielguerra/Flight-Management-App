@@ -2,9 +2,10 @@ import axios from 'axios';
 import { API } from "../../App"
 import { useState, useEffect } from "react";
 import { Switch } from '../../components/home-components/switch/Switch';
-import { FlightCard } from '../../components/flight-components/flight-card/FlightCard';
 import { PilotCard} from '../../components/pilot-components/pilot-card/PilotCard';
 import { AddPilotButton } from '../../components/pilot-components/add-pilot-button/AddPilotButton';
+import { FlightCard } from '../../components/flight-components/flight-card/FlightCard';
+import { AddFlightButton } from '../../components/flight-components/add-flight-button/AddFlightButton';
 import { AirportCard } from '../../components/airport-components/airport-card/AirportCard';
 import { AddAirportButton } from '../../components/airport-components/add-airport-button/AddAirportButton';
 import { FooterHome } from '../../components/global-components/footers/FooterHome';
@@ -73,14 +74,20 @@ export const HomePage = () => {
           </div>
 
         {!showAirports && (
-          <div className="flights">
-            {flights.map((flight, index) => {
-              return (
-                <FlightCard flight={flight} key={flight._id} refresh={getFlights}/>
-              );
-            })}
-          </div>
+          <>
+            <div className="flights">
+              {flights.map((flight, index) => {
+                return (
+                  <FlightCard flight={flight} key={flight._id} refresh={getFlights}/>
+                );
+              })}
+            </div>
+                  
+            <AddFlightButton />
+          </>
         )}
+
+
 
           {showAirports && (
             <div className="airport-panel">
