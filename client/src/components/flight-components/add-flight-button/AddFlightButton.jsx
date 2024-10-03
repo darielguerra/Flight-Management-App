@@ -5,11 +5,12 @@ export const AddFlightButton = () => {
   return(
     <div className="flight-button-component">
       <div className="flight-button-title">
-        <p>New Flight</p>
+        <p>Flight</p>
+        <button className="add-flight-button">
+          +
+        </button>
       </div>
-      <button className="add-flight-button">
-        +
-      </button>
+
     </div>
   )
 }

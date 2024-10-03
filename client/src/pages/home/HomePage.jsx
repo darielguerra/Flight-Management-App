@@ -83,11 +83,9 @@ export const HomePage = () => {
               })}
             </div>
                   
-            <AddFlightButton />
+            {/*<AddFlightButton />*/}
           </>
         )}
-
-
 
           {showAirports && (
             <div className="airport-panel">
