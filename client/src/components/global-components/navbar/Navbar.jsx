@@ -10,7 +10,7 @@ export const Navbar = () => {
       </a>
       <div className="title">
         <h1 className="logo-name"><strong>Zenith</strong></h1>
-        <h1 className="logo-name"><strong>Airlines</strong></h1>
+        <h1 className="logo-name"><strong>Airline<span className="letter-s">s</span></strong></h1>
       </div>
       <div>
         <ul className="nav-links">

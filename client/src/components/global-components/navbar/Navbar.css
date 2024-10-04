@@ -39,9 +39,10 @@
     font-size: 3.7rem;
     margin-left: 1.2rem;    
     margin-bottom: 2.9rem;    
+    margin-top: 2.7rem; 
     font-family: "Vidaloka", sans-serif;
     font-weight: 300;
-    color: var(--primary-light-color);
+    font-weight: 300;color: var(--primary-light-color);
     -webkit-text-stroke:  1px var(--border-color-altdarker2);
     /*color: rgba(230, 144, 111, 1) desired color when inverted*/
   }
@@ -50,6 +51,21 @@
    font-family: var(--font-title-main);
    font-size: 4.5rem;
 }
+
+
+.letter-s {
+  font-family: "Noto Serif TC";
+  font-size: 3.45rem;
+  font-weight: 600;
+}
+
+/* Alice font for s
+.letter-s {
+  font-family: "Alice";
+  font-size: 4rem;
+  font-weight: 300;
+}
+*/
 
 .nav-links {
    margin-right: 5.5rem;
