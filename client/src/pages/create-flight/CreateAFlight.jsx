@@ -112,17 +112,26 @@ export const CreateAFlight = () => {
                      {/* <label className="departureAirport-label">Departure Airport</label>
                       <input className="departureAirport-input" type="text" placeholder="Departure Airport" ref={departureAirportRef} />*/}
                      
+                    
+                     <Dropdown 
+                        buttonText="Departure Airport"
+                        list={airports}
+                        selectAirport={selectDepartureAirport}
+                      />
+
+                   {/* orignally setDepartureAirport(airport), rerenderd too much
                       <Dropdown 
                         buttonText="Departure Airport"
                         content={
                         <>
                           {airports.map((airport)=> 
-                            <DropdownItem key={airport._id} onClick={() => selectDepartureAirport(airport)}
-                                          /*orignally setDepartureAirport(airport), rerenderd too much*/>
+                            <DropdownItem key={airport._id} onClick={() => selectDepartureAirport(airport)}>                                         
                             {`${airport.code} - ${airport.city}, ${airport.state}`}
                             </DropdownItem>)} 
                         </>}
                       />
+                      */}
+                    
                     </div> 
 
                     <div className="item departure-date">
@@ -143,18 +152,25 @@ export const CreateAFlight = () => {
                     <div className="item arrival-airport">
                      {/*<label className="arrivalAirport-label">Arrival Airport</label>
                       <input className="arrivalAirport" type="text" placeholder="Arrival Airport" ref={arrivalAirportRef} />*/}
-                       
+
+                        <Dropdown 
+                          buttonText="Departure Airport"
+                          list={airports}
+                          selectAirport={selectArrivalAirport}
+                        />
+
+                     {/*  
                        <Dropdown 
                         buttonText="Arrival Airport"
                         content={
                         <>
                           {airports.map((airport)=> 
-                            <DropdownItem key={airport._id} onClick={() => selectArrivalAirport(airport)}
-                                          /*orignally setDepartureAirport(airport), rerenderd too much*/>
+                            <DropdownItem key={airport._id} onClick={() => selectArrivalAirport(airport)}>
                             {`${airport.code} - ${airport.city}, ${airport.state}`}
                             </DropdownItem>)} 
                         </>}
-                      />          
+                      />  
+                      */}
                     </div>
 
                     <div className="item arrival-date">
@@ -167,7 +183,14 @@ export const CreateAFlight = () => {
                     </div>
                   </div> 
               </div> 
+              {/*}
+              <select name="Pilot">
+                <option>
 
+                </option>
+                
+              </select> 
+              */}
               <div className="form-bottom">
                 <button className="add-flight">ADD</button>   
               </div>

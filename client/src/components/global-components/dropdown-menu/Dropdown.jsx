@@ -3,7 +3,7 @@ import { DropdownButton } from './dropdown-parts/DropdownButton';
 import { DropdownContent } from './dropdown-parts/DropdownContent';
 import "./Dropdown.css";
 
-export const Dropdown = ({buttonText, content}) => {
+export const Dropdown = ({buttonText, content, list, selectAirport}) => {
 
   const [open, setOpen] = useState(false);
 
@@ -11,6 +11,11 @@ export const Dropdown = ({buttonText, content}) => {
 
   const toggleDropdown = () => {
     setOpen((open) => !open);
+  }
+
+  const handleSelect = (item) => {
+    toggleDropdown();
+    selectAirport(item);
   }
 
   /*this is use to close content when clicking outside*/
@@ -31,13 +36,32 @@ export const Dropdown = ({buttonText, content}) => {
   }, []);
 
   return (
+    <div className="dropdown" ref={dropdownRef}>
+      <DropdownButton open={open} toggle={toggleDropdown}>
+        {buttonText}
+      </DropdownButton>
+ 
+      <div className={`dropdown-content
+         ${open ? "dropdown-content-open" : null}`}>
+ 
+         {list && list.map((item)=> 
+           <div className="dropdown-item" key={item._id} onClick={() =>handleSelect(item)}>                                         
+           {`${item.code} - ${item.city}, ${item.state}`}
+       </div>)} 
+    </div>
+    </div>
+   )
+
+  /*
+  return (
    <div className="dropdown" ref={dropdownRef}>
     <DropdownButton open={open} toggle={toggleDropdown}>
       {buttonText}
     </DropdownButton>
-    <DropdownContent open={open}>
+    <DropdownContent open={open} toggle={toggleDropdown}>
       {content}
     </DropdownContent>
    </div>
   )
+   */
 }
