@@ -13,6 +13,9 @@
   box-shadow: rgba(149, 157, 165, 0.2)
   0px 8px 24px;
   cursor: pointer;
+  height: 1.6rem;
+  padding-left: 1.2rem;
+  border: .01rem solid rgb(147, 147, 147);
 }
 
 .dropdown-btn-open {
@@ -23,7 +26,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 6rem;
+  margin-left: 10rem;
+  position: absolute;
+  left: 5.2rem;
 }
 
 .dropdown-content {

@@ -12,7 +12,7 @@ export const CreateAFlight = () => {
 
     const [airports, setAirports] = useState([]);
     const [departureAirport, setDepartureAirport] = useState({});
-     const [arrivalAirport, setArrivalAirport] = useState({});
+    const [arrivalAirport, setArrivalAirport] = useState({});
 
     const [flightNumber, setFlightNumber] = useState(0);
     const departureDateRef = useRef();
@@ -114,7 +114,7 @@ export const CreateAFlight = () => {
                      
                     
                      <Dropdown 
-                        buttonText="Departure Airport"
+                        buttonText={departureAirport && departureAirport.code ? departureAirport.code: "Departure Airport"}
                         list={airports}
                         selectAirport={selectDepartureAirport}
                       />
@@ -154,7 +154,9 @@ export const CreateAFlight = () => {
                       <input className="arrivalAirport" type="text" placeholder="Arrival Airport" ref={arrivalAirportRef} />*/}
 
                         <Dropdown 
-                          buttonText="Departure Airport"
+                          buttonText={arrivalAirport && arrivalAirport.code ? arrivalAirport.code: "Arrival Airport"}
+                          /* if you want to display code, city, and state:
+                          buttonText={arrivalAirport && arrivalAirport.code ? `${arrivalAirport.code} - ${arrivalAirport.city}, ${arrivalAirport.state}` : "Arrival Airport"}*/
                           list={airports}
                           selectAirport={selectArrivalAirport}
                         />
