@@ -2,7 +2,8 @@
 .add-airport-container {
   display: flex;
   justify-content: center;
-  width: 14rem;
+  /*width: 14rem;*/
+  width: 13.12rem;
   border-bottom: 1px solid black; 
   background-color: var(--primary-light-color); 
   height: 7rem;

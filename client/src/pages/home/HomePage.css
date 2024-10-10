@@ -22,10 +22,10 @@
     as you zoom out of page*/
   display: flex;
   flex-direction: column;
-  width: 95rem;
-
+  width: 85.6rem;
   
-
+  /*margin-left: 2rem;*/
+  
   /*position:relative;*/
  
 
@@ -51,7 +51,7 @@
   /*border: 1px solid black;*/
   display: flex;
   margin-top: 1.1rem;
-  margin-right: 8.3rem;
+  margin-right: 1.3rem;
   align-self: flex-end;
 }
 

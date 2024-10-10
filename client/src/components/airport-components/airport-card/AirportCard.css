@@ -2,7 +2,6 @@
   margin-top: 3rem;
   margin-bottom: 35rem;
   width: 64rem;
-  
   display: flex;
   flex-direction: column;
   /*background-color: var(--primary-light-color);*/
@@ -30,7 +29,8 @@
   color: var(--primary-light-color);
   font-family: var(--font-family-main);
   font-weight: 500;
-  width: 14rem;
+  /*width: 14rem;*/
+  width: 13.12rem;
   height: 2rem;
   position: absolute;
   z-index: 0;
@@ -49,7 +49,7 @@
   border-left: none;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
-  width: 14rem;
+  width: 13.12rem;
 }
 
 .airport-btn {
