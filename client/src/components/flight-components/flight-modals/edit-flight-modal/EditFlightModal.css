@@ -1,8 +1,8 @@
 
 
 .edit-flight-modal {
-  width: 27rem;
-  height: 16rem;
+  width: 24rem;
+  height: 22rem;
   background-color: var(--primary-light-color);
   position: absolute;
   top: 50%;
@@ -11,6 +11,7 @@
   border-radius: 28px;
   display: flex; 
   flex-direction: column;
+  justify-content: space-around;
 }
 
 .edit-flight-modal-title {
@@ -24,34 +25,52 @@
 .edit-flight-info-container {
   margin: auto;
   margin-top: 1.2rem;
-  /*display: flex;*/
-  justify-content: space-around;
-  width: 26rem;
+  display: flex;
+  justify-content: center;
+  width: 23rem;
 }
 
 .edit-flight-info {
-  margin-top: 3.6rem;
-  margin-left: .5rem;
-  margin-right: .5rem;
-  width: 19rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.edit-flight-airport-info {
+  display: flex;
+  flex-direction: column;
+  width: 22.85rem;
+  border-top: .01rem solid black;
+  margin: auto;
 }
 
 .edit-flight-airport-code {
   font-family: var(--font-family-main);
   font-weight: 600;
-  margin-bottom: 1.2rem;  
+  margin: auto; 
+  margin-top: 1rem;
   font-size: 25px;
   display: flex;
+  
+}
+
+.edit-flight-airport-city-state {
+  margin: auto;
+  margin-top: .5rem;
 }
 
 .edit-plane-img-container {
-  margin-right: .3rem;
+  margin: auto;
+  padding-left: 2rem;
+  margin-bottom: .6rem;
 }
 
 .plane-icon {
-  width: 15rem;
+  width: 20.5rem;
   /*opacity: .62; */
   opacity: .77; 
+  
 }
 
 .edit-plane-img {

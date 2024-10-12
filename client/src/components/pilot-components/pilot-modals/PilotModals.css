@@ -1,7 +1,7 @@
 
 .pilot-modal {
   width: 22rem;
-  height: 23rem;
+  height: 23.1rem;
   background-color: var(--primary-light-color);
   display: flex; 
   flex-direction: column;
@@ -67,7 +67,7 @@
   font-family: var(--font-family-main);
   font-weight: 600;
   margin-bottom: 1rem;  
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .edit-pilot-name p {
@@ -76,7 +76,7 @@
 
 .edit-pilot-yearsOfService {
   height: 2rem;
-  margin: .1rem auto;
+  margin: .3rem auto;
   font-family: var(--font-family-main);
   font-weight: 400;
 }

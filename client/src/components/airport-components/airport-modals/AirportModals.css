@@ -2,7 +2,7 @@
 
 .airport-modal {
   width: 23.5rem;
-  height: 24.5rem;
+  height: 25.2rem;
   background-color: var(--primary-light-color);
   display: flex; 
   flex-direction: column;
@@ -27,8 +27,8 @@
 
 .airport-image-container {
   margin: auto;
-  margin-top: 1.2rem;
-  margin-bottom: .9rem;
+  margin-top: 1.5rem;
+  margin-bottom: .85rem;
   display: flex;
   justify-content: space-around;
   width: 18rem;
@@ -48,7 +48,7 @@
 }
 
 .airport-modal-info {
-  width: 21.8rem;
+  width: 22.3rem;
   height: 4rem;
   display: flex;
   flex-direction: column;
@@ -106,7 +106,7 @@
 
 .airport-modal-city-state {
   height: 2rem;
-  margin: 0rem auto;
+  margin: .2rem auto;
   font-family: var(--font-family-main);
   font-weight: 400;
 
