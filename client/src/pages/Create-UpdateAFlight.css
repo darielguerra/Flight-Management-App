@@ -127,11 +127,66 @@ label {
 
 .flight-input {
   height: 3rem;
-  border: .01rem solid rgb(147, 147, 147);
+  border: .05rem solid #783E3E;
+  /*border: .01rem solid rgb(147, 147, 147);*/
   width: 8rem;
   border-radius: .5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  /*background-color: #FEE9DD;*/
+  background-color: #FEE9DD;
+}
+
+.arrivalTime-input {
+  width: 15rem;
+  display: flex;
+  padding-right: 1rem;
+  height: 3rem;
+}
+
+
+/*
+.arrivalTime-input:before {
+  content: 'Arrival Time';
+  width: 120px;
+  border: 1px solid red;
+}
+*/
+/*
+.arrivalTime-input:invalid:before {
+  content:'Arrival Time';
+  margin-right:.6em;
+  color:#9d9d9d;
+}
+*/
+/*
+.arrivalTime-input:before {
+  content: 'Arrival Time';
+  position: absolute;
+  background: #fff;
+  width: 6rem;
+}*/
+/*
+.arrivalTime-input:before {
+  content: 'Arrival Time';
+  position: absolute;
+  background: #fff;
+  width: 6rem;
+}*/
+
+.arrivalTime-input:before {
+  content: 'Arrival Time';
+  position: relative;
+  white-space: nowrap;
+  right: 1.5rem;
+  margin: auto;
+  z-index: 0;
+}
+
+
+.arrivalTime-input:focus:before {
+  width: 0rem;
+  content: '';
 }
 
 

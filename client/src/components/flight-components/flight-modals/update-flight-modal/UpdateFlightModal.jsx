@@ -101,7 +101,7 @@ export const UpdateFlightModal = (props) => {
                             <input className="arrivalDate-input flight-input" type="Date" placeholder="Arrival Date" ref={arrivalDateRef} />
                           </div>
                           <div className="item arrival-Time">             
-                            <label className="arrivalTime-label">Arrival Time</label>
+                            {/*<label className="arrivalTime-label">Arrival Time</label>*/}
                             <input className="arrivalTime-input flight-input" type="time" placeholder="Arrival Time" ref={arrivalTimeRef} />
                           </div>
                         </div> 
