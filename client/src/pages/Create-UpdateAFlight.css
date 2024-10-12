@@ -137,13 +137,6 @@ label {
   background-color: #FEE9DD;
 }
 
-.arrivalTime-input {
-  width: 15rem;
-  display: flex;
-  padding-right: 1rem;
-  height: 3rem;
-}
-
 
 /*
 .arrivalTime-input:before {
@@ -174,20 +167,118 @@ label {
   width: 6rem;
 }*/
 
-.arrivalTime-input:before {
-  content: 'Arrival Time';
+
+/*departure date input          */
+
+.departureDate-input {
+  width: 17rem;
+  display: flex;
+  padding-right: 1.2rem;
+  height: 3rem;
+}
+
+.departureDate-input:before {
+  content: 'Departure Date';
   position: relative;
-  white-space: nowrap;
+  white-space: nowrap; /*keeps text on one line*/
+  right: .7rem;
+  margin: auto;
+  z-index: 0;
+}
+
+.departureDate-input:focus:before {
+  width: 0rem;
+  content: '';
+}
+
+
+
+/*arrival date input          */
+
+.arrivalDate-input {
+  width: 17rem;
+  display: flex;
+  padding-right: 1.2rem;
+  height: 3rem;
+}
+
+.arrivalDate-input:before {
+  content: 'Arrival Date';
+  position: relative;
+  white-space: nowrap; /*keeps text on one line*/
   right: 1.5rem;
   margin: auto;
   z-index: 0;
 }
 
+.arrivalDate-input:focus:before {
+  width: 0rem;
+  content: '';
+}
+
+
+
+
+/*departure time input          */
+
+.departureTime-input {
+  width: 17rem;
+  display: flex;
+  padding-right: 1.2rem;
+  height: 3rem;
+}
+
+.departureTime-input:before {
+  content: 'Departure Time';
+  position: relative;
+  white-space: nowrap;
+  right: 1.7rem;
+  margin: auto;
+  z-index: 0;
+}
+
+.departureTime-input:focus:before {
+  width: 0rem;
+  content: '';
+}
+
+
+
+/*arrival time input        */
+
+.arrivalTime-input {
+  width: 17rem;
+  display: flex;
+  padding-right: 1.2rem;
+  height: 3rem;
+}
+
+.arrivalTime-input:before {
+  content: 'Arrival Time';
+  position: relative;
+  white-space: nowrap;
+  right: 2.1rem;
+  margin: auto;
+  z-index: 0;
+}
 
 .arrivalTime-input:focus:before {
   width: 0rem;
   content: '';
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .form-bottom {

@@ -77,10 +77,10 @@ export const FlightCard = (props) => {
                   {/* {flight.departureAirport} or {flight.departureAirport && flight.departureAirport.code ? flight.departureAirport.code : 'N/A'}*/}
                   
                   {flight.departureAirport && flight.departureAirport.map(airport=>(
-                    <div key={airport._id}>{airport.code}</div>                    
+                    <div key={airport._id}>{airport.code}-{'>'}</div>                    
                   ))}{/*because returning array, had to map through it */}
                   </div>
-                  <div><ArrowIcon /></div>
+                  {/*<div><ArrowIcon /></div>*/}
                 </div>
                 <div className="arrival-airport-name">
                   {/*{flight.arrivalAirport}*/}
