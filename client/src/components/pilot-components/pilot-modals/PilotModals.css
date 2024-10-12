@@ -1,6 +1,6 @@
 
 .pilot-modal {
-  width: 22.5rem;
+  width: 22rem;
   height: 23rem;
   background-color: var(--primary-light-color);
   display: flex; 
@@ -13,7 +13,7 @@
 }
 
 .edit-pilot-title  {
-  margin: auto auto auto 9.8rem;
+  margin: auto auto auto 9.38rem;
 }  
 
 .update-pilot-title {
@@ -27,7 +27,7 @@
 
 .edit-pilot-image-container {
   margin: auto;  
-  margin-top: 1rem;
+  margin-top: 3rem;
   margin-bottom: 1.2rem;
   display: flex;
   justify-content: space-around;
@@ -43,21 +43,22 @@
 
 .edit-pilot-icon {
   /*fill: #877269;
-  fill:rgb(118, 110, 104);*/
-  opacity: .7;
+  fill:rgb(118, 110, 104);
+  opacity: .6;*/
+  opacity: .78;
   width: 9.8rem;
-  margin: 1rem auto .8rem;
+  margin: 1.5rem auto .8rem;
 }
 
 .edit-pilot-modal-info {
   border-top: 1px solid black;
-  width: 17rem;
+  width: 21rem;
   height: 4rem;
   display: flex;
   flex-direction: column;
   margin: auto;
   margin-top: 0rem;
-  
+  padding-top: .35rem; 
 }
 
 .edit-pilot-name {

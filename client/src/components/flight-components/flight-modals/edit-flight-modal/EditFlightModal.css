@@ -50,8 +50,8 @@
 
 .plane-icon {
   width: 15rem;
-  opacity: .7;
-  
+  /*opacity: .62; */
+  opacity: .77; 
 }
 
 .edit-plane-img {

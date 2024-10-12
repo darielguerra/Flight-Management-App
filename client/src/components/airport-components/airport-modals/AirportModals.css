@@ -1,7 +1,7 @@
 
 
 .airport-modal {
-  width: 24rem;
+  width: 23.5rem;
   height: 24.5rem;
   background-color: var(--primary-light-color);
   display: flex; 
@@ -14,29 +14,32 @@
 }
 
 .edit-airport-title {
-  margin: auto auto auto 9.9rem; /*centers*/ 
+  margin: auto auto auto 9.38rem; /*centers*/ 
 }
 
 .update-airport-title {
-  margin: auto auto auto 7rem; /*centers*/    
+  margin: auto auto auto 6.6rem; /*centers*/    
 }  
 
 .add-airport-title{
-  margin: auto auto auto 8rem; /*centers*/  
+  margin: auto auto auto 7.5rem; /*centers*/  
 }
 
 .airport-image-container {
   margin: auto;
-  margin-top: 1rem;
-  margin-bottom: 1.2rem;
+  margin-top: 1.2rem;
+  margin-bottom: .9rem;
   display: flex;
   justify-content: space-around;
   width: 18rem;
 }
 
 .airport-icon {
-  width: 12rem;
-  opacity: .7;
+  width: 12.5rem;
+ /* opacity: .6; original
+    opacity: .74; in-between*/
+  opacity: .8;  
+   
 }
 
 .airport-image {
@@ -45,12 +48,13 @@
 }
 
 .airport-modal-info {
-  width: 18rem;
+  width: 21.8rem;
   height: 4rem;
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 0rem;  
+  margin-top: 0rem; 
+  padding-top: .25rem; 
   padding-bottom: .4rem; 
   border-top: 1px solid black;
 }
