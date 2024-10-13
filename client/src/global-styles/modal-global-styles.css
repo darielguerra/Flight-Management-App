@@ -68,10 +68,12 @@
 /*  background-color: rgba(0, 0, 0, 0.6);*/
   color: #FEE9DD;
   
-  /*background-color: #676767; lighter*/
-  
+  /*background-color: #676767; lighter*/  
   /*background-color: rgba(0, 0, 0, 0.74); inbetween*/
+
+
   background-color: #383838; 
+  /*background-color: #00145e;*/
   border: 1px solid black;
   border-radius: .2rem;
 }
@@ -82,7 +84,9 @@
   /*background-color: rgb(255, 170, 170); last */
  
    /*background-color: #c15e55; lighter*/
- background-color: #dc2d2d;
+ 
+  background-color: #dc2d2d;
+  /*background-color: #870202;*/
   color: #FEE9DD;
   border: 1px solid black;
   border-radius: .2rem;

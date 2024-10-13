@@ -178,6 +178,7 @@ label {
 }
 
 .departureDate-input:before {
+  -moz-appearance: initial; 
   content: 'Departure Date';
   position: relative;
   white-space: nowrap; /*keeps text on one line*/
@@ -187,6 +188,7 @@ label {
 }
 
 .departureDate-input:focus:before {
+  -moz-appearance: initial; 
   width: 0rem;
   content: '';
 }
