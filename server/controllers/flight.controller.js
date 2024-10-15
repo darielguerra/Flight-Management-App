@@ -2,7 +2,7 @@ const Flight = require('../models/Flight.model');
 
 const getAllFlights = async () => {
     /*const flights = await Flight.find();*/
-    const flights = await Flight.find().populate('departureAirport').populate('arrivalAirport');
+    const flights = await Flight.find().populate('departureAirport').populate('arrivalAirport').populate('pilot');
     /*.populate('departureAirport', 'code');*/;
     return flights;
 } 
@@ -20,7 +20,7 @@ const getLastFlight = async () => {
 
 // create flight
 const createFlight = async ({flightNumber, departureDate, arrivalDate, departureTime, 
-    arrivalTime, departureAirport, arrivalAirport}) => {
+    arrivalTime, departureAirport, arrivalAirport, pilot}) => {
     try {
         const flight = new Flight({
             flightNumber,
@@ -30,7 +30,7 @@ const createFlight = async ({flightNumber, departureDate, arrivalDate, departure
             arrivalTime,
             departureAirport,
             arrivalAirport,
-            /*pilot*/
+            pilot
         });
         await flight.save(); // Saves the newly created flight to the database
 
