@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
-import { DropdownButton } from './dropdown-parts/DropdownButton';
-import { DropdownContent } from './dropdown-parts/DropdownContent';
-import "./Dropdown.css";
+import { DropdownButton } from './dropdown-button/DropdownButton';
+import "./Dropdowns.css";
 
-export const Dropdown = ({buttonText, content, list, selectAirport}) => {
+export const AirportsDropdown  = ({buttonText, list, selectAirport}) => {
 
   const [open, setOpen] = useState(false);
 
@@ -51,17 +50,4 @@ export const Dropdown = ({buttonText, content, list, selectAirport}) => {
     </div>
     </div>
    )
-
-  /*
-  return (
-   <div className="dropdown" ref={dropdownRef}>
-    <DropdownButton open={open} toggle={toggleDropdown}>
-      {buttonText}
-    </DropdownButton>
-    <DropdownContent open={open} toggle={toggleDropdown}>
-      {content}
-    </DropdownContent>
-   </div>
-  )
-   */
 }

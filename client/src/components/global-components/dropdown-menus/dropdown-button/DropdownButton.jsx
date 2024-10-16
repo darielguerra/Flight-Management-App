@@ -1,5 +1,5 @@
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import "../Dropdown.css";
+import "../Dropdowns.css";
 
 export const DropdownButton = ({ children, open, toggle }) => {
   return( 

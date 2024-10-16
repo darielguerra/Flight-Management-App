@@ -91,7 +91,9 @@ export const FlightCard = (props) => {
               </div>
               <div className="pilot-departure-arrival">
                 <h2>Pilot</h2>
-                Pete Mitchell
+                {flight.pilot && flight.pilot.map(pilot =>
+                    <div key={pilot._id}>{pilot.firstName} {pilot.lastName}</div>
+                  )}
               </div>
               <div className="pilot-departure-arrival">
                 <h2>Departs</h2>

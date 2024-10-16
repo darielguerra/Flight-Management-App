@@ -1,32 +1,35 @@
 import axios from 'axios';
 import { API } from "../../App"
-import { getAirports } from "../../services/Services";
+import { getAirports, getPilots } from "../../services/Services";
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import { Dropdown } from '../../components/global-components/dropdown-menu/Dropdown';
-import { DropdownItem } from '../../components/global-components/dropdown-menu/dropdown-parts/DropdownItem';
+import { AirportsDropdown } from '../../components/global-components/dropdown-menus/AirportsDropdown';
+import { PilotsDropdown } from '../../components/global-components/dropdown-menus/PilotsDropdown';
 import { Footer } from '../../components/global-components/footers/Footer';
 import '.././Create-UpdateAFlight.css';
 
 export const CreateAFlight = () => {
 
     const [airports, setAirports] = useState([]);
+    const [pilots, setPilots] = useState([]);
+
     const [departureAirport, setDepartureAirport] = useState({});
     const [arrivalAirport, setArrivalAirport] = useState({});
+    const [pilot, setPilot] = useState({});
 
     const [flightNumber, setFlightNumber] = useState(0);
     const departureDateRef = useRef();
     const arrivalDateRef = useRef();
     const departureTimeRef = useRef();
     const arrivalTimeRef = useRef();
-    const departureAirportRef = useRef();
-    const arrivalAirportRef = useRef();
     const navigate = useNavigate();
 
     useEffect(() => {
       getLastFlight();
       fetchAirports();
-      console.log(airports)
+      fetchPilots();
+      console.log(airports);
+      console.log(pilots)
     }, []);    
 
     const getLastFlight = async () => {
@@ -49,6 +52,15 @@ export const CreateAFlight = () => {
       }
     };
 
+    const fetchPilots = async () => {
+      try {
+        const pilotsData = await getPilots();
+        setPilots(pilotsData);
+        console.log(pilotsData); 
+      } catch (error) {
+        console.error('Error fetching pilots:', error);
+      }
+    };
  
     const selectDepartureAirport = (airport) => {
       setDepartureAirport(airport);
@@ -60,7 +72,10 @@ export const CreateAFlight = () => {
       console.log(airport.code);
     }
 
-
+    const selectPilot = (pilot) => {
+      setPilot(pilot);
+      console.log(`${pilot.firstName} ${pilot.lastName} `);
+    }
 
     const handleSubmit = async (event) => {
       console.log(flightNumber);
@@ -73,10 +88,9 @@ export const CreateAFlight = () => {
                 arrivalDate: arrivalDateRef.current.value,
                 departureTime: departureTimeRef.current.value,
                 arrivalTime: arrivalTimeRef.current.value,
-                /*departureAirport: departureAirportRef.current.value,*/
                 departureAirport: departureAirport,
-                /*arrivalAirport: arrivalAirportRef.current.value*/
-                arrivalAirport: arrivalAirport
+                arrivalAirport: arrivalAirport,
+                pilot: pilot
             });
             navigate('../', {replace: true});
         } catch (error) {
@@ -107,13 +121,21 @@ export const CreateAFlight = () => {
               <div className="flight-information">
 
                   <div className="info-column departure">  
+                  
+                    <div className="pilot-dropdown">
+                      <PilotsDropdown 
+                        buttonText={pilot && pilot.firstName ? `${pilot.firstName}, ${pilot.lastName}`: "Pilot"}
+                        list={pilots}
+                        selectPilot={selectPilot}
+                      />
+                    </div>
 
                     <div className="item departure-airport">
                      {/* <label className="departureAirport-label">Departure Airport</label>
                       <input className="departureAirport-input" type="text" placeholder="Departure Airport" ref={departureAirportRef} />*/}
                      
-                    
-                     <Dropdown 
+               
+                     <AirportsDropdown 
                         buttonText={departureAirport && departureAirport.code ? departureAirport.code: "Departure Airport"}
                         list={airports}
                         selectAirport={selectDepartureAirport}
@@ -153,7 +175,7 @@ export const CreateAFlight = () => {
                      {/*<label className="arrivalAirport-label">Arrival Airport</label>
                       <input className="arrivalAirport" type="text" placeholder="Arrival Airport" ref={arrivalAirportRef} />*/}
 
-                        <Dropdown 
+                        <AirportsDropdown 
                           buttonText={arrivalAirport && arrivalAirport.code ? arrivalAirport.code: "Arrival Airport"}
                           /* if you want to display code, city, and state:
                           buttonText={arrivalAirport && arrivalAirport.code ? `${arrivalAirport.code} - ${arrivalAirport.city}, ${arrivalAirport.state}` : "Arrival Airport"}*/
@@ -189,14 +211,7 @@ export const CreateAFlight = () => {
                     </div>
                   </div> 
               </div> 
-              {/*}
-              <select name="Pilot">
-                <option>
 
-                </option>
-                
-              </select> 
-              */}
               <div className="form-bottom">
                 <button className="add-flight">ADD</button>   
               </div>

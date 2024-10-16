@@ -301,3 +301,8 @@ label {
 .add-flight:hover {
   cursor: pointer;
 }
+
+
+.pilot-dropdown {
+  margin-left: 7rem;
+}
