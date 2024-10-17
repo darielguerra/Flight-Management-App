@@ -13,7 +13,7 @@ html, body {
 }
 
 .page-layout {
-    overflow-y:hidden;
+
   
     display: flex;
     justify-content: space-evenly; /*centers horizontally*/
@@ -22,9 +22,9 @@ html, body {
 }
 
 .flight-info-card-create {
-    margin-top: 4.2rem;
+    margin-top: 2rem;
     width: 65%;
-    height: 30rem;
+    height: 32rem;
     background-color: var(--primary-light-color);
     border-bottom: 7px solid var(--secondary-dark2-color);
     display: flex; 
@@ -34,7 +34,7 @@ html, body {
 .flight-info-card-update {
   margin-top: 10rem;
   width: 64rem;
-  height: 28rem;
+  height: 30rem;
   background-color: var(--primary-light-color);
   border-bottom: 7px solid var(--secondary-dark2-color);
   display: flex; 
@@ -270,32 +270,26 @@ label {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .form-bottom {
-    height: 2rem;
-    display: flex;
-    justify-content:center;
-    align-items: center;    
+    display: flex;   
+    height: 5rem;
+}
+
+.pilot-dropdown {
+  margin: auto 7rem auto;
 }
 
 .add-flight {
+  margin: 3rem 18rem;
+}
+
+.add-flight-btn {
     width: 90px;
     background-color: #e8dad5;
     border: 1px solid black;
     border-radius: 3px;
     cursor: hover;
+    margin: auto;
 }
 
 .add-flight:hover {
@@ -303,6 +297,3 @@ label {
 }
 
 
-.pilot-dropdown {
-  margin-left: 7rem;
-}

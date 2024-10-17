@@ -122,19 +122,10 @@ export const CreateAFlight = () => {
 
                   <div className="info-column departure">  
                   
-                    <div className="pilot-dropdown">
-                      <PilotsDropdown 
-                        buttonText={pilot && pilot.firstName ? `${pilot.firstName}, ${pilot.lastName}`: "Pilot"}
-                        list={pilots}
-                        selectPilot={selectPilot}
-                      />
-                    </div>
-
                     <div className="item departure-airport">
                      {/* <label className="departureAirport-label">Departure Airport</label>
                       <input className="departureAirport-input" type="text" placeholder="Departure Airport" ref={departureAirportRef} />*/}
-                     
-               
+                                   
                      <AirportsDropdown 
                         buttonText={departureAirport && departureAirport.code ? departureAirport.code: "Departure Airport"}
                         list={airports}
@@ -209,11 +200,22 @@ export const CreateAFlight = () => {
                       onBlur={(e) => (e.target.type = "text")}*/
                       ref={arrivalTimeRef} />
                     </div>
+
                   </div> 
               </div> 
 
               <div className="form-bottom">
-                <button className="add-flight">ADD</button>   
+
+              <div className="pilot-dropdown">
+                <PilotsDropdown 
+                  buttonText={pilot && pilot.firstName ? `${pilot.firstName} ${pilot.lastName}`: "Pilot"}
+                  list={pilots}
+                  selectPilot={selectPilot}
+                />
+              </div>
+                <div className="add-flight">
+                  <button className="add-flight-btn">ADD</button>
+                </div> 
               </div>
 
             </form>
