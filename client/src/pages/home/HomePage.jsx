@@ -33,8 +33,13 @@ export const HomePage = () => {
       axios.get(`${API}/pilots`)
           .then(res => { 
           setPilots(res.data);
-          console.log(res.data)});
+          console.log('Pilots fetched:',res.data)});
     } 
+
+    const handleRefresh = () => {
+      console.log('Refreshing pilots...');
+      getPilots(); // Refresh the list of pilots
+    };
 
     const getAirports = () => {
       axios.get(`${API}/airports`)

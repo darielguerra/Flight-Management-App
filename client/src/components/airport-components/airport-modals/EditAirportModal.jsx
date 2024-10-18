@@ -14,12 +14,12 @@ export const EditAirportModal = (props) => {
   const handleDelete = async () => {
     try {
       await axios.delete(`${API}/airports/${airport._id}`);
+      props.refresh();
+      props.modalOpen(false);
     }
     catch (error) {
       console.log(error);
     }
-    props.refresh();
-    props.modalOpen(false);
   }
 
   return(

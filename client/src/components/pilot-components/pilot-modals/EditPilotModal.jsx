@@ -10,15 +10,17 @@ export const EditPilotModal = (props) => {
   const pilot = props.pilot;
   const [showUpdatePilot, setShowUpdatePilot ] = useState(false);
 
-  const handleDelete = () => {
+  const handleDelete = async () => {
     try{
-      axios.delete(`${API}/pilots/${pilot._id}`);
+      await axios.delete(`${API}/pilots/${pilot._id}`);
+      props.refresh();
+      props.modalOpen(false);
+      console.log("deleteing pilot");
     }
     catch (error){
       console.log(error);
     }
-    props.refresh();
-    props.modalOpen(false);
+     //without async, does not refresh the first time
   }
 
   return (
