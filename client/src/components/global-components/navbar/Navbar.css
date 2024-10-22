@@ -34,7 +34,7 @@
 
 }
 
-.logo-name {
+.app-name {
    /* position: fixed; */
     font-size: 3.7rem;
     margin-left: 1.2rem;    
@@ -47,7 +47,7 @@
     /*color: rgba(230, 144, 111, 1) desired color when inverted*/
   }
 
-.logo-name::first-letter {
+.app-name::first-letter {
    font-family: var(--font-title-main);
    font-size: 4.5rem;
 }

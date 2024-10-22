@@ -26,6 +26,7 @@ html, body {
     width: 65%;
     height: 32rem;
     background-color: var(--primary-light-color);
+    /*background-color: #f8ebe5;*/
     border-bottom: 7px solid var(--secondary-dark2-color);
     display: flex; 
     justify-content: space-evenly;
@@ -126,16 +127,36 @@ label {
 }
 
 .flight-input {
-  height: 3rem;
-  border: .05rem solid #783E3E;
-  /*border: .01rem solid rgb(147, 147, 147);*/
-  width: 8rem;
-  border-radius: .5rem;
+  height: 2.1rem;
+  /*border: .05rem solid #783E3E;*/
+  border: none;
+  border-bottom: .01rem solid black;
+  background-color: transparent;
+  width: 17rem;
+  /*border-radius: .5rem;
+  border-radius: .5rem;*/
   padding-left: 1rem;
   padding-right: 1rem;
-  /*background-color: #FEE9DD;*/
-  background-color: #FEE9DD;
+  /*background-color: #FEE9DD;
+  background-color: #f7efeb;*/
+  /*color: var(--primary-light-color);
+  color-scheme: dark;*/
 }
+
+/* previous flight-input
+.flight-input {
+  height: 3rem;
+  border: .05rem solid #783E3E;
+  old-border: .01rem solid rgb(147, 147, 147);
+  width: 8rem;
+  border-radius: .5rem;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #FEE9DD;
+
+}
+*/
 
 
 /*
@@ -171,10 +192,8 @@ label {
 /*departure date input          */
 
 .departureDate-input {
-  width: 17rem;
   display: flex;
   padding-right: 1.2rem;
-  height: 3rem;
 }
 
 .departureDate-input:before {
@@ -198,10 +217,8 @@ label {
 /*arrival date input          */
 
 .arrivalDate-input {
-  width: 17rem;
   display: flex;
   padding-right: 1.2rem;
-  height: 3rem;
 }
 
 .arrivalDate-input:before {
@@ -224,10 +241,8 @@ label {
 /*departure time input          */
 
 .departureTime-input {
-  width: 17rem;
   display: flex;
   padding-right: 1.2rem;
-  height: 3rem;
 }
 
 .departureTime-input:before {
@@ -245,14 +260,11 @@ label {
 }
 
 
-
 /*arrival time input        */
 
 .arrivalTime-input {
-  width: 17rem;
   display: flex;
   padding-right: 1.2rem;
-  height: 3rem;
 }
 
 .arrivalTime-input:before {

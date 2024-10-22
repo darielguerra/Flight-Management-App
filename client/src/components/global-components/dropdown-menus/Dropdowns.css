@@ -9,14 +9,16 @@
   width: 17.4rem;
   padding: .7rem;
   background-color: #FEE9DD;
-  border-radius: .5rem;
-  box-shadow: #959da533
-  0px 8px 24px;
+  border: none;
+  border-bottom: .01rem solid black;
+  /*border-radius: .5rem;*/
+  /*box-shadow: #959da533
+  0px 8px 24px;*/
   cursor: pointer;
   height: 1.6rem;
   padding-left: 1.2rem;
-  /*border: .01rem solid rgb(147, 147, 147); origianl border*/
-  border: .05rem solid #783E3E;
+  /*border: .01rem solid rgb(147, 147, 147); origianl border
+  border: .05rem solid #783E3E;*/
   
 }
 
