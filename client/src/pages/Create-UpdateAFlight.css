@@ -37,7 +37,7 @@ html, body {
   width: 64rem;
   height: 30rem;
   background-color: var(--primary-light-color);
-  border-bottom: 7px solid var(--secondary-dark2-color);
+  /*border-bottom: 7px solid var(--secondary-dark2-color);*/
   display: flex; 
   justify-content: space-evenly;
   border-radius: 30px;
@@ -308,4 +308,22 @@ label {
   cursor: pointer;
 }
 
+.update-form-bottom {
+  display: flex;  
+  justify-content: space-around; 
+  height: 5rem;
+}
 
+.update-flight-btn {
+  width: 90px;
+  background-color: #e8dad5;
+  border: 1px solid black;
+  border-radius: 3px;
+  cursor: hover;
+  margin: auto;
+  height: 2rem;
+}
+
+.update-flight:hover {
+  cursor: pointer;
+}

@@ -107,9 +107,9 @@ export const UpdateFlightModal = (props) => {
                         </div> 
                     </div> 
         
-                    <div className="form-bottom">
+                    <div className="update-form-bottom">
                       {/*<button type="submit" onClick={() => props.closeModal(false)} className="add-flight">ADD</button>*/}  
-                      <button type="submit" className="add-flight">ADD</button> 
+                      <button type="submit" className="update-flight-btn">Update</button> 
                     </div>
         
                   </form>
