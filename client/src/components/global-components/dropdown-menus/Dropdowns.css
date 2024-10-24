@@ -33,6 +33,16 @@
   margin-left: 10rem;
   position: absolute;
   left: 7rem;
+  top: 1rem;
+}
+
+.toggle-icon-click-open {
+  height: .9rem;
+  width: 1.1rem;
+  position: absolute;
+  left: 16.9rem;
+  top: 1rem;
+  /*border: 1px solid black;*/
 }
 
 .dropdown-content {
@@ -85,3 +95,4 @@
 .dropdown-item:hover {
   background-color: #fffaa4bb; 
 }
+

@@ -137,11 +137,13 @@ label {
   border-radius: .5rem;*/
   padding-left: 1rem;
   padding-right: 1rem;
+  border-radius: none;
   /*background-color: #FEE9DD;
   background-color: #f7efeb;*/
   /*color: var(--primary-light-color);
   color-scheme: dark;*/
 }
+
 
 /* previous flight-input
 .flight-input {
