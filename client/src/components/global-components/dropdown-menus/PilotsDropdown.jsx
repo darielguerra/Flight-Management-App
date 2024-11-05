@@ -68,7 +68,7 @@ export const PilotsDropdown = ({ buttonText, list, selectPilot }) => {
       <div className={`dropdown-content
          ${open ? "dropdown-content-open" : null}`}
          ref={contentRef}
-         style={{ top: dropdownTop ? `${dropdownTop}px` : "100%"}} 
+         style={{ top: dropdownTop ? `${dropdownTop}px` : "50%"}} /*was 100%*/
       >
          {list && list.map((item)=> 
            <div className="dropdown-item" key={item._id} onClick={() =>handleSelect(item)}>                                         
