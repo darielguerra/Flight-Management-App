@@ -1,10 +1,12 @@
 
 .nav {
-  /* background-color: rgb(255, 158, 109);*/
-    
-  /* sticky 
-    position: sticky;
-    top: 0;  */
+ /* fixed position is preventing part of the navbar from
+    getting cut off on smaller screens */
+    position: fixed;
+    top: 0; 
+    left:0;
+    margin: 0px;
+    right: 0;
     background-color: var(--secondary-dark-color);
     height: 4.4rem;
     display: flex;
@@ -12,8 +14,19 @@
     align-items: center;
     width: 100%;
     border-bottom: 2.4px solid var(--border-color-altdarker2);
-   
  }
+
+ /*
+ .nav {
+    background-color: var(--secondary-dark-color);
+    height: 4.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2.4px solid var(--border-color-altdarker2);
+ }
+*/
 
 .title {
   display: flex;
@@ -46,6 +59,7 @@
     -webkit-text-stroke:  1px var(--border-color-altdarker2);
     /*color: rgba(230, 144, 111, 1) desired color when inverted*/
   }
+  
 
 .app-name::first-letter {
    font-family: var(--font-title-main);
@@ -85,7 +99,36 @@ a { /*link styling*/
 }
 
 
+@media (max-width: 1164px) {
+  .nav-links {
+    font-size: 17px;
+   }
 
+/*
+  .app-name-first {
+     font-size: 2rem;
+     margin-left: .4rem;    
+   }
+
+   .app-name-second {
+     font-size: 2rem;
+     margin-left: .4rem;   
+     margin-bottom: .5rem; 
+   }
+ 
+
+   .app-name::first-letter {
+    font-family: var(--font-title-main);
+    font-size: 2rem;
+ }
+ 
+ 
+  .letter-s {
+    font-family: "Noto Serif TC";
+    font-size: 2rem;
+    font-weight: 600;
+  }  */
+}
 
 /*
 @media screen and (max-width:651px) {
