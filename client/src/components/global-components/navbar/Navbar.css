@@ -1,7 +1,9 @@
+/*
+
+tried to fix positioning
+
 
 .nav {
- /* fixed position is preventing part of the navbar from
-    getting cut off on smaller screens */
     position: fixed;
     top: 0; 
     left:0;
@@ -14,9 +16,10 @@
     align-items: center;
     width: 100%;
     border-bottom: 2.4px solid var(--border-color-altdarker2);
+    z-index: 1000;
  }
+*/
 
- /*
  .nav {
     background-color: var(--secondary-dark-color);
     height: 4.4rem;
@@ -26,7 +29,7 @@
     width: 100%;
     border-bottom: 2.4px solid var(--border-color-altdarker2);
  }
-*/
+
 
 .title {
   display: flex;
