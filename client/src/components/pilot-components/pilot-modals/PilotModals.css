@@ -1,7 +1,10 @@
 
 .pilot-modal {
+  /*previous size (nothing else changed):
   width: 22rem;
-  height: 23.1rem;
+  height: 23.1rem;*/
+  width: 24rem;
+  height: 22rem;
   background-color: var(--primary-light-color);
   display: flex; 
   flex-direction: column;
@@ -13,7 +16,7 @@
 }
 
 .edit-pilot-title  {
-  margin: auto auto auto 9.38rem;
+  margin: auto auto auto 10.55rem;
 }  
 
 .update-pilot-title {
