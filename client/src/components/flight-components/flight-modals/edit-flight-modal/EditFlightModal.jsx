@@ -33,18 +33,15 @@ export const EditFlightModal = (props) => {
             <div className="edit-flight-info">
               <div className="edit-plane-img-container">
                 <PlaneIcon />
-                {/*<img className="edit-plane-img" src="images/EditPlane.png" alt="Plane" />*/}
               </div> 
               <div className="edit-flight-airport-info">
                 <div className="edit-flight-airport-code">
-                  {/*{flight.departureAirport} -{'>'} {flight.arrivalAirport}*/}
                   {flight.departureAirport.map((airport) =>
                     <div key={airport._id}>{airport.code} -{'>'} {flight.arrivalAirport.map(airport => 
                       <span key={airport._id}>{airport.code}</span>)}
                     </div>)}            
                 </div>  
                 <div className="edit-flight-airport-city-state">
-                  {/*{flight.departureAirport} -{'>'} {flight.arrivalAirport}*/}
                   {flight.departureAirport.map((airport) =>
                     <div key={airport._id}>{airport.city}, {airport.state} -
                     {flight.arrivalAirport.map(airport => 

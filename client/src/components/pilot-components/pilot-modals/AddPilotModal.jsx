@@ -49,7 +49,6 @@ export const AddPilotModal = (props) => {
               <input className="years-of-service-input" type="text" ref={yearsOfService} />
             </div>
             <div className="add-pilot-submit">
-              {/* <button onClick={handleSubmit} className="add-airport-submit-btn">Add</button> */}
               <button type="submit" className="add-pilot-submit-btn">Add</button> 
             </div>
           </form>

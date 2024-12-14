@@ -15,7 +15,6 @@ export const PilotCard = (props) => {
     <div key={pilot._id} className="pilot-card">
       <div className="pilot-info">
         <button onClick={() => setEditPilotModal(true)} className="pilot-btn">
-        {/*<img className="pilot-image" src="images/Pilot1.png" alt="logo"></img>*/}
         <PilotCardIcon />
         <div className="pilot-name"><p>{pilot.firstName}{" "}{pilot.lastName}</p></div>
         </button>

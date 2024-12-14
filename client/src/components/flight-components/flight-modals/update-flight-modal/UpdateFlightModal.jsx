@@ -73,42 +73,31 @@ export const UpdateFlightModal = (props) => {
         
                           <div className="item">
                             {/*<label className="departureAirport-label">Departure Airport</label>*/}
-                            <input className="departureAirport-input flight-input" type="text" placeholder="Departure Airport" ref={departureAirportRef}/>
-                            
-                           
+                            <input className="departureAirport-input flight-input" type="text" placeholder="Departure Airport" ref={departureAirportRef}/>           
                           </div>
                           <div className="item departure-date">
-                            {/*<label className="departureDate-label">Departure Date</label>*/}
                             <input className="departureDate-input flight-input" type="Date" ref={departureDateRef} />
                           </div>
                           <div className="item departure-time">
-                            {/*<label className="departureTime-label">Departure Time</label>*/}
                             <input className="departureTime-input flight-input" type="time" placeholder="Departure Time" ref={departureTimeRef} />
-                          </div>
-                          
+                          </div>                         
                         </div>     
-        
-                        {/*<div className="center-line"></div>*/}
-        
+
                         <div className="info-column arrival">
         
                           <div className="item arrival-airport">
-                            {/*<label className="arrivalAirport-label">Arrival Airport</label>*/}
                             <input className="arrivalAirport flight-input" type="text" placeholder="Arrival Airport" ref={arrivalAirportRef} />
                           </div>
                           <div className="item arrival-date">
-                            {/*<label className="arrivalDate-label">Arrival Date</label>*/}
                             <input className="arrivalDate-input flight-input" type="Date" placeholder="Arrival Date" ref={arrivalDateRef} />
                           </div>
                           <div className="item arrival-Time">             
-                            {/*<label className="arrivalTime-label">Arrival Time</label>*/}
                             <input className="arrivalTime-input flight-input" type="time" placeholder="Arrival Time" ref={arrivalTimeRef} />
                           </div>
                         </div> 
                     </div> 
         
                     <div className="update-form-bottom">
-                      {/*<button type="submit" onClick={() => props.closeModal(false)} className="add-flight">ADD</button>*/}  
                       <button type="submit" className="update-flight-btn">Update</button> 
                     </div>
         

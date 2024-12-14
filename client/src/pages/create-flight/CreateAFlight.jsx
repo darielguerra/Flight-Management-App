@@ -123,49 +123,27 @@ export const CreateAFlight = () => {
                   <div className="info-column departure">  
                   
                     <div className="item departure-airport">
-                     {/* <label className="departureAirport-label">Departure Airport</label>
-                      <input className="departureAirport-input" type="text" placeholder="Departure Airport" ref={departureAirportRef} />*/}
+                     {/* <label className="departureAirport-label">Departure Airport</label>*/}
                                    
                      <AirportsDropdown 
                         buttonText={departureAirport && departureAirport.code ? departureAirport.code: "Departure Airport"}
                         list={airports}
                         selectAirport={selectDepartureAirport}
-                      />
-
-                   {/* orignally setDepartureAirport(airport), rerenderd too much
-                      <Dropdown 
-                        buttonText="Departure Airport"
-                        content={
-                        <>
-                          {airports.map((airport)=> 
-                            <DropdownItem key={airport._id} onClick={() => selectDepartureAirport(airport)}>                                         
-                            {`${airport.code} - ${airport.city}, ${airport.state}`}
-                            </DropdownItem>)} 
-                        </>}
-                      />
-                      */}
-                    
+                      />        
                     </div> 
 
                     <div className="item departure-date">
-                       {/*<label className="departureDate-label">Departure Date</label>*/}
                       <input className="departureDate-input flight-input" type="Date" placeholder="Departure Date" ref={departureDateRef} />
                     </div>
                     <div className="item departure-time">
-                       {/*<label className="departureTime-label">Departure Time</label>*/}
                       <input className="departureTime-input flight-input" type="time" placeholder="Departure Time" ref={departureTimeRef} />
                     </div>
                     
                   </div>     
 
-                  {/*<div className="center-line"></div>*/}
-
                   <div className="info-column arrival">
 
                     <div className="item arrival-airport">
-                     {/*<label className="arrivalAirport-label">Arrival Airport</label>
-                      <input className="arrivalAirport" type="text" placeholder="Arrival Airport" ref={arrivalAirportRef} />*/}
-
                         <AirportsDropdown 
                           buttonText={arrivalAirport && arrivalAirport.code ? arrivalAirport.code: "Arrival Airport"}
                           /* if you want to display code, city, and state:
@@ -173,27 +151,12 @@ export const CreateAFlight = () => {
                           list={airports}
                           selectAirport={selectArrivalAirport}
                         />
-
-                     {/*  
-                       <Dropdown 
-                        buttonText="Arrival Airport"
-                        content={
-                        <>
-                          {airports.map((airport)=> 
-                            <DropdownItem key={airport._id} onClick={() => selectArrivalAirport(airport)}>
-                            {`${airport.code} - ${airport.city}, ${airport.state}`}
-                            </DropdownItem>)} 
-                        </>}
-                      />  
-                      */}
                     </div>
 
                     <div className="item arrival-date">
-                       {/*<label className="arrivalDate-label">Arrival Date</label>*/}
                       <input className="arrivalDate-input flight-input" type="Date" placeholder="Arrival Date" ref={arrivalDateRef} />
                     </div>
                     <div className="item arrival-Time">             
-                     {/* <label className="arrivalTime-label">Arrival Time</label> */}
                       <input className="arrivalTime-input flight-input" 
                       type="time"  
                       /*onFocus={(e) => (e.target.type = "time")}

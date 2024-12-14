@@ -35,9 +35,6 @@ export const EditPilotModal = (props) => {
               <button className="modal-exit-btn" onClick={() => props.modalOpen(false)}>X</button>
             </div>
             <EditPilotIcon className="edit-pilot-icon"/>
-            {/*<div className="edit-pilot-image-container">
-              <img className="edit-pilot-image" src="images/Pilot1DarkStraightenedWebp.webp" alt="Pilot" />
-            </div>*/}
             <div className="edit-pilot-modal-info">
               <div className="edit-pilot-name"><p>{pilot.firstName}{" "}{pilot.lastName}</p></div>
               <div className="edit-pilot-yearsOfService"><p>Years of Service: {pilot.yearsOfService}</p></div>
@@ -65,21 +62,3 @@ export const EditPilotModal = (props) => {
 
   )
 }
-/*
-
-  return (
-    <div className="modal">
-      <div onClick={() => props.closeModal(false)} className="overlay">
-        <div onClick={(e) => e.stopPropagation()} className="edit-delete-pilot-modal">
-          <button onClick={() => {
-            setUpdatePilotModal(true);
-            updatePilotModal && <UpdatePilotModal pilotId={pilot._id} closeModal={setUpdatePilotModal} refresh={props.refresh} />
-            props.closeModal(false);
-            }} 
-            className="edit-pilot-button">Edit</button>          
-        </div>          
-      </div> 
-    </div> 
-
-  )
-}*/

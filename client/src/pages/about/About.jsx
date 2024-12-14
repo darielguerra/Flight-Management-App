@@ -8,7 +8,6 @@ export const About = () => {
     return (
       <div className="about-page">
         <div className="about-card">
-          {/*<div className="about-card-inside"></div>*/}
           <div className="about-title"><p>About this Site</p></div>
             <div className="about-info">
               <p><bold>Zenith Airlines</bold> is a fictional airlines created to 

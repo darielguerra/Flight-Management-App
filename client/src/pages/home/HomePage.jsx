@@ -62,8 +62,6 @@ export const HomePage = () => {
             <p className="airports-switch-label">Airports</p>
           </div>
         </div>
-
-        {/*<div className="top-page"></div>*/}
  
         <div className="pilots-flights-area" >  
 
@@ -88,7 +86,6 @@ export const HomePage = () => {
               })}
             </div>
                   
-            {/*<AddFlightButton />*/}
           </>
         )}
 
@@ -102,12 +99,6 @@ export const HomePage = () => {
                   )
                 })} 
                 < AddAirportButton refresh={getAirports} />
-                {/*
-                 <button className="add-airport-btn">
-                   <div className="add-airport">
-                      <div className="airport-plus-sign">+</div>
-                 </div>
-                </button>*/}
               </div>          
             </div>    
           )}          
