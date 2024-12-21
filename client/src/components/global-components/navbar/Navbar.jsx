@@ -5,8 +5,11 @@ import './Navbar.css';
 export const Navbar = () => {
    return (
     <nav className="nav">          
-      <a className="logo" href="/">
-          <h1 className="title">Zenith Airlines</h1>
+      <a className="title" href="/"> 
+          <div className="heading-underline">
+            <h1 className="heading">Zenith Airlines</h1>
+          </div>
+          <h3 className="subheading">Flight Management App</h3>
       </a>
 
       <div>
