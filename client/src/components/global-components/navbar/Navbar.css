@@ -1,24 +1,3 @@
-/*
-
-tried to fix positioning
-
-
-.nav {
-    position: fixed;
-    top: 0; 
-    left:0;
-    margin: 0px;
-    right: 0;
-    background-color: var(--secondary-dark-color);
-    height: 4.4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border-bottom: 2.4px solid var(--border-color-altdarker2);
-    z-index: 1000;
- }
-*/
 
  .nav {
     background-color: var(--secondary-dark-color);
@@ -34,60 +13,20 @@ tried to fix positioning
 .title {
   display: flex;
   margin-left: 7rem;
-  
-}
-
-.logo-image{
-    /*cropping excess of top and bottom of image*/
-    width: 5.2rem;
-    margin-top: .3rem;
-    margin-left: 9rem;
-    margin-bottom: .2rem;
-    /*height: 4rem; /*would shrink down to 4rem height*/
-    /*object-fit: cover; /*but because have this, its filling 
-                       the area and cropping the top and bottom*/
-    /*background-color: rgb(210, 210, 210); */
-
-}
-
-.app-name {
-   /* position: fixed; */
-    font-size: 3.7rem;
-    margin-left: 1.2rem;    
-    margin-bottom: 2.9rem;    
-    margin-top: 2.7rem; 
-    font-family: "Vidaloka", sans-serif;
-    font-weight: 300;
-    font-weight: 300;color: var(--primary-light-color);
-    -webkit-text-stroke:  1px var(--border-color-altdarker2);
-    /*color: rgba(230, 144, 111, 1) desired color when inverted*/
-  }
-  
-
-.app-name::first-letter {
-   font-family: var(--font-title-main);
-   font-size: 4.5rem;
-}
-
-
-.letter-s {
-  font-family: "Noto Serif TC";
-  font-size: 3.45rem;
-  font-weight: 600;
-}
-
-/* Alice font for s
-.letter-s {
-  font-family: "Alice";
-  font-size: 4rem;
+  font-family: var(--font-family-main);
+  font-size: 32px;
   font-weight: 300;
+  /*-webkit-text-stroke:  1px var(--border-color-altdarker2);*/
 }
-*/
+
+
 
 .nav-links {
+   font-family: var(--font-family-main);
+   font-weight: 300;
+   font-size: 16px;
    margin-right: 5.5rem;
    display: flex;
-   font-size: 20px;
   }
 
 .nav-links li {
@@ -106,31 +45,6 @@ a { /*link styling*/
   .nav-links {
     font-size: 17px;
    }
-
-/*
-  .app-name-first {
-     font-size: 2rem;
-     margin-left: .4rem;    
-   }
-
-   .app-name-second {
-     font-size: 2rem;
-     margin-left: .4rem;   
-     margin-bottom: .5rem; 
-   }
- 
-
-   .app-name::first-letter {
-    font-family: var(--font-title-main);
-    font-size: 2rem;
- }
- 
- 
-  .letter-s {
-    font-family: "Noto Serif TC";
-    font-size: 2rem;
-    font-weight: 600;
-  }  */
 }
 
 /*
@@ -144,34 +58,3 @@ a { /*link styling*/
 }
 */
 
-
-/*
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed; 
-    top: 0; 
-    width: 100%;
-  }
-  
-
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-
-  .navbar a:hover {
-    background: #ddd;
-    color: black;
-  }
-  
-
-  .main {
-    margin-top: 30px; 
-  }
-  */

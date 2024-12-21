@@ -6,16 +6,15 @@ export const Navbar = () => {
    return (
     <nav className="nav">          
       <a className="logo" href="/">
-        <img className="logo-image" src="images/Logo11ColorMatch.png" alt="logo" />
+          <h1 className="title">Zenith Airlines</h1>
       </a>
-      <div className="title">
-        <h1 className="app-name app-name-first"><strong>Zenith</strong></h1>
-        <h1 className="app-name app-name-second"><strong>Airline<span className="letter-s">s</span></strong></h1>
-      </div>
+
       <div>
         <ul className="nav-links">
-            <li><Link to="/createaflight">Create A Flight</Link></li>
-            <li><Link to="/about">About</Link></li>
+            {/*<li><Link to="/createaflight">Create A Flight</Link></li>*/}
+            <li><Link to="/flights">Flights</Link></li>
+            <li><Link to="/airports">Airports</Link></li>
+            <li><Link to="/pilots">Pilots</Link></li>
         </ul>
       </div>
     </nav>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { API } from "../../App"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Switch } from '../../components/home-components/switch/Switch';
 import { PilotCard} from '../../components/pilot-components/pilot-card/PilotCard';
 import { AddPilotButton } from '../../components/pilot-components/add-pilot-button/AddPilotButton';
@@ -9,9 +9,9 @@ import { AddFlightButton } from '../../components/flight-components/add-flight-b
 import { AirportCard } from '../../components/airport-components/airport-card/AirportCard';
 import { AddAirportButton } from '../../components/airport-components/add-airport-button/AddAirportButton';
 import { FooterHome } from '../../components/global-components/footers/FooterHome';
-import './HomePage.css';
+import './Flights.css';
 
-export const HomePage = () => {  
+export const Flights = () => {  
 
     const [showAirports, setShowAirports] = useState(false);
     const [flights, setFlights] = useState([]);
@@ -24,10 +24,21 @@ export const HomePage = () => {
         getAirports();
     }, []);
 
+    /*
     const getFlights = () => {
       axios.get(`${API}/flights`)
-          .then(res => setFlights(res.data));
-    }
+          .then(res => {
+            setFlights(res.data)
+            console.log('FLights fetched:',res.data)})
+    }*/
+
+    const getFlights = useCallback(() => {
+      axios.get(`${API}/flights`)
+          .then(res => {
+            setFlights(res.data)
+            console.log('FLights fetched:',res.data)})
+    }, []);
+
 
     const getPilots = () => {
       axios.get(`${API}/pilots`)

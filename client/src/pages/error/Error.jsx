@@ -3,7 +3,7 @@ export const Error = () => {
 
     return (
         
-        <h1>Sorry, you've reached an unavailable page</h1>
+        <h3>Sorry, this page is unavailable</h3>
        
     );
 }

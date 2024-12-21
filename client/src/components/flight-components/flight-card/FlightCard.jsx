@@ -13,6 +13,14 @@ export const FlightCard = (props) => {
       
   const flight = props.flight;
   console.log(flight.flightNumber);
+  
+  //saving airport to local variable incase
+  //airport gets deleted
+  const departureAirport = flight.departureAirport.map((airport) => {
+     return airport.code;
+  })
+
+  console.log(departureAirport);
 
   useEffect(() => {
     console.log('Flight data:', flight);
