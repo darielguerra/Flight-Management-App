@@ -2,8 +2,6 @@ import axios from 'axios';
 import { API } from "../../App"
 import { useState, useEffect, useCallback } from "react";
 import { Switch } from '../../components/home-components/switch/Switch';
-import { PilotCard} from '../../components/pilot-components/pilot-card/PilotCard';
-import { AddPilotButton } from '../../components/pilot-components/add-pilot-button/AddPilotButton';
 import { FlightCard } from '../../components/flight-components/flight-card/FlightCard';
 import { AddFlightButton } from '../../components/flight-components/add-flight-button/AddFlightButton';
 import { AirportCard } from '../../components/airport-components/airport-card/AirportCard';
@@ -15,22 +13,14 @@ export const Flights = () => {
 
     const [showAirports, setShowAirports] = useState(false);
     const [flights, setFlights] = useState([]);
-    const [pilots, setPilots] = useState([]);
     const [airports, setAirports] = useState([]);
   
     useEffect(() => {
         getFlights();
-        getPilots();
         getAirports();
     }, []);
 
-    /*
-    const getFlights = () => {
-      axios.get(`${API}/flights`)
-          .then(res => {
-            setFlights(res.data)
-            console.log('FLights fetched:',res.data)})
-    }*/
+
 
     const getFlights = useCallback(() => {
       axios.get(`${API}/flights`)
@@ -40,17 +30,6 @@ export const Flights = () => {
     }, []);
 
 
-    const getPilots = () => {
-      axios.get(`${API}/pilots`)
-          .then(res => { 
-          setPilots(res.data);
-          console.log('Pilots fetched:',res.data)});
-    } 
-
-    const handleRefresh = () => {
-      console.log('Refreshing pilots...');
-      getPilots(); // Refresh the list of pilots
-    };
 
     const getAirports = () => {
       axios.get(`${API}/airports`)
@@ -74,18 +53,9 @@ export const Flights = () => {
           </div>
         </div>
  
-        <div className="pilots-flights-area" >  
+      
 
-          <div className="pilot-panel">
-            <div className="pilot-title"><p>Pilots</p>
-              <AddPilotButton refresh={getPilots}/>
-            </div>
-            {pilots.map(pilot => {
-              return (
-                <PilotCard pilot={pilot} key={pilot._id} refresh={getPilots} />
-              );
-            })}
-          </div>
+   
 
         {!showAirports && (
           <>
@@ -114,7 +84,7 @@ export const Flights = () => {
             </div>    
           )}          
               
-        </div>
+   
         <div className="push"></div>
       </div>  
     </div>   
