@@ -1,0 +1,19 @@
+
+.pilot-icon {
+  margin-top: .4rem;
+  fill: var(--accent-blue);
+  width: 1.2rem;
+}
+
+.deparing-flight-icon {
+  margin-top: .7rem;
+  fill: var(--accent-blue);
+  width: 1.3rem;
+}
+
+.arriving-flight-icon {
+  margin-top: .7rem;
+  fill: var(--accent-blue);
+  width: 1.3rem;
+  transform: rotate(50deg);
+}

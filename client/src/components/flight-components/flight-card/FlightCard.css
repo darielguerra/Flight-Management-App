@@ -1,65 +1,37 @@
 
 .flight-card {
-  width: 63.7rem; /* was 97.9%; */
-  background-color: var(--primary-light-color);
-  height: 12rem;
-  margin-bottom: 3rem;
-  border-bottom: 7px solid var(--secondary-dark2-color);
+  margin-top: 3rem;
+  margin-left: 3rem;
+  width: 24.688rem; /* was 97.9%; */
+  background-color: #FAFAFA;
+  height: 13.875rem;
+  border: 1px solid #E6E6E6;
+  border-radius: 21px;
+  box-shadow: 0px 4px 65px rgba(20, 102, 142, 0.18);
 }
 
 /* this was made to add hover border line underneath*/
 .flight-details {
   display: flex; 
-  
   width: 100%; 
 }
-/*
-.flight-card-hover-border {
-  height: 11.6rem;
-  position: absolute;
-  width: 62.8rem;
- 
-  }
-
-.flight-card-hover-border:hover {
-  cursor: pointer;
-  border: 1px solid #c4c406; 
-  background-color: transparent;
-  pointer-events: none;
-  }
-*/
-
-
 
 .flight-card:hover {
   /*background-color: #ffff8e87;*/
-  background-color: #ffff7c87; 
-  border-bottom: 7px solid rgba(255, 255, 124, 0.529);
+  background-color: #b2d2ff; 
   background-clip: padding-box;
   cursor: pointer;
 }
 
+/*
 .flight-card:hover .flightnumber{
   background-color: transparent;
   color: var(--secondary-text-color);
   border-bottom: 1px solid black;
   border-right: 1px solid black;
 }
-
-
-.flight-card:hover .flight-border-line  {
-  border-top: 1px solid black;
-  margin-top: 1.85rem;
-  width: 63.7rem;
-}
-
-/* this is like its opening when hover
-.flight-card:hover .flight-border-line  {
-  border-top: 1px solid black;
-  margin-top: 5rem;
-  width: 63.7rem;
-}
 */
+
 
 .flight {
   display: flex;
@@ -67,55 +39,51 @@
 }
 
 .flight-info {
-  /*width: 97%;*/
-  width: 63.7rem;
-  margin-right: 2rem;
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.flight-header {
+  margin-top: .4rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .flightnumber {
-  font-size: 24px;
+  margin-left: 1.7rem;
+  font-size: 18px;
   display: flex;
-  text-align: center;
-  background-color: var(--tertiary-dark-color);
-  color: var(--primary-light-color);
+  text-align: center;  
   font-family: var(--font-family-main);
   font-weight: 500;
-  width: 14rem;
-  height: 2rem;
-  border-bottom: 1px solid transparent;
-  border-right: 1px solid transparent;
+  width: 6.2rem;
+  height: 1.8rem;
+  border: 1px solid var(--accent-blue);
+  border-radius: 4px;
 }
 
 .flightnumber p  {
   margin: auto; /*centers*/    
 }  
 
-
-.flight-details {
-  margin-top: 1.7rem;
-  display: flex;
-  justify-content: space-around;
-}
-
 .flight-card-airports {
-  margin-top: .1rem;
-  margin-left: 3.5rem;
-  width: 9rem;
+  margin-top: .4rem;
+  width: 8rem;
   font-family: var(--font-family-main);
-  color: var(--secondary-text-color);
-  font-weight: 600;
-  font-size: 36px;
-  padding-left: 1.5rem;
+  font-weight: 400;
+  font-size: 18px;
+  display: flex;
+  height: 1.6rem;
  }
 
 .departure-airport {
-display: flex;
-height: 2.6rem;
-margin-top: .1rem;
+
 }
 
 .departure-airport-name {
-  width: 9rem;
+
 }
 
 .arrow-icon {
@@ -126,22 +94,37 @@ margin-top: .1rem;
 }
 
 .arrival-airport-name {
-height: .5rem;
+  margin-left: .4rem;
 
 }
+
+.flight-details{
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 7rem;
+}
+
 
 .pilot-departure-arrival {
- padding-left: 2rem;
- padding-bottom: 0px;
- padding-right: 2rem;
- border-left: 2px solid var(--tertiary-dark2-color);
- border-bottom: 2px solid var(--tertiary-dark2-color);
- height: 6.3rem;
+ margin-left: 1.7rem;
+ display: flex;
+ justify-content: space-between;
+ font-size: 14px;
+ font-weight: 400;
+ margin-right: 1.8rem;
+ height: 2.2rem;
 }
 
-.pilot-departure-arrival h2 {
-  margin-top: 0px;
- 
+.flight-details-header {
+  display: flex;
+  height: 2rem;
+  margin-bottom: 5rem;
+}
+
+.flight-details-header-title{
+  font-weight: 500;
+  margin-left: .54rem;
 }
 
 .pilot-departure-arrival p {

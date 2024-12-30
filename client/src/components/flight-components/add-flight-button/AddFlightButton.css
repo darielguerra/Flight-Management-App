@@ -1,44 +1,28 @@
 
 .flight-button-component{
-  margin-top: 3.2rem;
   display: flex;
 }
 
 .flight-button-title{
   width: 5.8rem;
   height: 1.6rem;
-  font-size: 16px;
-  background-color: var(--tertiary-dark-color);
+  font-size: 18px;
+  color: white;
   font-family: var(--font-family-main);
-  color: var(--primary-light-color);
-  font-weight: 500;
+  font-weight: 300;
   display: flex;
-}
-
-.flight-button-title p {
-  margin: auto;
+  margin: .5rem auto;
 }
 
 .add-flight-button{
   display: flex;
   justify-content: space-around;
-  height: 1.5rem;
-  width: 1.8rem;
+  height: 2.5rem;
+  width: 10.250rem;
   margin-right: .1rem;
   margin-top: .05rem;
-  background-color: #dfd2cd;
-  border: .07rem solid black;
+  background-color: #498FEB;
+  border: .07rem solid #E6E6E6;
+  border-radius: 5px;
 }
 
-/*
-.add-flight-button{
-  height: 4.5rem;
-  width: 5.8rem;
-  font-size: 60px;
-  font-family: "Manrope";
-  font-weight: 200;
-  color: var(--secondary-text-color);
-  background-color: var(--primary-light-color);  
-  border: 1px solid black;
-}
-  */

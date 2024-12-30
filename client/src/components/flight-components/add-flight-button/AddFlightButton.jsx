@@ -11,12 +11,11 @@ export const AddFlightButton = () => {
   
   return(
     <div className="flight-button-component">
-      <div className="flight-button-title">
-        <p>Flight</p>
+      <div >
         <button 
-          onClick={handleButtonClick}
-          className="add-flight-button">
-          +
+          className="add-flight-button"
+          onClick={handleButtonClick}>          
+          <p className="flight-button-title">Add Flight</p>
         </button>
       </div>
 
