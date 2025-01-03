@@ -18,6 +18,12 @@
   color: var(--accent-blue);
 }
 
+@media (max-width: 580px) {
+  .title {
+    margin-left: 6rem;
+  }
+}
+
 .heading{ 
   font-family: var(--font-family-main);
   font-size: 28px;
@@ -50,6 +56,12 @@
    margin-right: 6rem;
    display: flex;
   }
+
+@media (max-width: 580px) {
+  .nav-links {
+    margin-left: 5rem;
+  }
+}
 
 .nav-links li {
     list-style: none;
