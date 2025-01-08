@@ -66,8 +66,26 @@
 .nav-links li {
     list-style: none;
     margin-left: 2.5rem;
-    
+    display: block;
 }
+
+.nav-hamburger-menu {
+  display: block;
+}
+
+@media (min-width: 580px) {
+  .nav-hamburger-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .nav-links li {
+    display: none;
+  }
+}
+
+
 
 a { /*link styling*/
   text-decoration: none; /*removes the link underline*/

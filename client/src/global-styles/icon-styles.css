@@ -17,3 +17,8 @@
   width: 1.3rem;
   transform: rotate(50deg);
 }
+
+.hamburger-menu {
+  width: 2rem;
+  fill: var(--accent-blue);
+}

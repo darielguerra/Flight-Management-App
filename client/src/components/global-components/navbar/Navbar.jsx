@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HamburgerMenu } from '../../../assets/svg-icons-new/HamburgerMenu';
 import './Navbar.css';
 
 export const Navbar = () => {
@@ -12,9 +13,12 @@ export const Navbar = () => {
           <h3 className="subheading">Flight Management App</h3>
       </a>
 
-      <div>
+      <div>        
         <ul className="nav-links">
             {/*<li><Link to="/createaflight">Create A Flight</Link></li>*/}
+            <div className="nav-hamburger-menu">
+              <HamburgerMenu />
+            </div>
             <li><Link to="/flights">Flights</Link></li>
             <li><Link to="/airports">Airports</Link></li>
             <li><Link to="/pilots">Pilots</Link></li>
