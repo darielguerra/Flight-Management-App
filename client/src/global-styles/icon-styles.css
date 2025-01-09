@@ -18,7 +18,7 @@
   transform: rotate(50deg);
 }
 
-.hamburger-menu {
+.hamburger-menu-icon {
   width: 2rem;
   fill: var(--accent-blue);
 }

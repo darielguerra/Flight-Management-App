@@ -69,12 +69,12 @@
     display: block;
 }
 
-.nav-hamburger-menu {
+.hamburger-menu-icon-container {
   display: block;
 }
 
 @media (min-width: 580px) {
-  .nav-hamburger-menu {
+  .hamburger-menu-icon-container {
     display: none;
   }
 }
@@ -85,7 +85,29 @@
   }
 }
 
+.hamburger-menu-window {
+  margin-right: 70rem;
 
+  background-color: white;
+
+  width: 50vw; /*100% of weiwport width*/
+  height: 50vh; /*100% of weiwport height*/
+  top: 0;
+  left: 50vw;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+.hamburger-menu-nav-links li {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.hamburger-menu-nav-links li:hover {
+  color:blue;
+}
 
 a { /*link styling*/
   text-decoration: none; /*removes the link underline*/
