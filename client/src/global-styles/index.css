@@ -1,7 +1,7 @@
 :root {
 
   --accent-blue: #4A629F;
-
+  --logo-blue: #0029FF;
   
 
   --primary-light-color: #FEE9DD;
@@ -50,6 +50,11 @@ html, body {
     margin: 0px;
     padding: 0px;
     background-color: #EDF1F5;
+    
+    /*
+    background: rgb(0,41,255);
+    background: linear-gradient(180deg, rgba(0,41,255,1) 0%, rgba(237,241,245,1) 8%);
+    */
 
     display: flex; 
     flex-direction: column; 
