@@ -15,8 +15,8 @@
 
 @media (max-width: 580px) {
   .flight-card {
-    width: 21rem;
-    height: 12.2rem;
+    width: 23rem;
+    height: 13em;
     margin-left: 1.2rem;
   }
 }
@@ -51,19 +51,20 @@
 }
 
 .flight-info {
-  margin-top: 1.2rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
 .flight-header {
-  margin-top: .4rem;
+  margin-top: 0rem;
   display: flex;
   justify-content: space-between;
 }
 
 .flightnumber {
+  margin: auto;
   margin-left: 1.7rem;
   font-size: 18px;
   display: flex;
@@ -81,37 +82,50 @@
 }  
 
 .flight-card-airports {
-  margin-top: .4rem;
-  width: 8rem;
+  margin-bottom: 0rem;
+  width: 11rem;
   font-family: var(--font-family-main);
   font-weight: 400;
   font-size: 18px;
   display: flex;
-  height: 1.6rem;
+  height: 2.5rem;
  }
+/*
+ .aiprort-icon-container {
+transform: scale(.3);
+width: 2rem;
+ }
+*/
 
-.departure-airport {
-
+.flight-airport-names {
+  display: flex;
+  margin: auto;
 }
 
 .departure-airport-name {
-
+  margin-right: 0rem;
+  width: 4.1rem;
 }
 
+/*
 .arrow-icon {
   margin-top: .1rem;
   fill: var(--secondary-text-color);
   width: 2.2rem; 
   margin-left: .6rem;   
 }
+  */
+
+.arrow-airports {
+  border: 2px solid red;
+}
 
 .arrival-airport-name {
-  margin-left: .4rem;
-
+  margin-right: 1.6rem;
 }
 
 .flight-details{
-  margin-top: 2.5rem;
+  margin-top: 2.7rem;
   display: flex;
   flex-direction: column;
   height: 7rem;
@@ -119,7 +133,7 @@
 
 @media (max-width: 580px) {
   .flight-details{
-    margin-top: 1rem;
+    margin-top: 1.8rem;
   }
 }
 
@@ -142,6 +156,15 @@
 .flight-details-header-title{
   font-weight: 500;
   margin-left: .54rem;
+}
+
+.date-icon-container {
+  margin-top: .6rem;
+  margin-right: .4rem;
+}
+
+.date-time-info {
+  display: flex;
 }
 
 .pilot-departure-arrival p {

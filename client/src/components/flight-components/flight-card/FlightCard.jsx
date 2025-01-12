@@ -2,9 +2,7 @@ import axios from 'axios';
 import { API } from "../../../App"
 import { useState, useEffect } from "react";
 import { EditFlightModal } from '../flight-modals/edit-flight-modal/EditFlightModal';
-import { PilotIcon } from '../../../assets/svg-icons-new/PilotIcon';
-import { DepartingFlightIcon } from '../../../assets/svg-icons-new/DepartingFlightIcon';
-import { ArrivingFlightIcon } from '../../../assets/svg-icons-new/ArrivingFlightIcon';
+import { PilotIcon, DateIcon, AirportIcon, DepartingFlightIcon, ArrivingFlightIcon } from '../../../assets/svg-icons-new';
 import './FlightCard.css';
 
 export const FlightCard = (props) => {
@@ -67,17 +65,20 @@ export const FlightCard = (props) => {
               </div>
             
               <div className="flight-card-airports">
-                <div className="departure-airport">
-                  <div className="departure-airport-name">             
-                  {flight.departureAirport && flight.departureAirport.map(airport=>(
-                    <div key={airport._id}>{airport.code} -{'>'} </div>                    
-                  ))}{/*because returning array, had to map through it */}
+                <AirportIcon />
+  
+                <div className="flight-airport-names">
+                  <div className="departure-airport">         
+                    {flight.departureAirport && flight.departureAirport.map(airport=>(
+                      <div className="departure-airport-name" key={airport._id}>{airport.code}  -{'>'}</div>                    
+                    ))}{/*because returning array, had to map through it */}
                   </div>
-                </div>
-                <div className="arrival-airport-name">
-                  {flight.arrivalAirport && flight.arrivalAirport.map(airport =>
-                    <div key={airport._id}> { airport.code}</div>
-                  )}{/*will not load without flight.arrivalAirport && first */}
+                  {/*<div className="arrow-airports"> -{'>'} </div>*/}
+                  <div className="arrival-airport-name">
+                    {flight.arrivalAirport && flight.arrivalAirport.map(airport =>
+                      <div key={airport._id}> { airport.code}</div>
+                    )}{/*will not load without flight.arrivalAirport && first */}
+                  </div>
                 </div>
               </div>          
             </div>   
@@ -89,22 +90,29 @@ export const FlightCard = (props) => {
                   <p className="flight-details-header-title">Pilot</p>
                 </div>
                 {flight.pilot && flight.pilot.map(pilot =>
-                  <p className="flight-details-info"key={pilot._id}>{pilot.firstName} {pilot.lastName}</p>
+                  <p className="flight-pilot-name"key={pilot._id}>{pilot.firstName} {pilot.lastName}</p>
                   )}
               </div>
+
               <div className="pilot-departure-arrival">
                 <div className="flight-details-header">
                   <DepartingFlightIcon />
                   <p className="flight-details-header-title">Departs</p>
-                </div>
-                <p className="flight-details-info">{formatDate(flight.departureDate)} - {formatTime(flight.departureTime)}</p>
+                </div>                
+                <div className="date-time-info">
+                   <div className="date-icon-container"><DateIcon /></div>
+                   <p>{formatDate(flight.departureDate)} - {formatTime(flight.departureTime)}</p></div>
               </div> 
+
               <div className="pilot-departure-arrival">
                 <div className="flight-details-header">
                   <ArrivingFlightIcon />  
                   <p className="flight-details-header-title">Arrives</p>
                 </div>
-                <p className="flight-details-info">{formatDate(flight.arrivalDate)} - {formatTime(flight.arrivalTime)}</p>
+                <div className="date-time-info">
+                  <div className="date-icon-container"><DateIcon /></div>
+                  <p>{formatDate(flight.arrivalDate)} - {formatTime(flight.arrivalTime)}</p>
+                </div> 
               </div>   
             </div>                   
           </div> 

@@ -22,3 +22,19 @@
   width: 2rem;
   fill: var(--accent-blue);
 }
+
+.airport-icon {
+  transform: scale(.9);
+  fill: var(--accent-blue);
+  margin-left: .5rem;
+  width: .5rem;
+ /* position: absolute;
+  right: 20rem;*/
+}
+
+.date-icon {
+  transform: scale(.95); /*width was cutting svg off*/
+  fill: var(--accent-blue);
+  width: 1.5rem;
+  height: 1.5rem;
+}

@@ -21,7 +21,7 @@
 */
 
 .nav-title {
-  margin-left: 3rem;
+  margin-left: 7rem;
   display: flex;
 }
 
@@ -109,7 +109,7 @@
 }
 
 .hamburger-menu-icon-container {
-  margin-left: 14rem;
+  margin-left: 12rem;
 }
 
 @media (min-width: 580px) {
