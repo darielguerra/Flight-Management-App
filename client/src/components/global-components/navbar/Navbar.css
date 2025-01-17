@@ -37,7 +37,8 @@
 }
 
 .nav-title-initials {
-  color: var(--accent-blue);
+  /*color: var(--accent-blue);*/
+  color: #E04058;
   font-size: 32px;
   font-weight: 700;
 }

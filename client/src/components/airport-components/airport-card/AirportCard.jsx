@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { EditAirportModal } from '../airport-modals/EditAirportModal';
-import './AirportCard.css'
+import '../../../global-styles/Airports+PilotsPages.css'
 
 export const AirportCard = (props) => {
   
@@ -9,11 +9,12 @@ export const AirportCard = (props) => {
   console.log(props.airport);
   
   return (
-    <div key={airport._id} className="airport-card">
-      <button onClick={()=> setEditAirportModal(true)} className="airport-btn">
-        <div className="airport-info">
-          <div className="code">{airport.code}</div>
-          <div className="city-state">{airport.city}, {airport.state}</div>
+    <div key={airport._id} className="ap-card">
+      <button onClick={()=> setEditAirportModal(true)} className="ap-edit-modal-btn">
+        <div className="ap-info">
+          <div className="ap-name">{airport.code}</div>
+          <div className="ap-location">{airport.city}, {airport.state}</div>
+          <div className="ap-date">Nov 22, 2024</div>
         </div>
       </button>
       {editAirportModal && <EditAirportModal airport={airport} modalOpen={setEditAirportModal} refresh={props.refresh} />}

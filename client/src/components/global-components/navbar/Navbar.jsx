@@ -20,7 +20,8 @@ export const Navbar = () => {
     */} 
 
       <a className="nav-title" href="/"> 
-        <img className="nav-logo-img" src="images/NavBarWingMatchingBlue300pxWide.png" alt="Zenith Airlines" />
+        <img className="nav-logo-img" src="images/NavBarWingRed.png" alt="Zenith Airlines" />
+        {/*<img className="nav-logo-img" src="images/NavBarWingMatchingBlue300pxWide.png" alt="Zenith Airlines" />*/}
         <div className="nav-title-initials">ZA</div>
         <div className="nav-title-name">Fligth Management App</div>
       </a>

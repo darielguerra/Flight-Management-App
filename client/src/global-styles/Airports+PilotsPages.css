@@ -1,0 +1,31 @@
+
+/* ap for airports-pilots */
+
+/*
+/page
+div ap-page
+  div select card
+  div window
+    div ap-titles
+      div ap-title-name
+      div ap-title-location
+      div ap-title-date 
+
+  div /card
+  div /button
+
+
+/card
+  div ap-card
+    button ap-edit-modal-btn
+      div ap-info 
+        div ap-name
+        div ap-location
+        div ap-date
+
+
+/button
+  ap-btn-container
+    button ap-add-btn
+      p ap-add-btn-text
+*/

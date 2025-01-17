@@ -24,12 +24,12 @@
 }
 
 .airport-icon {
-  transform: scale(.9);
+ /* transform: scale(.9);*/
   fill: var(--accent-blue);
   margin-left: .5rem;
-  width: .5rem;
- /* position: absolute;
-  right: 20rem;*/
+  width: 2rem;
+  /*border: 1px solid blue;
+  object-fit: 70% 15%;*/
 }
 
 .date-icon {

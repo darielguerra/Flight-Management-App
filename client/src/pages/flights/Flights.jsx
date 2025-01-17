@@ -27,8 +27,9 @@ export const Flights = () => {
     return (
       <>
       <div className="flights-page">
-        
-        <div className="page">  
+          <img className="red-logo" src="images/BIgRed1700pxWidth.png" alt="Zenith Airlines Logo"/>
+        <div className="page"> 
+          
           <div className="flights">
             {flights.map((flight, index) => {
               return (
@@ -36,11 +37,11 @@ export const Flights = () => {
               );
             })}
           </div>
-      
+          
           <div className="add-flight-area">
                   <AddFlightButton />
           </div>
-      </div>  
+      </div> 
     </div>   
     < FooterHome />
     </>   

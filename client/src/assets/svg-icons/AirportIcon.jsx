@@ -9,7 +9,7 @@ export const AirportIcon = () => {
       height="100%"
       viewBox="0 0 848 864"
       version="1.1"
-      className="airport-icon"
+      className="airport-icon-old"
       xmlSpace="preserve"
     >
       <g transform="matrix(1,0,0,1,-2267.28,-1193.53)">

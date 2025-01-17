@@ -3,7 +3,7 @@
   margin-top: 3rem;
   margin-left: 3.4rem;
   width: 24.688rem; /* was 97.9%; */
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   height: 13.875rem;
   border: 1px solid #E6E6E6;
   /*
@@ -11,6 +11,8 @@
   border-right: 5px solid #0029FF;*/
   border-radius: 21px;
   box-shadow: 0px 4px 65px rgba(20, 102, 142, 0.18);
+
+  z-index: 1;
 }
 
 @media (max-width: 580px) {

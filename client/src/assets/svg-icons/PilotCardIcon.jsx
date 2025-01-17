@@ -1,4 +1,3 @@
-import "../../components/pilot-components/pilot-card/PilotCard.css";
 
 export const PilotCardIcon = () => {
   return (

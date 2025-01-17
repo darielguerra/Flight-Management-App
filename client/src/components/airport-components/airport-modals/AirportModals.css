@@ -34,12 +34,11 @@
   width: 18rem;
 }
 
-.airport-icon {
+.airport-icon-old {
   width: 12.5rem;
  /* opacity: .6; original
     opacity: .74; in-between*/
   opacity: .8;  
-   
 }
 
 .airport-image {
