@@ -29,3 +29,49 @@ div ap-page
     button ap-add-btn
       p ap-add-btn-text
 */
+
+.ap-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.ap-select-item {
+  margin: 1.5rem 7rem 0rem;
+  font-family: var(--font-family-main);
+}
+
+.ap-window {
+  margin: 0.5rem auto;
+  width: 56rem;
+  height: 34rem;
+  background-color: var(--card-background-color);
+  box-shadow: var(--box-shadow);
+}
+
+.ap-titles {
+  margin: 1rem auto 0rem;
+  width: 44rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ap-card {
+  margin: 1rem auto 0rem;
+  width: 52rem;
+  background-color: var(--ap-card-background-color);
+}
+
+.ap-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ap-pilot-name-container {
+  display: flex;
+  width: 20rem;
+  border: 1px solid black;
+}
+
+.ap-pilot-image {
+  height: 2.44rem;
+}

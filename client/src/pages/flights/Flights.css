@@ -54,11 +54,3 @@
   margin: 2rem auto 2rem;
 }
 
-
-.red-logo {
-  position: fixed;
-  z-index: 0;
-  top: 6rem;
-  right: 90rem;
-  width: 95%;
-}

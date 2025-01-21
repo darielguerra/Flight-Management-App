@@ -27,7 +27,6 @@ export const Flights = () => {
     return (
       <>
       <div className="flights-page">
-          <img className="red-logo" src="images/BIgRed1700pxWidth.png" alt="Zenith Airlines Logo"/>
         <div className="page"> 
           
           <div className="flights">

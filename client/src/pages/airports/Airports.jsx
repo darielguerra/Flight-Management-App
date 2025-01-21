@@ -23,19 +23,21 @@ const getAirports = () => {
 
   return (
     <div className="ap-page">
+      <div className="ap-select-item">Select Airport to edit.</div>
+      <div className="ap-window">
+        <div className="ap-titles">
+          <p className="ap-title-name">Airport Code</p>  
+          <p className="ap-title-loaction">Location</p>  
+          <p className="ap-title-date">Date Added</p>  
+        </div> 
 
-      <div className="ap-titles">
-        <p className="ap-title-name"></p>  
-        <p className="ap-title-loaction">Base Location</p>  
-        <p className="ap-title-date"></p>  
-      </div> 
-
-        {airports.map(airport => {
-          return (
-            <AirportCard airport={airport} key={airport._id} refresh={getAirports}/>
-          )
-        })} 
-        
-        < AddAirportButton refresh={getAirports} />    
+          {airports.map(airport => {
+            return (
+              <AirportCard airport={airport} key={airport._id} refresh={getAirports}/>
+            )
+          })} 
+          
+          <AddAirportButton refresh={getAirports} />    
+      </div>    
     </div>    
-    )}
+)}
