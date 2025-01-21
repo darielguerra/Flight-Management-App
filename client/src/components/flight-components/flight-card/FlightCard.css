@@ -5,7 +5,7 @@
   width: 24.688rem; /* was 97.9%; */
   background-color: var(--card-background-color);
   height: 13.875rem;
-  border: 1px solid #E6E6E6;
+  border: var(--card-border);
   /*
   border-left: 5px solid #0029FF;
   border-right: 5px solid #0029FF;*/

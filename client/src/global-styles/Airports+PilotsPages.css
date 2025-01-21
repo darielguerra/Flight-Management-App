@@ -57,21 +57,50 @@ div ap-page
 
 .ap-card {
   margin: 1rem auto 0rem;
+  display: flex;
   width: 52rem;
+  height: 3.18rem;
   background-color: var(--ap-card-background-color);
+  border: var(--card-border);
 }
 
+/*
 .ap-info {
   display: flex;
   justify-content: space-between;
 }
+*/
+
+.ap-info {
+  width: 52rem;
+  display: grid;
+  grid-template-columns: 15rem 1fr 1fr;  
+  margin: auto;
+}
 
 .ap-pilot-name-container {
   display: flex;
-  width: 20rem;
+  width: 15rem;
+  margin: auto;
   border: 1px solid black;
 }
 
 .ap-pilot-image {
   height: 2.44rem;
+  clip-path: circle();
+  margin: auto 0rem;
+}
+
+.ap-name {
+  margin: auto;
+}
+
+.ap-location {
+  margin: auto;
+  border: 1px solid black;
+}
+
+.ap-date {
+  border: 1px solid black;
+  margin: auto 0rem auto 8rem;
 }
