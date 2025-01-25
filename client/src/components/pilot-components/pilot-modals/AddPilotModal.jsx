@@ -49,6 +49,7 @@ export const AddPilotModal = (props) => {
               <label className="years-of-service-label">Years of Service:</label>
               <input className="years-of-service-input" type="text" ref={yearsOfService} />
             </div>
+            <UploadImage /*file={file}*/ />
             <div className="add-pilot-submit">
               <button type="submit" className="add-pilot-submit-btn">Add</button> 
             </div>

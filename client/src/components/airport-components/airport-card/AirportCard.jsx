@@ -13,7 +13,7 @@ export const AirportCard = (props) => {
       <div className="ap-info">
         <div className="ap-name">{airport.code}</div>
         <div className="ap-location">{airport.city}, {airport.state}</div>
-        <div className="ap-date">Nov 22, 2024</div>
+        <div className="ap-date">{airport.timeStamp}</div>
       </div>      
       {editAirportModal && <EditAirportModal airport={airport} modalOpen={setEditAirportModal} refresh={props.refresh} />}
     </div>

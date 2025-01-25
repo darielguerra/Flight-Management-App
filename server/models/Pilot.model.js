@@ -5,6 +5,7 @@ const pilotSchema = new Schema({
      firstName: String,
      lastName: String,
      homeLocation: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Airport' }],
+     filePath: { type: String, required: true },
      timeStamp: String
 });
 

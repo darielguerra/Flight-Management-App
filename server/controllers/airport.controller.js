@@ -7,13 +7,23 @@ const getAllAirports = async () => {
 }
 
 // add an airport
-const addAirport = async ({code, city, state, timeStamp}) => {
+const addAirport = async ({code, city, state}) => {
+  
+    // Format the current date
+    const formattedDate = new Intl.DateTimeFormat('en-US', {
+     month: 'short', // Short month name (e.g., "Jan")
+     day: 'numeric',
+     year: 'numeric',
+   }).format(new Date());
+
+   console.log(formattedDate);
+
     try {
         const airport = new Airport({
             code,
             city,
             state,
-            timeStamp
+            timeStamp: formattedDate
         });
         await airport.save();
 
