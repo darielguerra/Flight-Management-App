@@ -2,17 +2,18 @@ const Pilot = require('../models/Pilot.model');
 
 // get all pilots
 const getAllPilots = async () => {
-  const pilots = await Pilot.find();
+  const pilots = await Pilot.find().populate('homeLocation');
   return pilots;
 }
 
 // add a pilot
-const addPilot = async ({firstName, lastName, yearsOfService}) => {
+const addPilot = async ({firstName, lastName, homeLocation, timeStamp}) => {
   try {
       const pilot = new Pilot({
           firstName,
           lastName,
-          yearsOfService
+          homeLocation,
+          timeStamp
       });
       await pilot.save();
 
@@ -25,14 +26,14 @@ const addPilot = async ({firstName, lastName, yearsOfService}) => {
 }
 
 // update pilot
-const updatePilot = async ({ _id, firstName, lastName, yearsOfService }) => {
-  console.log('updatePilot called with:', { _id, firstName, lastName, yearsOfService }); //logging
+const updatePilot = async ({ _id, firstName, lastName, homeLocation }) => {
+  console.log('updatePilot called with:', { _id, firstName, lastName, homeLocation }); //logging
   try {
     const pilot = await Pilot.findOneAndUpdate({ _id },      
       {
         firstName,
         lastName,
-        yearsOfService
+        homeLocation
       },
       { new: true } // This option returns the updated pilot instead of the old one
     );

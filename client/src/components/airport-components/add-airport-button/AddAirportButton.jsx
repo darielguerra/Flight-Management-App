@@ -7,9 +7,9 @@ export const AddAirportButton = (props) => {
   const [addAirportModal, setAddAirportModal] = useState(false);
 
   return (
-    <div className="ap-btn-container">   
+    <div className="airport-btn-container">   
       <button onClick={() => setAddAirportModal(true)} className="ap-add-btn">
-        <p className="ap-add-btn-text">Add New Airport</p>
+        <p className="ap-add-btn-text">Add Airport</p>
       </button>
       {addAirportModal && 
         <AddAirportModal refresh={props.refresh} modalOpen={setAddAirportModal} />}

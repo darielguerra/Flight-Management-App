@@ -82,7 +82,6 @@ div ap-page
   display: flex;
   width: 15rem;
   margin: auto;
-  border: 1px solid black;
 }
 
 .ap-pilot-image {
@@ -97,10 +96,36 @@ div ap-page
 
 .ap-location {
   margin: auto;
-  border: 1px solid black;
 }
 
 .ap-date {
-  border: 1px solid black;
   margin: auto 0rem auto 8rem;
+}
+
+.pilot-btn-container{
+  margin-top: 13rem;
+  width: 56rem;
+  display: flex;
+}
+
+.airport-btn-container {
+  width: 56rem;
+  display: flex;
+}
+
+.ap-add-btn {
+  margin: auto;
+  height: 2.5rem;
+  width: 10.250rem;
+  display: flex;
+  background-color: #498FEB;
+  border: .07rem solid #E6E6E6;
+  border-radius: 5px;
+}
+
+.ap-add-btn-text {
+  margin: auto;
+  color: white;
+  font-family: var(--font-family-main);
+  font-weight: 300;
 }

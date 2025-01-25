@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const pilotSchema = new Schema({
      firstName: String,
      lastName: String,
-     yearsOfService: Number
+     homeLocation: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Airport' }],
+     timeStamp: String
 });
 
 const Pilot = mongoose.model('Pilot', pilotSchema, 'Pilots');

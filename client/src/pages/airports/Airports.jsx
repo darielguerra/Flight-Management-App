@@ -23,7 +23,7 @@ const getAirports = () => {
 
   return (
     <div className="ap-page">
-      <div className="ap-select-item">Select Airport to edit.</div>
+      <div className="ap-select-item">Select an Airport to edit.</div>
       <div className="ap-window">
         <div className="ap-titles">
           <p className="ap-title-name">Airport Code</p>  

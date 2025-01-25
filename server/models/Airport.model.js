@@ -15,7 +15,8 @@ const airportSchema = new Schema({
      state: {
           type: String,
           required: true
-      }
+      },
+      timeStamp: String
 });
 
 const Airport = mongoose.model('Airport', airportSchema, 'Airports');

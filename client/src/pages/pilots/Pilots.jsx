@@ -22,7 +22,7 @@ import '../../global-styles/Airports+PilotsPages.css'
 
   return (
     <div className="ap-page">
-      <div className="ap-select-item">Select Pilot to edit.</div>
+      <div className="ap-select-item">Select a Pilot to edit.</div>
       <div className="ap-window">
         <div className="ap-titles">
           <p className="ap-title-name">Pilot</p>  
@@ -35,7 +35,6 @@ import '../../global-styles/Airports+PilotsPages.css'
             <PilotCard pilot={pilot} key={pilot._id} refresh={getPilots} />
           );
         })}
-
         <AddPilotButton refresh={getPilots}/>
       </div>
     </div>

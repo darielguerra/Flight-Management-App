@@ -1,6 +1,7 @@
 import axios from "axios";
 import { API } from "../../../App";
 import { useRef } from "react";
+import { UploadImage } from "./UploadImage";
 import '../pilot-modals/PilotModals.css';
 
 export const AddPilotModal = (props) => {

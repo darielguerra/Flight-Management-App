@@ -7,12 +7,13 @@ const getAllAirports = async () => {
 }
 
 // add an airport
-const addAirport = async ({code, city, state}) => {
+const addAirport = async ({code, city, state, timeStamp}) => {
     try {
         const airport = new Airport({
             code,
             city,
-            state
+            state,
+            timeStamp
         });
         await airport.save();
 

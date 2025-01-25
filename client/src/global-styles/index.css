@@ -64,10 +64,10 @@ html, body {
 
 
     /*website looked better zoomed out a bit*/
-    transform: scale(0.95); /* Scale down to 95% */ 
-    transform-origin: top left; /* Set the origin point for scaling */ 
-    width: 105.11%; /* Adjust the width to prevent clipping */ 
-    overflow-x: hidden; /* Remove scrollbar this produced */
+    /* transform: scale(0.95); Scale down to 95% */ 
+     /* transform-origin: top left;Set the origin point for scaling */ 
+    /* width: 105.11%; Adjust the width to prevent clipping */ 
+   /*  overflow-x: hidden; Remove scrollbar this produced */
   }
   
 

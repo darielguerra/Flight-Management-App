@@ -22,10 +22,10 @@ router.post('/', async (req, res) => {
  //update pilot
  router.put('/:id', async (req, res) => {
   const { id } = req.params;
-  const { firstName, lastName, yearsOfService } = req.body;
+  const { firstName, lastName, homeLocation} = req.body;
 
   try {
-    const updatedPilot = await updatePilot({ _id: id, firstName, lastName, yearsOfService });
+    const updatedPilot = await updatePilot({ _id: id, firstName, lastName, homeLocation });
     res.status(200).json(updatedPilot);
   } catch (err) {
     res.status(err.status || 500).json({ message: err.message || 'Server Error' });
