@@ -42,21 +42,21 @@ div ap-page
 
 .ap-window {
   margin: 0.5rem auto;
-  width: 50rem;
+  width: 56rem;
   height: 34rem;
   background-color: var(--card-background-color);
   box-shadow: var(--box-shadow);
 }
 
 .ap-pilot-titles {
-  margin: 1rem auto 0rem;
+  margin: 3rem auto 0rem;
   width: 44rem;
   display: flex;
   justify-content: space-between;
 }
 
 .ap-airport-titles {
-  margin: 1rem auto 0rem;
+  margin: 3rem auto 0rem;
   width: 41.5rem;
   display: grid;
   grid-template-columns: 15rem 19.7rem 15rem; 
