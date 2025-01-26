@@ -26,22 +26,22 @@ export const Flights = () => {
 
     return (
       <>
-      <div className="flights-page">
-        <div className="page"> 
-          
-          <div className="flights">
-            {flights.map((flight, index) => {
-              return (
-                <FlightCard flight={flight} key={flight._id} refresh={getFlights}/>
-              );
-            })}
-          </div>
-          
-          <div className="add-flight-area">
-                  <AddFlightButton />
-          </div>
-      </div> 
-    </div>   
+        <div className="flights-page">
+          <div className="page"> 
+            
+            <div className="flights">
+              {flights.map((flight, index) => {
+                return (
+                  <FlightCard flight={flight} key={flight._id} refresh={getFlights}/>
+                );
+              })}
+            </div>
+            
+            <div className="add-flight-area">
+                    <AddFlightButton />
+            </div>
+        </div> 
+      </div>   
     < FooterHome />
     </>   
     );

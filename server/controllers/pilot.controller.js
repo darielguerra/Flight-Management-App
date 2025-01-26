@@ -7,13 +7,22 @@ const getAllPilots = async () => {
 }
 
 // add a pilot
-const addPilot = async ({firstName, lastName, homeLocation, timeStamp}) => {
+const addPilot = async ({firstName, lastName, homeLocation, imagePath}) => {
+  
+  // Format the current date
+  const formattedDate = new Intl.DateTimeFormat('en-US', {
+    month: 'short', // Short month name (e.g., "Jan")
+    day: 'numeric',
+    year: 'numeric',
+  }).format(new Date());
+  
   try {
       const pilot = new Pilot({
           firstName,
           lastName,
           homeLocation,
-          timeStamp
+          imagePath,
+          timeStamp: formattedDate
       });
       await pilot.save();
 
@@ -26,8 +35,8 @@ const addPilot = async ({firstName, lastName, homeLocation, timeStamp}) => {
 }
 
 // update pilot
-const updatePilot = async ({ _id, firstName, lastName, homeLocation }) => {
-  console.log('updatePilot called with:', { _id, firstName, lastName, homeLocation }); //logging
+const updatePilot = async ({ _id, firstName, lastName, homeLocation, imagePath }) => {
+  console.log('updatePilot called with:', { _id, firstName, lastName, homeLocation, imagePath }); //logging
   try {
     const pilot = await Pilot.findOneAndUpdate({ _id },      
       {

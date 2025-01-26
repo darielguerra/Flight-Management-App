@@ -1,30 +1,49 @@
 import axios from "axios";
 import { API } from "../../../App";
-import { useRef } from "react";
-import { UploadImage } from "./UploadImage";
+import { useRef, useState } from "react";
+import { UploadImageButton } from "./UploadImage";
+import { ImagePreview } from "./ImagePreview";
 import '../pilot-modals/PilotModals.css';
 
 export const AddPilotModal = (props) => {
 
   const firstName = useRef();
   const lastName = useRef();
-  const yearsOfService = useRef();
+  const [preview, setPreview] = useState(null);
+  const [image, setImage] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    const formData = new FormData();
+    formData.append("firstName", firstName.current.value);
+    formData.append("lastName", firstName.current.value);
+    formData.append("imagePath", image);
+    
+    if (image) {
     try {
+      await axios.post(`${API}/pilots`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+    }
+
+    /*try {
       await axios.post(`${API}/pilots`,
         {
           firstName: firstName.current.value,
           lastName: lastName.current.value,
-          yearsOfService: yearsOfService.current.value
+          imagePath: image
         });
     }
+    */
     catch (error) {
       console.log(error);
     }
     props.closeModal(false);
     props.refresh();
+  }
   }
 
   return(
@@ -45,11 +64,13 @@ export const AddPilotModal = (props) => {
               <label className="pilot-last-name-label">Last Name:</label>
               <input className="pilot-last-name-input" type="text" ref={lastName} />
             </div>
-            <div className="years-of-service">
-              <label className="years-of-service-label">Years of Service:</label>
-              <input className="years-of-service-input" type="text" ref={yearsOfService} />
+            <div className="upload-image-header">
+              <label className="profile-picture-label">Profile Picture</label>
+              <UploadImageButton preview={setPreview} file={setImage}  />
             </div>
-            <UploadImage /*file={file}*/ />
+            <div className="image-preview-area">
+              <ImagePreview preview={preview} />
+            </div>
             <div className="add-pilot-submit">
               <button type="submit" className="add-pilot-submit-btn">Add</button> 
             </div>

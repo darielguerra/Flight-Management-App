@@ -24,7 +24,7 @@ import '../../global-styles/Airports+PilotsPages.css'
     <div className="ap-page">
       <div className="ap-select-item">Select a Pilot to edit.</div>
       <div className="ap-window">
-        <div className="ap-titles">
+        <div className="ap-pilot-titles">
           <p className="ap-title-name">Pilot</p>  
           <p className="ap-title-loaction">Base Location</p>  
           <p className="ap-title-date">Date Joined</p>  

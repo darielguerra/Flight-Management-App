@@ -1,6 +1,6 @@
 
 .flights-page{ 
-  /*min-height: 100vh; this made footer go to bottom of
+  min-height: 100vh; /* this made footer go to bottom of
                        page even on scroll */
   display: flex;
   justify-content: center;
@@ -35,7 +35,7 @@
 
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;  
-   margin: auto;
+   margin: 0rem auto;
 }
 /*
 @media (max-width: 2240px) {

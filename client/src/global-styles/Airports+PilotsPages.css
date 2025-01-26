@@ -42,24 +42,49 @@ div ap-page
 
 .ap-window {
   margin: 0.5rem auto;
-  width: 56rem;
+  width: 50rem;
   height: 34rem;
   background-color: var(--card-background-color);
   box-shadow: var(--box-shadow);
 }
 
-.ap-titles {
+.ap-pilot-titles {
   margin: 1rem auto 0rem;
   width: 44rem;
   display: flex;
   justify-content: space-between;
 }
 
+.ap-airport-titles {
+  margin: 1rem auto 0rem;
+  width: 41.5rem;
+  display: grid;
+  grid-template-columns: 15rem 19.7rem 15rem; 
+  font-weight: 500;
+  font-size: 14px; 
+  font-family: var(--font-family-main);
+}
+
+.ap-airport-title-name {
+  margin: auto;
+  width: 100%;
+}
+
+.ap-airport-title-loaction {
+  margin: auto auto auto 2.5rem;
+  width: 100%;
+}
+
+.ap-airport-title-date {
+  margin: auto;
+  width: 100%;
+}
+
 .ap-card {
   margin: 1rem auto 0rem;
   display: flex;
-  width: 52rem;
-  height: 3.18rem;
+  width: 46rem;
+  height: 2.5rem;
   background-color: var(--ap-card-background-color);
   border: var(--card-border);
 }
@@ -71,11 +96,11 @@ div ap-page
 }
 */
 
-.ap-info {
+.ap-pilot-info {
   width: 52rem;
   display: grid;
   grid-template-columns: 15rem 1fr 1fr;  
-  margin: auto;
+  font-size: 14px;
 }
 
 .ap-pilot-name-container {
@@ -85,21 +110,40 @@ div ap-page
 }
 
 .ap-pilot-image {
-  height: 2.44rem;
+  height: 2rem;
   clip-path: circle();
   margin: auto 0rem;
 }
 
-.ap-name {
+
+.ap-pilot-location {
+  margin: auto;
+  width: 100%;
+}
+
+.ap-pilot-date {
+  margin: auto 0rem auto 0rem;
+  width: 100%;
+}
+
+.ap-airport-info {
+  width: 52rem;
+  display: grid;
+  grid-template-columns: 10rem 24rem 15rem;  
+  font-size: 14px;
+}
+
+.ap-airport-name { 
   margin: auto;
 }
 
-.ap-location {
-  margin: auto;
+.ap-airport-location {
+  margin: auto auto auto 8.3rem;
 }
 
-.ap-date {
-  margin: auto 0rem auto 8rem;
+.ap-airport-date {
+  margin: auto 0rem auto 3rem;
+  width: 100%;
 }
 
 .pilot-btn-container{

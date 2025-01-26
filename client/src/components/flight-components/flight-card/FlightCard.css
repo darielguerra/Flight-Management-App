@@ -22,12 +22,6 @@
 }
 
 
-/* this was made to add hover border line underneath*/
-.flight-details {
-  display: flex; 
-  width: 100%; 
-}
-
 .flight-card:hover {
   /*background-color: #ffff8e87;*/
   background-color: #b2d2ff; 
@@ -127,7 +121,7 @@ width: 2rem;
 .flight-details{
   margin-top: 2.7rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   height: 7rem;
 }
 
@@ -137,24 +131,34 @@ width: 2rem;
   }
 }
 
+/*
 .pilot-departure-arrival {
- margin-left: 1.7rem;
- display: flex;
- justify-content: space-between;
- font-size: 14px;
- font-weight: 400;
- margin-right: 1.8rem;
- height: 2.2rem;
+  margin-left: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 1.8rem;
+  height: 2.2rem;
+  border: 1px solid black;
+}
+  */
+
+.flight-details-headers {
+  display: flex;
+  flex-direction: column;
+  width: 12.6rem;
+  margin-left: 1.7rem;
 }
 
-.flight-details-header {
+.flight-details-title {
   display: flex;
-  height: 2rem;
-  margin-bottom: 5rem;
+  height: 2.2rem;
 }
 
 .flight-details-header-title{
   font-weight: 500;
+  font-size: 14px;
   margin-left: .54rem;
 }
 
@@ -163,9 +167,30 @@ width: 2rem;
   margin-right: .4rem;
 }
 
+/*
 .date-time-info {
   display: flex;
 }
+  */
+
+.flight-details-content {
+  display: flex;
+  flex-direction: column;
+  width: 19rem;
+  height: 7rem;
+}
+
+.flight-pilot-name {
+  margin-left: 5.5rem;
+}
+
+.pilot-date-time{
+  display: flex;
+  height: 2.2rem;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 
 .pilot-departure-arrival p {
  

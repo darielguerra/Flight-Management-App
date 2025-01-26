@@ -25,10 +25,10 @@ const getAirports = () => {
     <div className="ap-page">
       <div className="ap-select-item">Select an Airport to edit.</div>
       <div className="ap-window">
-        <div className="ap-titles">
-          <p className="ap-title-name">Airport Code</p>  
-          <p className="ap-title-loaction">Location</p>  
-          <p className="ap-title-date">Date Added</p>  
+        <div className="ap-airport-titles">
+          <p className="ap-airport-title-name">Airport Code</p>  
+          <p className="ap-airport-title-loaction">Location</p>  
+          <p className="ap-airport-title-date">Date Added</p>  
         </div> 
 
           {airports.map(airport => {

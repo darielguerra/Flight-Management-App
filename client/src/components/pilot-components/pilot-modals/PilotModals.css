@@ -28,6 +28,16 @@
   width: 10rem;
 }
 
+.upload-image-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-preview {
+  height: 4rem;
+  clip-path: circle();
+}
+
 .edit-pilot-image-container {
   margin: auto;  
   margin-top: 3rem;
@@ -77,16 +87,8 @@
   margin: auto;
 }
 
-.edit-pilot-yearsOfService {
-  height: 2rem;
-  margin: .3rem auto;
-  font-family: var(--font-family-main);
-  font-weight: 400;
-}
 
-.edit-pilot-yearsOfService p {
-  margin: auto;
-}
+
 
 .edit-pilot-btn {
   height: 1.6rem;
@@ -128,4 +130,5 @@
   height: 1.5rem;
   font-size: 18px;
 }
+
 

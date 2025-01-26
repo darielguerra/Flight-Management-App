@@ -9,7 +9,7 @@ export const UpdatePilot = (props) => {
   console.log(pilotId);
   const firstName = useRef();
   const lastName = useRef();
-  const yearsOfService = useRef();
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -18,7 +18,7 @@ export const UpdatePilot = (props) => {
         {
           firstName:firstName.current.value,
           lastName:lastName.current.value,
-          yearsOfService:yearsOfService.current.value
+ 
         });
         } 
         catch (error) {
@@ -37,10 +37,6 @@ export const UpdatePilot = (props) => {
       <div className="pilot-last-name">
         <label className="pilot-last-name-label">Last Name:</label>
         <input className="pilot-last-name-input" type="text" ref={lastName} />
-      </div>
-      <div className="years-of-service">
-        <label className="years-of-service-label">Years of Service:</label>
-        <input className="years-of-service-input" type="text" ref={yearsOfService} />
       </div>
       <button type="submit" className="update-pilot-btn">Update</button>
     </form>
