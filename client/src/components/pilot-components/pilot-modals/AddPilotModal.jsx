@@ -17,8 +17,13 @@ export const AddPilotModal = (props) => {
 
     const formData = new FormData();
     formData.append("firstName", firstName.current.value);
-    formData.append("lastName", firstName.current.value);
+    formData.append("lastName", lastName.current.value);
     formData.append("imagePath", image);
+    
+    //log formData
+    for (let pair of formData.entries()) {
+      console.log(pair[0] + ': ' + pair[1]);
+    }
     
     if (image) {
     try {

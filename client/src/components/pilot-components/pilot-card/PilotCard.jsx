@@ -18,7 +18,7 @@ export const PilotCard = (props) => {
           <p className="ap-pilot-name">{pilot.firstName}{" "}{pilot.lastName}</p>         
         </div>  
         <div className="ap-pilot-location">Somewhere, Vermont</div>
-        <div className="ap-pilot-date">Nov 22, 2024</div>       
+        <div className="ap-pilot-date">{pilot.location}</div>       
       </div>
       {editPilotModal && <EditPilotModal pilot={pilot} modalOpen={setEditPilotModal} refresh={props.refresh} />}
     </div>

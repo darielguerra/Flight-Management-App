@@ -10,7 +10,8 @@ export const UploadImageButton = (props) => {
       const previewUrl = URL.createObjectURL(file);
       //saves to a url created by the browser
       props.preview(previewUrl);
-      props.file(file);      
+      props.file(file); 
+      console.log(file);     
     }    
   }
 

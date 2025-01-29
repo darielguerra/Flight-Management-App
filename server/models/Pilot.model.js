@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const pilotSchema = new Schema({
      firstName: String,
      lastName: String,
-     homeLocation: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Airport' }],
+     /*homeLocation: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Airport' }],*/
      imagePath: { type: String, required: true },
      timeStamp: String
 });

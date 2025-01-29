@@ -2,14 +2,16 @@ const Pilot = require('../models/Pilot.model');
 
 // get all pilots
 const getAllPilots = async () => {
-  const pilots = await Pilot.find().populate('homeLocation');
+  /* use when adding homeLocation:
+  const pilots = await Pilot.find().populate('homeLocation');*/
+  const pilots = await Pilot.find();
   return pilots;
 }
 
 // add a pilot
-const addPilot = async ({firstName, lastName, homeLocation, imagePath}) => {
+const addPilot = async ({firstName, lastName, /*homeLocation,*/ imagePath}) => {
   
-  // Format the current date
+  // Format tand get current date
   const formattedDate = new Intl.DateTimeFormat('en-US', {
     month: 'short', // Short month name (e.g., "Jan")
     day: 'numeric',
@@ -20,7 +22,7 @@ const addPilot = async ({firstName, lastName, homeLocation, imagePath}) => {
       const pilot = new Pilot({
           firstName,
           lastName,
-          homeLocation,
+          /*homeLocation,*/
           imagePath,
           timeStamp: formattedDate
       });

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Flights, Airports, Pilots, About, Error, CreateAFlight  } from './pages';
+import { Home, Flights, Airports, Pilots, About, Error, CreateAFlight  } from './pages';
 import { Navbar } from './components/global-components/navbar/Navbar';
 
 export const API = process.env.REACT_APP_SERVER_URL;
@@ -9,7 +9,7 @@ function App() {
          <BrowserRouter>
                 <Navbar />
                 <Routes>
-                    <Route path="/" element={<Flights />} /> 
+                    <Route path="/" element={<Home />} /> 
                     <Route path="/createaflight" element={<CreateAFlight />} />
                     <Route path="/flights" element={<Flights />} />
                     <Route path="/airports" element={<Airports />} />
