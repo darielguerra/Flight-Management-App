@@ -9,7 +9,7 @@ const getAllPilots = async () => {
 }
 
 // add a pilot
-const addPilot = async ({firstName, lastName, /*homeLocation,*/ imagePath}) => {
+const addPilot = async (firstName, lastName, /*homeLocation,*/ imagePath) => {
   
   // Format tand get current date
   const formattedDate = new Intl.DateTimeFormat('en-US', {

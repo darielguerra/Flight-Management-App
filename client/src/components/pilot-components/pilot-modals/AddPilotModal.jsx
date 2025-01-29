@@ -18,7 +18,7 @@ export const AddPilotModal = (props) => {
     const formData = new FormData();
     formData.append("firstName", firstName.current.value);
     formData.append("lastName", lastName.current.value);
-    formData.append("imagePath", image);
+    formData.append("pilot-image", image);
     
     //log formData
     for (let pair of formData.entries()) {

@@ -20,6 +20,8 @@ export const UploadImageButton = (props) => {
            <input className="file-input"
             type="file" 
             accept="image/*"
+            name="pilot-image" /*required to pass to multer backend
+                                 and the name used to append to formData*/
             onChange={handleUpload}
            />
     </div>

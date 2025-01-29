@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const upload = require('../index');
 const { getAllPilots, addPilot, updatePilot, deletePilot } = require('../controllers/pilot.controller');
 
  // get all pilots
@@ -8,10 +9,15 @@ router.get('/', async (req, res) => {
 });
 
   // add a pilot
-router.post('/', async (req, res) => {
+  // upload is the instance of multer I made
+  // single is that multer is epecting one file
+  // pilot-image is name attribute given the the html input 
+router.post('/', upload.single('pilot-image'), async (req, res) => {
     try {
         console.log(req.body);
-        const pilotId = await addPilot(req.body);
+        const pilotId = await addPilot(req.body.firstName, req.body.lastName, req.file.path);
+        //const pilotId = await addPilot(req.body, req.file.path); didn't work
+        //req.files for files (not in json format))
         res.status(201).json({_id: pilotId});
     }
     catch (err) {
