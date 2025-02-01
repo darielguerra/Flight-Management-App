@@ -21,7 +21,11 @@ const storage = multer.diskStorage({
   // const userId = req.body.userId;
   // cb(null, `uploads/${userId}) to save in user's own folder
   destination: (req, file, cb) => { // (request, uploadedFile, callback)
-    cb(null, 'pilot_images/'); // callback to say where file so be saved
+    const savePath = process.env.Render ? '/server/pilot_images' : 'pilot_images';
+    // process.env.Render render keyword to use when you have a specific process that's dif
+    // from local and production, here to save in render's persistent store if running produtoin
+    // if not, save locally. This is to persist images across deploys
+    cb(null, savePath); // callback to say where file so be saved
                                // null returns if there's no error, for error handling
                                // pilot_images is the folder to save in
                                // I created a folder called pilot_images in the server
